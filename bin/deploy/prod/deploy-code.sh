@@ -2,17 +2,16 @@
 
 source bin/vars/variables.sh
 
-echo "Deploying..."
+echo "Deploying theme..."
 echo
-mv www/html/wp-content/themes/vanicacummings ~/dist/wp-content/themes/
-mv www/html/wp-content/plugins/vanicacummings ~/dist/wp-content/plugins/
-mv docker/.htaccess ~/dist/
-mv docker/deploy-gitignore.txt ~/dist/.gitignore
-cd ~/dist
-git config --global user.email "hello@joshcummingsdesign.com"
-git config --global user.name "Josh Cummings"
-git init
-git remote add production git@git.wpengine.com:production/ccbstg.git
-git add .
-git commit -am "Deployed by CircleCI"
-git push -f production master
+rsync -azq --partial --delete www/html/wp-content/themes/vanicacummings/ \
+  $PROD_USER@$PROD_IP:applications/$PROD_DB/public_html/wp-content/themes/vanicacummings/
+
+echo
+echo "==========================="
+echo
+
+echo "Deploying plugins..."
+echo
+rsync -azq --partial --delete www/html/wp-content/plugins/vanicacummings/ \
+  $PROD_USER@$PROD_IP:applications/$PROD_DB/public_html/wp-content/plugins/vanicacummings/

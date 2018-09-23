@@ -13,11 +13,11 @@ if [[ $IS_RUNNING != "true" ]]; then
   exit 1
 fi
 
-# Check for dev branch
+# Check for staging branch
 BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
-if [[ $BRANCH != "dev" ]]; then
-  pretty_print "${COL_RED}You should be running this from the dev branch.${COL_RESET}"
+if [[ $BRANCH != "staging" ]]; then
+  pretty_print "${COL_RED}You should be running this from the staging branch.${COL_RESET}"
   exit 2
 fi
 
@@ -43,34 +43,36 @@ if [[ $PROCEED == "y" ]]; then
 
     docker exec -it $WP_CONTAINER bash -c "mkdir -p tmp \
       && echo 'Retrieving database...' \
-      && ssh $DEV_USER@$DEV_IP 'STG_DB="${STG_DB}" \
-        && cd applications/$DEV_DB/public_html; \
-          if [ ! -f dev.sql ]; then \
-            wp db export dev.sql; \
+      && ssh $STG_USER@$STG_IP 'STG_DB="${STG_DB}" \
+        && cd applications/$STG_DB/public_html; \
+          if [ ! -f staging.sql ]; then \
+            wp db export staging.sql; \
           else \
             echo 'Someone is currently cloning.'; \
             echo 'Please wait and try again.'; \
-            echo 'If issue persists, delete dev.sql from the server.'; \
+            echo 'If issue persists, delete staging.sql from the server.'; \
             exit 5; \
           fi' \
-      && rsync -azP $DEV_USER@$DEV_IP:applications/$DEV_DB/public_html/dev.sql tmp/dev.sql \
-      && echo 'Cleaning up dev...' \
-      && ssh $DEV_USER@$DEV_IP 'STG_DB="${STG_DB}" \
-        && rm applications/$DEV_DB/public_html/dev.sql;' \
+      && rsync -azP $STG_USER@$STG_IP:applications/$STG_DB/public_html/staging.sql tmp/staging.sql \
+      && echo 'Cleaning up staging...' \
+      && ssh $STG_USER@$STG_IP 'STG_DB="${STG_DB}" \
+        && rm applications/$STG_DB/public_html/staging.sql;' \
       && echo 'Resetting the database...' \
       && cd html \
       && wp db reset --yes \
       && echo 'Importing the database...' \
-      && wp db import ../tmp/dev.sql \
+      && wp db import ../tmp/staging.sql \
       && echo 'Performing search and replace...' \
       && echo 'This may take a moment...' \
-      && wp search-replace '"$DEV_DOMAIN"' 'localhost' --all-tables \
+      && wp search-replace '"$STG_DOMAIN"' 'localhost' --all-tables \
       && echo 'Cleaning up...' \
       && rm -rf ../tmp \
       && echo 'Gathering files...' \
-      && rsync -azP --delete $DEV_USER@$DEV_IP:applications/$DEV_DB/public_html/wp-content/uploads/ wp-content/uploads/ \
-      && rsync -azP --delete $DEV_USER@$DEV_IP:applications/$DEV_DB/public_html/wp-content/plugins/ wp-content/plugins/ \
-      && chown -R www-data:www-data wp-content"
+      && rsync -azP --delete $STG_USER@$STG_IP:applications/$STG_DB/public_html/wp-content/uploads/ wp-content/uploads/ \
+      && rsync -azP --delete $STG_USER@$STG_IP:applications/$STG_DB/public_html/wp-content/plugins/ wp-content/plugins/ \
+      && chown -R www-data:www-data wp-content \
+      && wp plugin deactivate \
+        w3-total-cache"
 
   else
     pretty_print "${COL_RED}Confirmation number did not match.${COL_RESET}"

@@ -2,17 +2,25 @@
 
 source bin/vars/variables.sh
 
-echo "Deploying..."
+echo "Deploying theme..."
 echo
-mv www/html/wp-content/themes/vanicacummings ~/dist/wp-content/themes/
-mv www/html/wp-content/plugins/vanicacummings ~/dist/wp-content/plugins/
-mv docker/.htaccess ~/dist/
-mv docker/deploy-gitignore.txt ~/dist/.gitignore
-cd ~/dist
-git config --global user.email "hello@joshcummings.com"
-git config --global user.name "Josh Cummings"
-git init
-git remote add staging git@git.wpengine.com:staging/ccbstg.git
-git add .
-git commit -am "Deployed by CircleCI"
-git push -f staging master
+rsync -azq --partial --delete www/html/wp-content/themes/vanicacummings/ \
+  $STG_USER@$STG_IP:applications/$STG_DB/public_html/wp-content/themes/vanicacummings/
+
+echo
+echo "==========================="
+echo
+
+echo "Deploying plugins..."
+echo
+rsync -azq --partial --delete www/html/wp-content/plugins/vanicacummings/ \
+  $STG_USER@$STG_IP:applications/$STG_DB/public_html/wp-content/plugins/vanicacummings/
+
+echo
+echo "==========================="
+echo
+
+echo "Deploying Pattern Lab..."
+echo
+rsync -azq --partial --delete www/html/patternlab/ \
+  $STG_USER@$STG_IP:applications/$STG_DB/public_html/patternlab/
