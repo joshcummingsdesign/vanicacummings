@@ -25,6 +25,6 @@ function jcdPrettyPrint($var, $args = []) {
 }
 
 function jcdppd($var, $args = []) {
-  gzPrettyPrint($var, $args);
+  jcdPrettyPrint($var, $args);
   die();
 }

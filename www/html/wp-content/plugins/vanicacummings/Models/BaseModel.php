@@ -43,7 +43,7 @@ class BaseModel {
       $menuData->$menuDataSlug = new \Timber\Menu($menuDataSlug);
     }
 
-    return gzNormalizeMenus($menuData);
+    return jcdNormalizeMenus($menuData);
   }
 
   /**

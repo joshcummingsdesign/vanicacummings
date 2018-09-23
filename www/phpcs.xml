@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="Grizzly">
-  <description>Grizzly Coding Standards</description>
+<ruleset name="JCD">
+  <description>JCD Coding Standards</description>
 
   <!-- Scan these files -->
   <file>./html/wp-content/themes/vanicacummings</file>
   <file>./html/wp-content/plugins/vanicacummings</file>
 
   <!-- Exclude these files -->
-  <exclude-pattern>./html/wp-content/themes/vanicacummings/woocommerce</exclude-pattern>
   <exclude-pattern>vendor</exclude-pattern>
   <exclude-pattern>*.js</exclude-pattern>
   <exclude-pattern>*.css</exclude-pattern>

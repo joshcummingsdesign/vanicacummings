@@ -31,8 +31,6 @@ www/html/wp-content/*
 www/html/wp-content/plugins/*
 !www/html/wp-content/plugins/index.php
 !www/html/wp-content/plugins/advanced-custom-fields
-!www/html/wp-content/plugins/admin-columns-pro
-!www/html/wp-content/plugins/woocommerce
 
 
 #### WordPress Themes ####

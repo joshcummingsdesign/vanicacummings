@@ -82,7 +82,7 @@ clean:
 	@bin/tasks/clean.sh
 
 help:
-	@echo "Welcome to Grizzly WP!"
+	@echo "Welcome to JCD WP!"
 	@echo "	make coffee"
 	@echo "		- Run start, install, deps, and build"
 	@echo "	make start"

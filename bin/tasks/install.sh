@@ -32,10 +32,10 @@ docker exec -it $WP_CONTAINER bash -c "\
   && echo \
   && wp core install \
     --url=https://localhost \
-    --title=Grizzly \
-    --admin_user=grizzly \
+    --title=Josh \
+    --admin_user=josh \
     --admin_password=changeme \
-    --admin_email=hello@madebygrizzly.com \
+    --admin_email=hello@joshcummingsdesign.com \
     --skip-email \
   && echo \
   && echo '===========================' \

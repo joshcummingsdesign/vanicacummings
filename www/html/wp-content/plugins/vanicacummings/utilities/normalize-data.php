@@ -69,7 +69,7 @@ function jcdNormalizeImage($image) {
   return (object) [
     'title' => $image['title'],
     'alt' => $image['alt'],
-    'sizes' => (object) [
+    'sizes' => (object)[
       'medium' => $image['sizes']['medium']
     ]
   ];

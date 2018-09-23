@@ -34,18 +34,19 @@ final class TestBaseModel extends \WP_UnitTestCase {
     $this->assertObjectHasAttribute('url', $data);
     $this->assertObjectHasAttribute('language', $data);
     $this->assertObjectHasAttribute('title', $data);
+    $this->assertObjectHasAttribute('charset', $data);
   }
 
   /** @test */
   public function can_get_menu_data() {
     $data = $this->model->getMenus();
-    $this->assertObjectHasAttribute('left', $data);
+    $this->assertObjectHasAttribute('main_menu', $data);
   }
 
   /** @test */
   public function can_get_footer_data() {
     $data = $this->model->getFooter();
-    $this->assertObjectHasAttribute('form', $data);
+    $this->assertObjectHasAttribute('copyright', $data);
   }
 
   /** @test */

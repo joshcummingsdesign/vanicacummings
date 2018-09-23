@@ -46,7 +46,7 @@ RUN apt-get update && apt-get install -qqy sudo less nano git subversion wget my
     -days 365 \
     -nodes \
     -x509 \
-    -subj "/C=US/ST=California/L=San Diego/O=Grizzly/OU=Development/CN=localhost" \
+    -subj "/C=US/ST=California/L=San Diego/O=JCD/OU=Development/CN=localhost" \
     -out /etc/apache2/ssl/server.crt \
     -keyout /etc/apache2/ssl/server.key \
   && cat /etc/apache2/ssl.conf >> /etc/apache2/apache2.conf \

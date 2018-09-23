@@ -2,4 +2,4 @@
 
 Documentation coming soon...
 
-**[View the Grizzly WP Docs](https://bitbucket.org/madebygrizzly/grizzly-wp-wiki/wiki/Home)**
+**[View the JCD WP Docs](https://bitbucket.org/madebygrizzly/grizzly-wp-wiki/wiki/Home)**

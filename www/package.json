@@ -5,7 +5,7 @@
   "scripts": {
     "test": "mocha --require babel-core/register src/scripts/tests/unit-tests"
   },
-  "repository": "bitbucket:madebygrizzly/grizzly-wp",
+  "repository": "github:joshcummingsdesign/vanicacummings",
   "author": "Josh Cummings <hello@joshcummingsdesign.com> (https://joshcummingsdesign.com)",
   "license": "GPL-2.0",
   "bugs": {

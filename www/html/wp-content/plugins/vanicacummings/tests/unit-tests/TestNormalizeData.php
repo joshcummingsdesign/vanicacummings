@@ -68,26 +68,26 @@ final class TestNormalizeData extends \WP_UnitTestCase {
     $this->assertEquals($expected, $actual);
   }
 
-    /** @test */
-    public function can_normalize_images() {
+  /** @test */
+  public function can_normalize_images() {
 
-      $image = [
-        'title' => 'foobar',
-        'alt' => 'this is foobar',
-        'sizes' => [
-          'medium' => 800
-        ]
-      ];
+    $image = [
+      'title' => 'foobar',
+      'alt' => 'this is foobar',
+      'sizes' => [
+        'medium' => 800
+      ]
+    ];
 
-      $expected = (object) [
-        'title' => $image['title'],
-        'alt' => $image['alt'],
-        'sizes' => (object) [
-          'medium' => $image['sizes']['medium']
-        ]
-      ];
+    $expected = (object) [
+      'title' => $image['title'],
+      'alt' => $image['alt'],
+      'sizes' => (object)[
+        'medium' => $image['sizes']['medium']
+      ]
+    ];
 
-      $actual = jcdNormalizeImage($image);
-      $this->assertEquals($expected, $actual);
-    }
+    $actual = jcdNormalizeImage($image);
+    $this->assertEquals($expected, $actual);
+  }
 }
