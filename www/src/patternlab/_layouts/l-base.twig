@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
 
-  {% include 'includes/head.twig' %}
+  {% include 'includes/l-head.twig' %}
 
   <body class="{{ body_class }} {{ is_mobile ? 'is-mobile' : '' }}">
 
@@ -9,7 +9,9 @@
     {% include 'includes/l-header.twig' %}
 
     <main>
-      {{ content }}
+      {% block content %}
+        {# Main content goes here... #}
+      {% endblock content %}
     </main>
 
     {% include 'includes/l-footer.twig' %}

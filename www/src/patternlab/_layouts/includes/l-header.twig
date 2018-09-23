@@ -1,7 +1,11 @@
+{% set items = menus.main_menu.items %}
+
 <header>
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
+      {% for item in items %}
+        <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+      {% endfor %}
     </ul>
   </nav>
 </header>
