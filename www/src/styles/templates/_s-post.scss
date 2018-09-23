@@ -18,7 +18,6 @@
   }
 
   p {
-    @extend .h-p;
     margin: $padding-xs 0;
   }
 
@@ -28,7 +27,7 @@
   }
 
   i, em {
-    @extend .h-em;
+    font-style: italic;
   }
 
   sup {

@@ -29,8 +29,11 @@ module.exports = (() => {
     src: `${project.src}/patternlab`,
     dest: `${dir.path}/patternlab`,
     public: './patternlab-core/public/**/*',
-    head: [`${project.src}/patternlab/_layouts/includes/head.twig`, `${project.src}/patternlab/_meta/_01-foot.twig`],
-    foot: [`${project.src}/patternlab/_layouts/includes/foot.twig`, `${project.src}/patternlab/_meta/_01-foot.twig`],
+    head: [`${project.src}/patternlab/_layouts/includes/l-head.twig`, `${project.src}/patternlab/_meta/_01-foot.twig`],
+    foot: [
+      `${project.src}/patternlab/_layouts/includes/l-scripts.twig`,
+      `${project.src}/patternlab/_meta/_01-foot.twig`
+    ],
     layouts: {
       src: `${project.src}/patternlab/_layouts/**/*.twig`,
       dest: `${project.views}/layouts`

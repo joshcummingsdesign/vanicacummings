@@ -102,7 +102,7 @@
     ],
     "arrow-parens": [
       "warn",
-      "always"
+      "as-needed"
     ],
     "arrow-spacing": [
       "warn",
