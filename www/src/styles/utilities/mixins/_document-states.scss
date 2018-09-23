@@ -1,0 +1,6 @@
+/*=============================================
+=               Document States               =
+=============================================*/
+
+@mixin is-mobile { body.is-mobile { @content; } }
+@mixin is-desktop { body:not(.is-mobile) { @content; } }

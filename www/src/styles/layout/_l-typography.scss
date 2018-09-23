@@ -1,0 +1,11 @@
+/*=============================================
+=                  Typograpy                  =
+=============================================*/
+
+// .h-h1 - .h-h6
+@for $i from 1 through 6 {
+  .h-h#{$i} {
+    font-family: $font-heading;
+    font-weight: $bold;
+  }
+}

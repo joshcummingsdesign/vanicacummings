@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="s-page" style="max-width: 600px;">
+
+        <h1>Spacing</h1>
+
+        <h2>General</h2>
+        <p>All spacing uses increments of 8px in rems (0.8rem).</p>
+        <p>There are three main spacing options found in _variables.scss:</p>
+        <pre><code>$padding-small: 2.4rem;<br>$padding-medium: 6.4rem;<br>$padding-large: 9.6rem;</code></pre>
+        <p>These classes are fed to the spacing classes found in _spacing.scss and are generally used for spacing around blocks of content.</p>
+        <p>It is perfectly accpetable to use regular margins and padding, just make sure they are multples of 0.8rem.</p>
+
+        <h2>Classes</h2>
+        <p>The spacing classes in _spacing.scss follow the following naming convention:</p>
+        <pre><code>h-mt-large-@m</code></pre>
+        <p>The first part is the helper prefix. The second part is the type [margin-top]. The third part is the spacing size [$padding-large]. The last part is the breakpoint [min-width: $medium].</p>
+        <p>Another example would be:</p>
+        <pre><code>h-pb-medium-@s</code></pre>
+        <p>[padding-bottom] [min-width: $small] [$padding-medium]</p>
+
+        <h2>Paragraphs</h2>
+        <p>There should be 2.4rem of space below paragraphs.</p>
+        <p>If thre is a button, increase the space to 3.2rem.</p>
+
+      </div>
+    </div>
+  </div>
+</div>

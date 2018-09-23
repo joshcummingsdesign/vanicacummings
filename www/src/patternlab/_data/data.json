@@ -1,0 +1,23 @@
+{
+  "body_class": "home",
+  "is_mobile": false,
+  "site": {
+    "url": "/",
+    "language": "en",
+    "title": "VanicaCummings"
+  },
+  "menus": {
+    "main": {
+      "items": [
+        {
+          "name": "Home",
+          "url": "#",
+          "target": "_self"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "2018 &copy; VanicaCummings"
+  }
+}

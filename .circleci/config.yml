@@ -1,0 +1,103 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.2-apache-node
+      - image: circleci/mariadb:10.3-ram
+        environment:
+          MYSQL_USER: root
+          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - composer-v005-{{ checksum "www/html/wp-content/plugins/vanicacummings/composer.lock" }}
+      - restore_cache:
+          keys:
+            - node-modules-v005-{{ checksum "www/package-lock.json" }}
+      - run:
+          name: Database Check
+          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
+      - run:
+          name: Install Server Dependencies
+          command: |
+            sudo apt install mysql-client subversion
+            sudo docker-php-ext-install mysqli
+            mkdir -p ~/test-results/mocha ~/test-results/phpunit
+      - run:
+          name: Install PHPUnit
+          command: |
+            sudo wget https://phar.phpunit.de/phpunit-6.1.phar
+            sudo chmod +x phpunit-6.1.phar
+            sudo mv phpunit-6.1.phar /usr/bin/phpunit
+      - run:
+          name: Install PHP_CodeSniffer
+          command: sudo pear install PHP_CodeSniffer
+      - run:
+          name: Spin up WordPress Test Environment
+          working_directory: www/html/wp-content/plugins/vanicacummings/tests/bin
+          command: ./install-wp-tests.sh wordpress_test root '' 127.0.0.1 latest
+      - run:
+          name: npm install
+          working_directory: www
+          command: |
+            if [ ! -e node_modules ]; then
+              npm install --silent
+            fi
+      - run:
+          name: composer install
+          working_directory: www/html/wp-content/plugins/vanicacummings
+          command: |
+            if [ ! -e vendor ]; then
+              composer install -o
+            fi
+      - save_cache:
+          key: composer-v005-{{ checksum "www/html/wp-content/plugins/vanicacummings/composer.lock" }}
+          paths:
+            - www/html/wp-content/plugins/vanicacummings/vendor
+      - save_cache:
+          key: node-modules-v005-{{ checksum "www/package-lock.json" }}
+          paths:
+            - www/node_modules
+      - run:
+          name: Compile
+          working_directory: www
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              npx gulp --production
+            else
+              npx gulp
+            fi
+      - run:
+          name: Check for Vulnerabilities
+          working_directory: www
+          command: npx retire -n -p
+      - run:
+          name: PHP Coding Standards
+          working_directory: www
+          command: phpcs --standard=phpcs.xml
+          when: always
+      - run:
+          name: JavaScript Unit Tests
+          working_directory: www
+          command: npx mocha --require babel-core/register --reporter mocha-junit-reporter --reporter-options mochaFile=~/test-results/mocha/results.xml src/scripts/tests/unit-tests
+          when: always
+      - run:
+          name: PHP Unit Tests
+          working_directory: www
+          command: phpunit --log-junit ~/test-results/phpunit/results.xml
+          when: always
+      - store_test_results:
+          path: ~/test-results
+      - store_artifacts:
+          path: ~/test-results
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "dev" ]; then
+              ./bin/deploy/dev/deploy-code.sh
+            elif [ "${CIRCLE_BRANCH}" == "staging" ]; then
+              ./bin/deploy/staging/deploy-code.sh
+            elif [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ./bin/deploy/prod/deploy-code.sh
+            fi

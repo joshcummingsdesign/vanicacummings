@@ -1,0 +1,81 @@
+/*=============================================
+=               Helpers - Text                =
+=============================================*/
+
+.h-text-center {
+  text-align: center !important;
+}
+
+.h-text-left {
+  text-align: left !important;
+}
+
+.h-text-right {
+  text-align: right !important;
+}
+
+.h-text-uppercase {
+  text-transform: uppercase !important;
+}
+
+/*----------  Colors  ----------*/
+
+.h-text-black {
+  color: $black !important;
+}
+
+.h-text-white {
+  color: $white !important;
+}
+
+.h-text-grey {
+  color: $grey !important;
+}
+
+.h-text-dark-grey {
+  color: $dark-grey !important;
+}
+
+.h-text-light-grey {
+  color: $light-grey !important;
+}
+
+.h-text-purple {
+  color: $purple !important;
+}
+
+.h-text-light-purple {
+  color: $light-purple !important;
+}
+
+.h-text-green {
+  color: $green !important;
+}
+
+.h-text-error {
+  color: $error !important;
+}
+
+
+/*----------  Line Breaks  ----------*/
+
+// To fix orphans and widows.
+.h-br { display: block; }
+// Max
+.h-br\@xl-max { @include breakpoint($xl - 1, max-width) { display: block; } }
+.h-br\@lg-max { @include breakpoint($lg - 1, max-width) { display: block; } }
+.h-br\@md-max { @include breakpoint($md - 1, max-width) { display: block; } }
+.h-br\@sm-max { @include breakpoint($sm - 1, max-width) { display: block; } }
+.h-br\@xs-max { @include breakpoint($xs - 1, max-width) { display: block; } }
+// Min
+.h-br\@xs { @include breakpoint($xs) { display: block; } }
+.h-br\@sm { @include breakpoint($sm) { display: block; } }
+.h-br\@md { @include breakpoint($md) { display: block; } }
+.h-br\@lg { @include breakpoint($lg) { display: block; } }
+.h-br\@xl { @include breakpoint($xl) { display: block; } }
+// Reset
+.h-br-reset\@xs { @include breakpoint($xs) { display: inline; } }
+.h-br-reset\@sm { @include breakpoint($sm) { display: inline; } }
+.h-br-reset\@md { @include breakpoint($md) { display: inline; } }
+.h-br-reset\@lg { @include breakpoint($lg) { display: inline; } }
+.h-br-reset\@xl { @include breakpoint($xl) { display: inline; } }

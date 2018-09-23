@@ -1,0 +1,47 @@
+/*=============================================
+=              Helpers - Section              =
+=============================================*/
+
+.h-section-width {
+  max-width: $section-width;
+  margin: 0 auto;
+}
+
+.h-section-padding {
+  padding-top: $padding-md;
+  padding-bottom: $padding-md;
+
+  @include breakpoint($xs) {
+    padding-top: $padding-lg;
+    padding-bottom: $padding-lg;
+  }
+
+  @include breakpoint($mobile-nav) {
+    padding-top: $padding-xl;
+    padding-bottom: $padding-xl;
+  }
+}
+
+.h-section-pt {
+  padding-top: $padding-md;
+
+  @include breakpoint($xs) {
+    padding-top: $padding-lg;
+  }
+
+  @include breakpoint($mobile-nav) {
+    padding-top: $padding-xl;
+  }
+}
+
+.h-section-pb {
+  padding-bottom: $padding-md;
+
+  @include breakpoint($xs) {
+    padding-bottom: $padding-lg;
+  }
+
+  @include breakpoint($mobile-nav) {
+    padding-bottom: $padding-xl;
+  }
+}

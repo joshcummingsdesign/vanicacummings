@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+
+  {% include 'includes/head.twig' %}
+
+  <body class="{{ body_class }} {{ is_mobile ? 'is-mobile' : '' }}">
+
+    {% include 'includes/l-svgs.twig' %}
+    {% include 'includes/l-header.twig' %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% include 'includes/l-footer.twig' %}
+    {% include 'includes/l-scripts.twig' %}
+
+  </body>
+
+</html>

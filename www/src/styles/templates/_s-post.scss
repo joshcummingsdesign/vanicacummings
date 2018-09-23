@@ -1,0 +1,159 @@
+/*=============================================
+=                    Post                     =
+=============================================*/
+
+.s-post {
+  color: $black;
+
+  // h1 - h6
+  @for $i from 1 through 6 {
+    h#{$i} {
+      @extend .h-h#{$i};
+      margin: $padding-xs 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    @extend .h-p;
+    margin: $padding-xs 0;
+  }
+
+  b, strong {
+    font-weight: $bold;
+    color: $grey;
+  }
+
+  i, em {
+    @extend .h-em;
+  }
+
+  sup {
+    vertical-align: super;
+    font-size: smaller;
+  }
+
+  figcaption {
+    font-size: 1.4rem;
+    color: $grey;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px dashed $grey;
+    width: 100%;
+    margin: $padding-xxs 0;
+    display: inline-block;
+  }
+
+  /*----------  Links  ----------*/
+
+  a {
+    color: $grey;
+    text-decoration: none;
+    transition: color $time $easing;
+
+    &:focus, &:hover {
+      color: darken($grey, 10%);
+      text-decoration: underline;
+    }
+  }
+
+  /*----------  Lists  ----------*/
+
+  ul {
+    list-style-type: disc;
+    padding-left: $padding-xs;
+    font-size: 1.5rem;
+  }
+
+  ol {
+    list-style-type: decimal;
+    list-style-type: none;
+    font-size: 1.5rem;
+
+    li {
+      counter-increment: step-counter;
+      position: relative;
+      padding-left: $padding-xs;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: counter(step-counter)'.';
+        font-weight: $bold;
+      }
+
+      // p tag inside ordered list
+      // usually for syntax highlighting
+      p {
+        display: inline;
+        font-size: 1.5rem;
+      }
+    }
+
+    // Nested ul
+    ul {
+      li {
+        counter-reset: step-counter;
+        padding-left: 0;
+        font-weight: $normal;
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    // Nested ol
+    ol {
+      list-style-type: lower-roman;
+      li {
+        counter-reset: step-counter;
+        padding-left: 0;
+        margin-left: $padding-xs * 2;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  li {
+    margin: 1rem 0;
+    color: $grey;
+  }
+
+  /*----------  Blockquotes  ----------*/
+
+  blockquote {
+    background-color: $off-white;
+    border-left: 5px solid $grey;
+    margin: $padding-xs 0;
+    padding: 1rem 2rem;
+    quotes: "\201C""\201D""\2018""\2019";
+    color: $grey;
+
+    &:before {
+      content: open-quote;
+    }
+
+    &:after {
+      content: close-quote;
+      font-size: 0;
+    }
+  }
+
+  blockquote p {
+    display: inline;
+  }
+
+  /*----------  Videos  ----------*/
+
+  iframe {
+    width: 100%;
+  }
+}

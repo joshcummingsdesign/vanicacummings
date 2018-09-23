@@ -1,0 +1,21 @@
+{
+  "name": "jcd/vanicacummings",
+  "version": "1.0.0",
+  "license": "GPL-2.0",
+  "description": "The VanicaCummings Plugin",
+  "authors": [
+    {
+      "name": "Josh Cummings",
+      "email": "hello@joshcummingsdesign.com",
+      "homepage": "https://joshcummingsdesign.com"
+    }
+  ],
+  "require": {
+    "timber/timber": "~1.4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "VanicaCummings\\": "./"
+    }
+  }
+}
