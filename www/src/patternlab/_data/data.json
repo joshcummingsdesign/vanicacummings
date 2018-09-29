@@ -4,7 +4,21 @@
   "site": {
     "url": "/",
     "language": "en",
-    "title": "VanicaCummings"
+    "title": "VanicaCummings",
+    "logo": {
+      "src": "/assets/images/brand/vc-wordmark.svg",
+      "alt": "VanicaCummings"
+    }
+  },
+  "pagination": {
+    "prev": {
+      "name": "Capital Campaigns",
+      "url": "#"
+    },
+    "next": {
+      "name": "Philanthropy",
+      "url": "#"
+    }
   },
   "menus": {
     "main": {
@@ -17,7 +31,486 @@
       ]
     }
   },
+  "organisms": {
+    "hero": {
+      "heading": "Cras mattis consectetur purus sit amet fermentum.",
+      "opt_text": "Eldwood Hopkins, Emerging Markets, LLC",
+      "opt_button": {
+        "name": "View Book",
+        "url": "#",
+        "target": "_self"
+      }
+    },
+    "image_text": {
+      "image": {
+        "src": "/assets/images/brand/vc-logo.svg",
+        "alt": "VanicaCummings"
+      },
+      "heading": "Cras justo odio, dapibus ac facilisis in, egestas eget quam.",
+      "text": "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+    },
+    "content": {
+      "heading": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+      "text": "<p>Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p><p>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
+    },
+    "four_column_image_text": {
+      "opt_heading": "What We Do",
+      "opt_text": "Unleashing the power and capacity of people to create change.",
+      "items": [
+        {
+          "image": {
+            "src": "https://picsum.photos/300/300",
+            "alt": "image"
+          },
+          "heading": "Sharing Lessons",
+          "text": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+        },
+        {
+          "image": {
+            "src": "https://picsum.photos/300/300",
+            "alt": "image"
+          },
+          "heading": "Stakeholder Strategies",
+          "text": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+        },
+        {
+          "image": {
+            "src": "https://picsum.photos/300/300",
+            "alt": "image"
+          },
+          "heading": "Participitory Planning",
+          "text": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+        },
+        {
+          "image": {
+            "src": "https://picsum.photos/300/300",
+            "alt": "image"
+          },
+          "heading": "Capacity Building & Resources",
+          "text": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+        }
+      ],
+      "opt_button": {
+        "name": "Learn More",
+        "url": "#",
+        "target": "_self"
+      }
+    },
+    "one_column_people_small": {
+      "opt_heading": "About Us",
+      "people": [
+        {
+          "image": {
+            "src": "https://picsum.photos/600/600",
+            "alt": "person"
+          },
+          "name": "Jennifer Vanica",
+          "title": "Senior Fellow at PolicyLink",
+          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+          "social_items": [
+            {
+              "name": "twitter",
+              "url": "#"
+            },
+            {
+              "name": "linkedin",
+              "url": "#"
+            },
+            {
+              "name": "email",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "image": {
+            "src": "https://picsum.photos/600/600",
+            "alt": "person"
+          },
+          "name": "Ron Cummings",
+          "title": "Community Change Leader",
+          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+          "social_items": [
+            {
+              "name": "twitter",
+              "url": "#"
+            },
+            {
+              "name": "linkedin",
+              "url": "#"
+            },
+            {
+              "name": "email",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "opt_button": {
+        "name": "Learn More",
+        "url": "#",
+        "target": "_self"
+      }
+    },
+    "one_column_people": {
+      "opt_heading": "About the Author",
+      "people": [
+        {
+          "image": {
+            "src": "https://picsum.photos/600/600",
+            "alt": "person"
+          },
+          "name": "Jennifer Vanica",
+          "title": "Senior Fellow at PolicyLink",
+          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+          "social_items": [
+            {
+              "name": "twitter",
+              "url": "#"
+            },
+            {
+              "name": "linkedin",
+              "url": "#"
+            },
+            {
+              "name": "email",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "image": {
+            "src": "https://picsum.photos/600/600",
+            "alt": "person"
+          },
+          "name": "Ron Cummings",
+          "title": "Community Change Leader",
+          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+          "social_items": [
+            {
+              "name": "twitter",
+              "url": "#"
+            },
+            {
+              "name": "linkedin",
+              "url": "#"
+            },
+            {
+              "name": "email",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "opt_button": {
+        "name": "Learn More",
+        "url": "#",
+        "target": "_self"
+      }
+    },
+    "two_column_people": {
+      "opt_heading": "Who We Are",
+      "people": [
+        {
+          "image": {
+            "src": "https://picsum.photos/600/600",
+            "alt": "person"
+          },
+          "name": "Jennifer Vanica",
+          "title": "Senior Fellow at PolicyLink",
+          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+          "social_items": [
+            {
+              "name": "twitter",
+              "url": "#"
+            },
+            {
+              "name": "linkedin",
+              "url": "#"
+            },
+            {
+              "name": "email",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "image": {
+            "src": "https://picsum.photos/600/600",
+            "alt": "person"
+          },
+          "name": "Ron Cummings",
+          "title": "Community Change Leader",
+          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+          "social_items": [
+            {
+              "name": "twitter",
+              "url": "#"
+            },
+            {
+              "name": "linkedin",
+              "url": "#"
+            },
+            {
+              "name": "email",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "opt_button": {
+        "name": "Learn More",
+        "url": "#",
+        "target": "_self"
+      }
+    },
+    "three_column_image_grid": {
+      "opt_heading": "Our Work",
+      "items": [
+        {
+          "opt_heading": "Community Development",
+          "image": {
+            "src": "https://picsum.photos/480/480",
+            "alt": "photo"
+          },
+          "opt_link": {
+            "url": "#",
+            "target": "_self"
+          }
+        },
+        {
+          "opt_heading": "Philanthropy",
+          "image": {
+            "src": "https://picsum.photos/480/480",
+            "alt": "photo"
+          },
+          "opt_link": {
+            "url": "#",
+            "target": "_self"
+          }
+        },
+        {
+          "opt_heading": "Collaborations",
+          "image": {
+            "src": "https://picsum.photos/480/480",
+            "alt": "photo"
+          },
+          "opt_link": {
+            "url": "#",
+            "target": "_self"
+          }
+        },
+        {
+          "opt_heading": "Social Enterprises",
+          "image": {
+            "src": "https://picsum.photos/480/480",
+            "alt": "photo"
+          },
+          "opt_link": {
+            "url": "#",
+            "target": "_self"
+          }
+        },
+        {
+          "opt_heading": "Non-Profits",
+          "image": {
+            "src": "https://picsum.photos/480/480",
+            "alt": "photo"
+          },
+          "opt_link": {
+            "url": "#",
+            "target": "_self"
+          }
+        },
+        {
+          "opt_heading": "Capital Campaigns",
+          "image": {
+            "src": "https://picsum.photos/480/480",
+            "alt": "photo"
+          },
+          "opt_link": {
+            "url": "#",
+            "target": "_self"
+          }
+        }
+      ],
+      "opt_button": {
+        "name": "Learn More",
+        "url": "#",
+        "target": "_self"
+      }
+    },
+    "testimonial_carousel": {
+      "opt_heading": "What People Are Saying",
+      "items": [
+        {
+          "image": {
+            "src": "https://picsum.photos/200/200",
+            "alt": "image"
+          },
+          "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+          "name": "Moki Macias",
+          "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+        },
+        {
+          "image": {
+            "src": "https://picsum.photos/200/200",
+            "alt": "image"
+          },
+          "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+          "name": "Moki Macias",
+          "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+        },
+        {
+          "image": {
+            "src": "https://picsum.photos/200/200",
+            "alt": "image"
+          },
+          "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+          "name": "Moki Macias",
+          "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+        }
+      ]
+    },
+    "text_image_list": {
+      "heading": "Our Approach",
+      "text": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+      "image": {
+        "src": "https://picsum.photos/800/600",
+        "alt": "image"
+      },
+      "list": [
+        "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
+        "Etiam porta sem malesuada magna mollis euismod.",
+        "Donec ullamcorper nulla non metus auctor fringilla.",
+        "Cras mattis consectetur purus sit amet fermentum.",
+        "Nullam id dolor id nibh ultricies vehicula ut id elit."
+      ],
+      "button": {
+        "name": "Learn More",
+        "url": "#",
+        "target": "_self"
+      }
+    },
+    "trust_logos": {
+      "opt_heading": "Also Available On",
+      "logos": [
+        {
+          "src": "/assets/images/trust-logos/amazon.svg",
+          "alt": "amazon"
+        },
+        {
+          "src": "/assets/images/trust-logos/barnes-noble.svg",
+          "alt": "barnes and noble"
+        }
+      ]
+    },
+    "text_featured": {
+      "featured_text": "Featured",
+      "items": [
+        {
+          "heading": "Sharing Lessons",
+          "text": "<p>Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis.</p><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus.</p>",
+          "featured": {
+            "name": "Courageous Philanthropy",
+            "image": {
+              "src": "https://picsum.photos/600/300",
+              "alt": "photo"
+            },
+            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+            "link": {
+              "name": "Read More",
+              "url": "#",
+              "target": "_self"
+            }
+          }
+        },
+        {
+          "heading": "Stakeholder Strategies",
+          "text": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p><h4>VanicaCummings can help your team:</h4><ul><li>Curabitur blandit tempus porttitor</li><li>Donec id elit non mi porta gravida at eget metus</li><li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus</li><li>Nullam id dolor id nibh ultricies vehicula ut id elit</li></ul>",
+          "featured": {
+            "name": "Courageous Philanthropy",
+            "image": {
+              "src": "https://picsum.photos/600/300",
+              "alt": "photo"
+            },
+            "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+            "link": {
+              "name": "Read More",
+              "url": "#",
+              "target": "_self"
+            }
+          }
+        }
+      ]
+    },
+    "three_column_cards": {
+      "opt_heading": "Achievements",
+      "items": [
+        {
+          "caption": "San Diego, CA",
+          "heading": "Market Creek Plaza",
+          "text": "Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod."
+        },
+        {
+          "caption": "2011",
+          "heading": "Gold-Designated Catalyst Project, California Sustainable Strategies Pilot Program",
+          "opt_subheading": "California Department of Housing and Community Development",
+          "text": "The Village at Market Creek"
+        }
+      ]
+    }
+  },
   "footer": {
+    "call_to_action": {
+      "heading": "Get Involved",
+      "buttons": [
+        {
+          "name": "View Book",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "Contact",
+          "url": "#",
+          "target": "_self"
+        }
+      ]
+    },
+    "subscribe": {
+      "heading": "Keep In Touch",
+      "text": "Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+      "form": {
+        "placeholder": "Email",
+        "button_text": "Subscribe"
+      }
+    },
+    "sitemap_text": "Sitemap",
+    "contact": {
+      "heading": "Contact",
+      "email": "change@vanicacummings.com",
+      "phone": "619-840-0640"
+    },
+    "social": [
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Twitter",
+        "url": "#"
+      }
+    ],
+    "terms": [
+      {
+        "name": "Terms & Conditions",
+        "url": "#"
+      },
+      {
+        "name": "Privacy Policy",
+        "url": "#"
+      }
+    ],
     "copyright": "2018 &copy; VanicaCummings"
   }
 }
