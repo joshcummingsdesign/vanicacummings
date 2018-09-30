@@ -1,0 +1,20 @@
+{% set data = organisms.hero %}
+
+<section class="o-hero" style="background-image: url('{{ data.bg_img }}');">
+  <div class="o-hero__overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="o-hero__content">
+          <h1 class="h-h1 o-hero__heading">{{ data.heading }}</h1>
+          {% if data.opt_text %}
+            <p class="h-p o-hero__text">{{ data.opt_text }}</p>
+          {% endif %}
+          {% if data.opt_button %}
+            <a class="a-button a-button--light o-hero__button" href="{{ data.opt_button.url }}" target="{{ data.opt_button.target }}">{{ data.opt_button.name }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -5,7 +5,35 @@
 // .h-h1 - .h-h6
 @for $i from 1 through 6 {
   .h-h#{$i} {
-    font-family: $font-heading;
     font-weight: $bold;
+  }
+}
+
+.h-h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+
+  @include breakpoint($sm) {
+    font-size: 3.2rem;
+  }
+
+  @include breakpoint($md) {
+    font-size: 3.6rem;
+  }
+
+  @include breakpoint($lg) {
+    font-size: 4rem;
+  }
+}
+
+.h-p {
+  font-size: 1.6rem;
+
+  @include breakpoint($md) {
+    font-size: 1.7rem;
+  }
+
+  @include breakpoint($lg) {
+    font-size: 1.8rem;
   }
 }

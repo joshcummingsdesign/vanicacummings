@@ -26,11 +26,18 @@ class ThemeAssets {
    */
   public function enqueue() {
 
+    // fonts
+    wp_enqueue_style(
+      'jcd/fonts',
+      'https://fonts.googleapis.com/css?family=Lato:300,700',
+      null
+    );
+
     // main.css
     wp_enqueue_style(
       'jcd/css',
       AssetPath::get('styles/main.css'),
-      ['jcd/prater-font'],
+      ['jcd/fonts'],
       null
     );
 

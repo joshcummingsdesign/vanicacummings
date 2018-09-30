@@ -3,11 +3,10 @@
 =============================================*/
 
 // Fonts
-$stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$stack: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font: $stack;
-$font-heading: $stack;
 $mono: monospace;
 
 // Font weights
-$normal: normal;
-$bold: bold;
+$normal: 300;
+$bold: 700;

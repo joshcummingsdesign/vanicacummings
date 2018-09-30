@@ -5,6 +5,16 @@
 /*----------  Highlight  ----------*/
 
 @mixin highlight {
-  &::selection      {@content}
-  &::-moz-selection {@content}
+  &::selection {
+    @content;
+  }
+  &::-moz-selection {
+    @content;
+  }
+}
+
+/*----------  Text Shadow  ----------*/
+
+@mixin text-shadow {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }

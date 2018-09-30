@@ -33,8 +33,9 @@
   },
   "organisms": {
     "hero": {
-      "heading": "Cras mattis consectetur purus sit amet fermentum.",
-      "opt_text": "Eldwood Hopkins, Emerging Markets, LLC",
+      "bg_img": "https://picsum.photos/1440/600",
+      "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
+      "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
       "opt_button": {
         "name": "View Book",
         "url": "#",

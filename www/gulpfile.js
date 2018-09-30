@@ -41,7 +41,8 @@ gulp.task('watch', () => {
       whitelist: config.server.whitelist,
       blacklist: config.server.blacklist
     },
-    open: false
+    open: false,
+    online: false
   });
   plugins.watch(`${config.content.path}/**/*.php`, () => gulp.start('reload'));
   plugins.watch(config.scripts.adminWatch, () => gulp.start('admin-scripts-watch'));
