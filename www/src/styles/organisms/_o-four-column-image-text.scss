@@ -1,0 +1,28 @@
+/*=============================================
+=           Four Column Image Text            =
+=============================================*/
+
+.o-four-column-image-text {
+  background-color: $purple;
+  color: $white;
+  text-align: center;
+}
+
+.o-four-column-image-text__item {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.o-four-column-image-text__image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.o-four-column-image-text__button {
+  margin: $padding-md auto 0;
+}

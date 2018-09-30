@@ -51,8 +51,8 @@
       "text": "With an award-winning track record in building teams that are inclusive, innovative, and can achieve inspired action, VanicaCummings works with you to develop the culture, teamwork, and participitory process for giving voice to the widsom, experience, and creativity of your stakeholders."
     },
     "content": {
-      "heading": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-      "text": "<p>Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p><p>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
+      "heading": "It is time to forge a new, more courageous relationship between foundations and the communities we serve.",
+      "text": "<p>Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis.</p><p>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
     },
     "four_column_image_text": {
       "opt_heading": "What We Do",
@@ -64,7 +64,7 @@
             "alt": "image"
           },
           "heading": "Sharing Lessons",
-          "text": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+          "text": "We write, blog, present, and engage the community building field in expending the conversation about innovative structures and strategies for accelerating inspired social change."
         },
         {
           "image": {
@@ -72,7 +72,7 @@
             "alt": "image"
           },
           "heading": "Stakeholder Strategies",
-          "text": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+          "text": "We co-design wasy to lift the vision and voice of your stakeholders, as well as manage and support large-scale teamwork."
         },
         {
           "image": {
@@ -80,7 +80,7 @@
             "alt": "image"
           },
           "heading": "Participitory Planning",
-          "text": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+          "text": "We facilitate and train teams in an inclusive process to unleash people's natural creativity and problem-solving and encourage teams to dream big, break through, and own the plan."
         },
         {
           "image": {
@@ -88,7 +88,7 @@
             "alt": "image"
           },
           "heading": "Capacity Building & Resources",
-          "text": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+          "text": "We coach stakeholder teams in strengthening their organizations and mobilizing the resources needed to put wheels under bold ideas."
         }
       ],
       "opt_button": {
@@ -428,7 +428,7 @@
         },
         {
           "heading": "Stakeholder Strategies",
-          "text": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p><h4>VanicaCummings can help your team:</h4><ul><li>Curabitur blandit tempus porttitor</li><li>Donec id elit non mi porta gravida at eget metus</li><li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus</li><li>Nullam id dolor id nibh ultricies vehicula ut id elit</li></ul>",
+          "text": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p><h5>VanicaCummings can help your team:</h5><ul><li>Curabitur blandit tempus porttitor</li><li>Donec id elit non mi porta gravida at eget metus</li><li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus</li><li>Nullam id dolor id nibh ultricies vehicula ut id elit</li></ul>",
           "featured": {
             "name": "Courageous Philanthropy",
             "image": {

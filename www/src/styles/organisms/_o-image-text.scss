@@ -6,11 +6,6 @@
   text-align: center;
 }
 
-.o-image-text__content {
-  max-width: 50rem;
-  margin: 0 auto;
-}
-
 .o-image-text__image {
   max-width: 9rem;
 
@@ -28,10 +23,15 @@
 }
 
 .o-image-text__heading {
-  margin-top: $padding-xxs;
-  margin-bottom: $padding-xxs;
+  max-width: 58rem;
+  margin: $padding-xxs auto;
+
+  @include breakpoint($sm) {
+    max-width: 60rem;
+  }
 }
 
 .o-image-text__text {
-  margin-top: $padding-xxs;
+  max-width: 51rem;
+  margin: $padding-xxs auto 0;
 }

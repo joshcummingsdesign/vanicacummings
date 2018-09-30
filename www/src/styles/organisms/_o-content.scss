@@ -1,0 +1,28 @@
+/*=============================================
+=                   Content                   =
+=============================================*/
+
+.o-content {
+  text-align: center;
+  background-color: $purple;
+  color: $white;
+}
+
+.o-content__heading {
+  max-width: 58rem;
+  margin: 0 auto $padding-xxs;
+
+  @include breakpoint($sm) {
+    max-width: 60rem;
+  }
+}
+
+.o-content__text {
+  max-width: 51rem;
+  margin: 0 auto;
+
+  p {
+    margin-top: $padding-xxs;
+    margin-bottom: $padding-xxs;
+  }
+}

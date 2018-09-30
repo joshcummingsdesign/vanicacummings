@@ -1,0 +1,15 @@
+{% set data = organisms.content %}
+
+<section class="o-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="h-h3 o-content__heading">{{ data.heading }}</h3>
+        {% include "a-hr.twig" %}
+        <div class="o-content__text">
+          {{ data.text | raw }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -11,7 +11,19 @@
             <p class="h-p o-hero__text">{{ data.opt_text }}</p>
           {% endif %}
           {% if data.opt_button %}
-            <a class="a-button a-button--light o-hero__button" href="{{ data.opt_button.url }}" target="{{ data.opt_button.target }}">{{ data.opt_button.name }}</a>
+            <div class="o-hero__button">
+              {%
+                include "a-button.twig"
+                with {
+                  data: {
+                    style: 'light',
+                    url: data.opt_button.url,
+                    target: data.opt_button.target,
+                    name: data.opt_button.name
+                  }
+                }
+              %}
+            </div>
           {% endif %}
         </div>
       </div>
