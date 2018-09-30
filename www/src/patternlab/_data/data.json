@@ -44,11 +44,11 @@
     },
     "image_text": {
       "image": {
-        "src": "/assets/images/brand/vc-logo.svg",
+        "src": "/wp-content/themes/vanicacummings/dist/images/brand/vc-logo.svg",
         "alt": "VanicaCummings"
       },
-      "heading": "Cras justo odio, dapibus ac facilisis in, egestas eget quam.",
-      "text": "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+      "heading": "We are think-partners, coaches, and facilitators with a mission of building communities of change.",
+      "text": "With an award-winning track record in building teams that are inclusive, innovative, and can achieve inspired action, VanicaCummings works with you to develop the culture, teamwork, and participitory process for giving voice to the widsom, experience, and creativity of your stakeholders."
     },
     "content": {
       "heading": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",

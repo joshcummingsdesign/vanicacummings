@@ -32,6 +32,16 @@
   color: $grey !important;
 }
 
+/*----------  Divider  ----------*/
+
+.h-hr {
+  width: 80%;
+  max-width: 40rem;
+  background: url('../images/patterns/divider.svg');
+  height: 3px;
+  display: inline-block;
+}
+
 /*----------  Line Breaks  ----------*/
 
 // To fix orphans and widows.

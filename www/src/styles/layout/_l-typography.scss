@@ -26,6 +26,23 @@
   }
 }
 
+.h-h2 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+
+  @include breakpoint($sm) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint($md) {
+    font-size: 3.2rem;
+  }
+
+  @include breakpoint($lg) {
+    font-size: 3.4rem;
+  }
+}
+
 .h-p {
   font-size: 1.6rem;
 

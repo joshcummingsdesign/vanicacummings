@@ -1,0 +1,16 @@
+{% set data = organisms.image_text %}
+
+<section class="o-image-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="o-image-text__content">
+          <img class="o-image-text__image" src="{{ data.image.src }}" alt="{{ data.image.alt }}">
+          <h2 class="h-h2 o-image-text__heading">{{ data.heading }}</h2>
+          <div class="h-hr"></div>
+          <p class="h-p o-image-text__text">{{ data.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
