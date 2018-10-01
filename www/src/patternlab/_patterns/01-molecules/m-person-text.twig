@@ -1,0 +1,18 @@
+{% set data = data ? data : molecules.person_text %}
+
+<div class="m-person-text">
+  <h4 class="h-h4 m-person-text__name">{{ data.name }}</h4>
+  <p class="m-person-text__title">{{ data.title }}</p>
+  <p class="m-person-text__description">{{ data.description }}</p>
+  {% if data.social_items|length > 0 %}
+    <ul class="m-person-text__social-items">
+      {% for item in data.social_items %}
+        <li class="m-person-text__social-item">
+          <a class="m-person-text__social-link" href="{{ item.url }}" target="_blank">
+            {% include "a-icon.twig" with { data: { name: item.name, title: item.name } } %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

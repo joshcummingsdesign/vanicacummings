@@ -31,6 +31,44 @@
       ]
     }
   },
+  "atoms": {
+    "icon": {
+      "name": "twitter",
+      "title": "twitter"
+    },
+    "button": {
+      "name": "Learn More",
+      "url": "#",
+      "target": "_self"
+    }
+  },
+  "molecules": {
+    "person_image": {
+      "image": {
+        "src": "https://picsum.photos/600/600",
+        "alt": "person"
+      }
+    },
+    "person_text": {
+      "name": "Ron Cummings",
+      "title": "Community Change Leader",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+      "social_items": [
+        {
+          "name": "twitter",
+          "url": "#"
+        },
+        {
+          "name": "linkedin",
+          "url": "#"
+        },
+        {
+          "name": "email",
+          "url": "#"
+        }
+      ]
+    }
+  },
   "organisms": {
     "hero": {
       "bg_img": "https://picsum.photos/1440/600",

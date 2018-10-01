@@ -1,1 +1,3 @@
+{% set data = data ? data : atoms.button %}
+
 <a class="a-button a-button--{{ data.style }}" href="{{ data.url }}" target="{{ data.target }}">{{ data.name }}</a>

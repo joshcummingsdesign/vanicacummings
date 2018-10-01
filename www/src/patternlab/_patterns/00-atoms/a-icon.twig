@@ -1,0 +1,6 @@
+{% set data = data ? data : atoms.icon %}
+
+<svg class="a-icon a-icon--{{ data.name }}">
+  <title>{{ data.title }}</title>
+  <use xlink:href="#icon-{{ data.name }}"></use>
+</svg>
