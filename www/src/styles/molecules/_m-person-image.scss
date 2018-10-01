@@ -1,0 +1,14 @@
+/*=============================================
+=                Person Image                 =
+=============================================*/
+
+.m-person-image {
+  width: 25rem;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  img {
+    width: 100%;
+  }
+}

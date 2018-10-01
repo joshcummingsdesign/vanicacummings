@@ -1,0 +1,57 @@
+/*=============================================
+=                 Person Text                 =
+=============================================*/
+
+.m-person-text {
+
+  .a-icon {
+    font-size: 0.9rem;
+    color: $purple;
+    transition: color $time $easing;
+  }
+}
+
+.m-person-text__name {
+  line-height: 1.3;
+}
+
+.m-person-text__title {
+  color: $purple;
+  margin-bottom: -0.6rem;
+}
+
+.m-person-text__description {
+
+  a {
+    color: $purple;
+    display: inline-block;
+    margin-bottom: $padding-xxs;
+  }
+
+  p {
+    margin: $padding-xxs 0;
+  }
+}
+
+.m-person-text__social-items {
+  padding-top: $padding-tiny;
+}
+
+.m-person-text__social-item {
+  display: inline-block;
+  margin-right: 2px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.m-person-text__social-link {
+
+  &:focus, &:hover {
+
+    .a-icon {
+      color: $black;
+    }
+  }
+}

@@ -52,7 +52,7 @@
     "person_text": {
       "name": "Ron Cummings",
       "title": "Community Change Leader",
-      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+      "description": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
       "social_items": [
         {
           "name": "twitter",
@@ -257,7 +257,7 @@
           },
           "name": "Jennifer Vanica",
           "title": "Senior Fellow at PolicyLink",
-          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+          "description": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
           "social_items": [
             {
               "name": "twitter",
@@ -280,7 +280,7 @@
           },
           "name": "Ron Cummings",
           "title": "Community Change Leader",
-          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+          "description": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
           "social_items": [
             {
               "name": "twitter",

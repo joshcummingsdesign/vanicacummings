@@ -3,7 +3,12 @@
 <div class="m-person-text">
   <h4 class="h-h4 m-person-text__name">{{ data.name }}</h4>
   <p class="m-person-text__title">{{ data.title }}</p>
-  <p class="m-person-text__description">{{ data.description }}</p>
+  <div class="m-person-text__description">
+    {{ data.description | raw }}
+    {% if data.opt_link %}
+      <a href="{{ data.opt_link.url }}" target={{ data.opt_link.target }}>{{ data.opt_link.name }}</a>
+    {% endif %}
+  </div>
   {% if data.social_items|length > 0 %}
     <ul class="m-person-text__social-items">
       {% for item in data.social_items %}
