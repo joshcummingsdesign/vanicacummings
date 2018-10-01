@@ -67,6 +67,17 @@
           "url": "#"
         }
       ]
+    },
+    "image_card": {
+      "opt_heading": "Community Development",
+      "image": {
+        "src": "https://picsum.photos/480/480",
+        "alt": "photo"
+      },
+      "opt_link": {
+        "url": "#",
+        "target": "_self"
+      }
     }
   },
   "organisms": {

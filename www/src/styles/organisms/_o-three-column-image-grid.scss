@@ -1,0 +1,26 @@
+/*=============================================
+=           Three Column Image Grid           =
+=============================================*/
+
+.o-three-column-image-grid {
+  background-color: $purple;
+  text-align: center;
+  color: $white;
+
+  .m-image-card {
+    margin-top: $grid-gutter-width;
+  }
+}
+
+.o-three-column-image-grid__inner {
+  max-width: 144rem;
+  margin: 0 auto;
+
+  @include breakpoint($sm - 1, max-width) {
+    max-width: 40rem;
+  }
+}
+
+.o-three-column-image-grid__button {
+  margin: $padding-md auto 0;
+}
