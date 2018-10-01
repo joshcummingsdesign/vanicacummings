@@ -1,0 +1,6 @@
+{% set data = data ? data : molecules.testimonial_card %}
+
+<img src="{{ data.image.src }}" alt="{{ data.image.alt }}">
+<p>{{ data.text }}</p>
+<p>{{ data.name }}</p>
+<p>{{ data.title }}</p>

@@ -1,5 +1,11 @@
+import TestimonialCarousel from '../organisms/testimonial-carousel';
+
 export default class MainController {
+  constructor() {
+    this.testimonialCarousel = new TestimonialCarousel();
+  }
+
   init() {
-    console.log(this);
+    this.testimonialCarousel.init();
   }
 }

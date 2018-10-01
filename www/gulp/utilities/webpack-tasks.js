@@ -1,6 +1,7 @@
 module.exports = (entries, presets, compact, isProduction, plugins, lazypipe) =>
-  lazypipe()
-    .pipe(plugins.webpackStream, {
+  lazypipe().pipe(
+    plugins.webpackStream,
+    {
       cache: true,
       entry: entries,
       output: {
@@ -24,11 +25,13 @@ module.exports = (entries, presets, compact, isProduction, plugins, lazypipe) =>
       plugins: [
         new plugins.webpackStream.webpack.ProvidePlugin({
           $: 'jquery',
-          jQuery: 'jquery'
+          jQuery: 'jquery',
+          'window.jQuery': 'jquery'
         }),
         new plugins.webpack.optimize.UglifyJsPlugin({
-          compressor: {warnings: false},
-          output: {comments: false}
+          compressor: { warnings: false },
+          output: { comments: false }
         })
       ]
-    })();
+    }
+  )();

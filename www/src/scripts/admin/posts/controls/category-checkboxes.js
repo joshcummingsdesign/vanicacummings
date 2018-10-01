@@ -3,7 +3,7 @@ class CategoryCheckboxes {
     this.checklistSelector = '[id$="-all"] > ul.categorychecklist';
   }
 
-  _cacheDomElements() {
+  cacheDomElements() {
     const p = new Promise(resolve => {
       this.$checklist = $(this.checklistSelector);
       resolve();
@@ -14,7 +14,7 @@ class CategoryCheckboxes {
   /**
    * Scroll the taxonomy checklist to a checked item.
    */
-  _scrollToCheckedItems() {
+  scrollToCheckedItems() {
     this.$checklist.each((i, checklist) => {
       const $list = $(checklist);
 
@@ -32,7 +32,7 @@ class CategoryCheckboxes {
   }
 
   init() {
-    this._cacheDomElements().then(() => this._scrollToCheckedItems());
+    this.cacheDomElements().then(() => this.scrollToCheckedItems());
   }
 }
 

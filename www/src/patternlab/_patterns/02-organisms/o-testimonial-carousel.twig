@@ -1,0 +1,31 @@
+{% set data = organisms.testimonial_carousel %}
+
+<section class="o-testimonial-carousel">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="o-testimonial-carousel__carousel owl-carousel js-testimonial-carousel">
+
+          {% for card in data.cards %}
+
+            <div class="o-testimonial-carousel__item item">
+              {%
+                include "m-testimonial-card.twig"
+                with {
+                  data: {
+                    image: card.image,
+                    text: card.text,
+                    name: card.name,
+                    title: card.title
+                  }
+                }
+              %}
+            </div>
+
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

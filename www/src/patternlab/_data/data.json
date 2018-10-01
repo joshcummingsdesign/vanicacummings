@@ -78,6 +78,15 @@
         "url": "#",
         "target": "_self"
       }
+    },
+    "testimonial_card": {
+      "image": {
+        "src": "https://picsum.photos/200/200",
+        "alt": "image"
+      },
+      "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+      "name": "Moki Macias",
+      "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
     }
   },
   "organisms": {
@@ -392,7 +401,7 @@
     },
     "testimonial_carousel": {
       "opt_heading": "What People Are Saying",
-      "items": [
+      "cards": [
         {
           "image": {
             "src": "https://picsum.photos/200/200",
