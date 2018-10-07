@@ -1018,6 +1018,108 @@
           }
         ]
       }
+    },
+    "work": {
+      "hero": {
+        "bg_img": "https://picsum.photos/1440/600",
+        "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
+        "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
+        "opt_button": {
+          "name": "View Book",
+          "url": "#",
+          "target": "_self"
+        }
+      },
+      "content": {
+        "heading": "It is time to forge a new, more courageous relationship between foundations and the communities we serve.",
+        "text": "<p>Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis.</p><p>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
+      },
+      "three_column_image_grid": {
+        "opt_style": "light",
+        "items": [
+          {
+            "opt_heading": "Community Development",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Philanthropy",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Collaborations",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Social Enterprises",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Non-Profits",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Capital Campaigns",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          }
+        ]
+      },
+      "call_to_action": {
+        "heading": "Get Involved",
+        "buttons": [
+          {
+            "name": "View Book",
+            "url": "#",
+            "target": "_self"
+          },
+          {
+            "name": "Contact",
+            "url": "#",
+            "target": "_self"
+          }
+        ]
+      }
     }
   },
   "footer": {

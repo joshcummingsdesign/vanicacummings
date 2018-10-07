@@ -1,17 +1,17 @@
 {% set data = data ? data : organisms.three_column_image_grid %}
 
-<section class="o-three-column-image-grid {{ class }}">
+<section class="o-three-column-image-grid {{ data.opt_style == 'light' ? 'o-three-column-image-grid--light' : '' }} {{ class }}">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12 h-mb-tiny">
-        {% if data.opt_heading %}
+  {% if data.opt_heading %}
+    <div class="container">
+      <div class="row">
+        <div class="col-12 h-mb-tiny">
           <h2 class="h-h2 h-mb-xxs">{{ data.opt_heading }}</h2>
           {% include "a-hr.twig" %}
-        {% endif %}
+        </div>
       </div>
     </div>
-  </div>
+  {% endif %}
 
   <div class="o-three-column-image-grid__inner">
     <div class="container">
