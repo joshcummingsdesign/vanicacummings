@@ -1,0 +1,26 @@
+{% set data = organisms.call_to_action %}
+
+<section class="o-call-to-action h-bg-purple h-pt-lg h-pb-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="h-h3 h-text-white h-mb-xs">{{ data.heading }}</h3>
+        <div class="o-call-to-action__buttons">
+          {% for button in data.buttons %}
+            {%
+              include "a-button.twig"
+              with {
+                data: {
+                  style: 'light',
+                  url: button.url,
+                  target: button.target,
+                  name: button.name
+                }
+              }
+            %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

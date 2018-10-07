@@ -518,6 +518,21 @@
           "text": "The Village at Market Creek"
         }
       ]
+    },
+    "call_to_action": {
+      "heading": "Get Involved",
+      "buttons": [
+        {
+          "name": "View Book",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "Contact",
+          "url": "#",
+          "target": "_self"
+        }
+      ]
     }
   },
   "templates": {

@@ -1,0 +1,17 @@
+/*=============================================
+=               Call to Action                =
+=============================================*/
+
+.o-call-to-action {
+  text-align: center;
+}
+
+.o-call-to-action__buttons {
+
+  .a-button {
+
+    &:first-child {
+      margin-right: 3.2rem;
+    }
+  }
+}
