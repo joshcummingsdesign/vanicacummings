@@ -25,7 +25,12 @@
   a {
     color: $purple;
     display: inline-block;
-    margin-bottom: $padding-xxs;
+
+    &.m-person-text__link {
+      display: block;
+      margin-top: $padding-tiny;
+      margin-bottom: $padding-xxs;
+    }
   }
 
   p {

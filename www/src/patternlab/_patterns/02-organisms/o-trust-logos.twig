@@ -1,0 +1,24 @@
+{% set data = data ? data : organisms.trust_logos %}
+
+<section class="o-trust-logos h-bg-off-white {{ class }}">
+  {% if data.opt_heading %}
+    <p class="o-trust-logos__heading h-mb-xs">{{ data.opt_heading }}</p>
+  {% endif %}
+  <ul class="o-trust-logos__list">
+    {% for logo in data.logos %}
+    <li class="o-trust-logos__item">
+      {% if logo.opt_link %}
+        <a class="o-trust-logos__link" href="#">
+      {% else %}
+        <span class="o-trust-logos__link">
+      {% endif %}
+        <img class="o-trust-logos__logo" src="{{ logo.src }}" alt="{{ logo.alt }}">
+      {% if logo.opt_link %}
+        </a>
+      {% else %}
+        </span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>

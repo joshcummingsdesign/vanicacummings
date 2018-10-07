@@ -220,7 +220,7 @@
       }
     },
     "one_column_people_small": {
-      "opt_heading": "About Us",
+      "opt_heading": "Who We Are",
       "people": [
         {
           "image": {
@@ -229,7 +229,12 @@
           },
           "name": "Jennifer Vanica",
           "title": "Senior Fellow at PolicyLink",
-          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
+          "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
+          "opt_link": {
+            "name": "View Resume",
+            "url": "#",
+            "target": "_self"
+          },
           "social_items": [
             {
               "name": "twitter",
@@ -252,63 +257,12 @@
           },
           "name": "Ron Cummings",
           "title": "Community Change Leader",
-          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
-          "social_items": [
-            {
-              "name": "twitter",
-              "url": "#"
-            },
-            {
-              "name": "linkedin",
-              "url": "#"
-            },
-            {
-              "name": "email",
-              "url": "#"
-            }
-          ]
-        }
-      ],
-      "opt_button": {
-        "name": "Learn More",
-        "url": "#",
-        "target": "_self"
-      }
-    },
-    "one_column_people": {
-      "opt_heading": "About the Author",
-      "people": [
-        {
-          "image": {
-            "src": "https://picsum.photos/600/600",
-            "alt": "person"
+          "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
+          "opt_link": {
+            "name": "View Resume",
+            "url": "#",
+            "target": "_self"
           },
-          "name": "Jennifer Vanica",
-          "title": "Senior Fellow at PolicyLink",
-          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
-          "social_items": [
-            {
-              "name": "twitter",
-              "url": "#"
-            },
-            {
-              "name": "linkedin",
-              "url": "#"
-            },
-            {
-              "name": "email",
-              "url": "#"
-            }
-          ]
-        },
-        {
-          "image": {
-            "src": "https://picsum.photos/600/600",
-            "alt": "person"
-          },
-          "name": "Ron Cummings",
-          "title": "Community Change Leader",
-          "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
           "social_items": [
             {
               "name": "twitter",
@@ -341,7 +295,7 @@
           },
           "name": "Jennifer Vanica",
           "title": "Senior Fellow at PolicyLink",
-          "description": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
+          "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
           "social_items": [
             {
               "name": "twitter",
@@ -364,7 +318,7 @@
           },
           "name": "Ron Cummings",
           "title": "Community Change Leader",
-          "description": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
+          "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
           "social_items": [
             {
               "name": "twitter",
@@ -519,12 +473,20 @@
       "opt_heading": "Also Available On",
       "logos": [
         {
-          "src": "/assets/images/trust-logos/amazon.svg",
-          "alt": "amazon"
+          "src": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
+          "alt": "amazon",
+          "opt_link": {
+            "url": "#",
+            "target": "_self"
+          }
         },
         {
-          "src": "/assets/images/trust-logos/barnes-noble.svg",
-          "alt": "barnes and noble"
+          "src": "/wp-content/themes/vanicacummings/dist/images/trust-logos/barnes-noble.svg",
+          "alt": "barnes and noble",
+          "opt_link": {
+            "url": "#",
+            "target": "_self"
+          }
         }
       ]
     },
@@ -854,25 +816,120 @@
           "url": "#",
           "target": "_self"
         }
+      },
+      "call_to_action": {
+        "heading": "Get Involved",
+        "buttons": [
+          {
+            "name": "View Book",
+            "url": "#",
+            "target": "_self"
+          },
+          {
+            "name": "Contact",
+            "url": "#",
+            "target": "_self"
+          }
+        ]
+      }
+    },
+    "book": {
+      "hero": {
+        "bg_img": "https://picsum.photos/1440/600",
+        "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
+        "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
+        "opt_button": {
+          "name": "View Book",
+          "url": "#",
+          "target": "_self"
+        }
+      },
+      "image_text": {
+        "image": {
+          "src": "/wp-content/themes/vanicacummings/dist/images/brand/vc-logo.svg",
+          "alt": "VanicaCummings"
+        },
+        "heading": "We are think-partners, coaches, and facilitators with a mission of building communities of change.",
+        "text": "With an award-winning track record in building teams that are inclusive, innovative, and can achieve inspired action, VanicaCummings works with you to develop the culture, teamwork, and participitory process for giving voice to the widsom, experience, and creativity of your stakeholders."
+      },
+      "content": {
+        "heading": "It is time to forge a new, more courageous relationship between foundations and the communities we serve.",
+        "text": "<p>Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis.</p><p>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
+      },
+      "testimonial_carousel": {
+        "opt_border": true,
+        "opt_heading": "What People Are Saying",
+        "cards": [
+          {
+            "image": {
+              "src": "https://picsum.photos/200/200",
+              "alt": "image"
+            },
+            "text": "Hello world.",
+            "name": "Moki Macias",
+            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+          },
+          {
+            "image": {
+              "src": "https://picsum.photos/200/200",
+              "alt": "image"
+            },
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+            "name": "Moki Macias",
+            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+          },
+          {
+            "image": {
+              "src": "https://picsum.photos/200/200",
+              "alt": "image"
+            },
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.",
+            "name": "Moki Macias",
+            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+          }
+        ]
+      },
+      "one_column_people_small": {
+        "opt_heading": "Who We Are",
+        "people": [
+          {
+            "image": {
+              "src": "https://picsum.photos/600/600",
+              "alt": "person"
+            },
+            "name": "Jennifer Vanica",
+            "title": "Senior Fellow at PolicyLink",
+            "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
+            "social_items": [
+              {
+                "name": "twitter",
+                "url": "#"
+              },
+              {
+                "name": "linkedin",
+                "url": "#"
+              },
+              {
+                "name": "email",
+                "url": "#"
+              }
+            ]
+          }
+        ]
+      },
+      "call_to_action": {
+        "heading": "Get Involved",
+        "buttons": [
+          {
+            "name": "Buy Now",
+            "url": "#",
+            "target": "_self"
+          }
+        ]
       }
     }
   },
   "footer": {
-    "call_to_action": {
-      "heading": "Get Involved",
-      "buttons": [
-        {
-          "name": "View Book",
-          "url": "#",
-          "target": "_self"
-        },
-        {
-          "name": "Contact",
-          "url": "#",
-          "target": "_self"
-        }
-      ]
-    },
     "subscribe": {
       "opt_border": true,
       "heading": "Keep In Touch",

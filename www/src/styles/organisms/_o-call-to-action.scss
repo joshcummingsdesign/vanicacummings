@@ -9,9 +9,10 @@
 .o-call-to-action__buttons {
 
   .a-button {
+    margin-left: 3.2rem;
 
     &:first-child {
-      margin-right: 3.2rem;
+      margin-left: 0;
     }
   }
 }

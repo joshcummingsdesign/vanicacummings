@@ -1,4 +1,4 @@
-{% set data = organisms.call_to_action %}
+{% set data = data ? data : organisms.call_to_action %}
 
 <section class="o-call-to-action h-bg-purple {{ class }}">
   <div class="container">

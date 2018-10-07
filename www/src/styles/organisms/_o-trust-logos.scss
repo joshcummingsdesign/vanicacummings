@@ -1,0 +1,33 @@
+/*=============================================
+=                 Trust Logos                 =
+=============================================*/
+
+.o-trust-logos {
+  text-align: center;
+}
+
+.o-trust-logos__heading {
+  font-weight: $bold;
+  color: $dark-grey;
+}
+
+.o-trust-logos__item {
+  display: block;
+  margin-top: $padding-xs;
+
+  @include breakpoint($xs) {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+    margin-left: $padding-xs;
+  }
+
+  @include breakpoint($sm) {
+    margin-left: $padding-sm;
+  }
+
+  &:first-child {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}

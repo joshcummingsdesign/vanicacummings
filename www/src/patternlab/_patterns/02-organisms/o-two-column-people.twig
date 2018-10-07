@@ -12,7 +12,7 @@
       </div>
 
       {% for person in data.people %}
-        <div class="col-sm-6 col-md-5 col-lg-4 {{ loop.first ? 'offset-md-1 offset-lg-2': '' }} h-mb-md h-mb-none@sm">
+        <div class="col-sm-6 col-md-5 col-lg-4 {{ loop.first ? 'offset-md-1 offset-lg-2': 'h-mt-md h-mt-none@sm' }}">
           <div class="o-two-column-people__person">
               {% include "m-person-image.twig" with { data: { image: person.image } } %}
               {%
@@ -36,7 +36,7 @@
     <div class="row">
 
       {% if data.opt_button %}
-        <div class="o-two-column-people__button h-mt-md@sm">
+        <div class="o-two-column-people__button h-mt-md">
           {%
             include "a-button.twig"
             with {

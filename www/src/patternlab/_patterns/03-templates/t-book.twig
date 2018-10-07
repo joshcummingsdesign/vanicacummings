@@ -1,0 +1,21 @@
+{% extends 'l-base.twig' %}
+
+{% block content %}
+
+  {% set data = templates.book %}
+
+  {% include "o-hero.twig" with { data: data.hero } %}
+
+  {% include "o-image-text.twig" with { data: data.image_text, class: 'h-pt-lg h-pb-lg' } %}
+
+  {% include "o-content.twig" with { data: data.content, class: 'h-pt-lg h-pb-lg' } %}
+
+  {% include "o-testimonial-carousel.twig" with { data: data.testimonial_carousel, class: 'h-pt-lg h-pb-lg' } %}
+
+  {% include "o-one-column-people-small.twig" with { data: data.one_column_people_small, class: 'h-pt-lg h-pb-lg' } %}
+
+  {% include "o-call-to-action.twig" with { data: data.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
+
+  {% include "o-trust-logos.twig" with { data: data.trust_logos, class: 'h-pt-lg h-pb-lg' } %}
+
+{% endblock %}
