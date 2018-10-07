@@ -1,0 +1,41 @@
+/*=============================================
+=               Text Image List               =
+=============================================*/
+
+.o-text-image-list {
+  text-align: center;
+}
+
+.o-text-image-list__inner {
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
+.o-text-image-list__text {
+
+  @include breakpoint($lg - 1, max-width) {
+    max-width: 51rem;
+    margin: 0 auto;
+  }
+}
+
+.o-text-image-list__image {
+  width: 100%;
+}
+
+.o-text-image-list__list {
+  text-align: left;
+  margin: 0 auto;
+
+  @include breakpoint($xs) {
+    width: 88%;
+  }
+
+  @include breakpoint($sm) {
+    width: 78%;
+  }
+}
+
+.o-text-image-list__button {
+  margin: $padding-md auto 0;
+}

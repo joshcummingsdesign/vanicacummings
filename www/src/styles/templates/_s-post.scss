@@ -3,7 +3,6 @@
 =============================================*/
 
 .s-post {
-  color: $black;
 
   // h1 - h6
   @for $i from 1 through 6 {
@@ -23,7 +22,6 @@
 
   b, strong {
     font-weight: $bold;
-    color: $grey;
   }
 
   i, em {
@@ -37,7 +35,6 @@
 
   figcaption {
     font-size: 1.4rem;
-    color: $grey;
   }
 
   hr {
@@ -51,12 +48,10 @@
   /*----------  Links  ----------*/
 
   a {
-    color: $grey;
+    color: $purple;
     text-decoration: none;
-    transition: color $time $easing;
 
     &:focus, &:hover {
-      color: darken($grey, 10%);
       text-decoration: underline;
     }
   }
@@ -84,7 +79,6 @@
         top: 0;
         left: 0;
         content: counter(step-counter)'.';
-        font-weight: $bold;
       }
 
       // p tag inside ordered list
@@ -123,18 +117,15 @@
 
   li {
     margin: 1rem 0;
-    color: $grey;
   }
 
   /*----------  Blockquotes  ----------*/
 
   blockquote {
-    background-color: $off-white;
     border-left: 5px solid $grey;
     margin: $padding-xs 0;
     padding: 1rem 2rem;
     quotes: "\201C""\201D""\2018""\2019";
-    color: $grey;
 
     &:before {
       content: open-quote;

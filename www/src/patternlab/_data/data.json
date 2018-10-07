@@ -433,13 +433,13 @@
     },
     "text_image_list": {
       "heading": "Our Approach",
-      "text": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+      "text": "Enduring change is deeply rooted in the will, motivation, and expectations of people and is energized by working across disciplines, sectors, areas of interest, cultures, and ages. By working in teams across natural boundaries, groups begin to see the world in a new way, open up to new risks, and think freely about innovative strategies that can be tested. When people combine their wisdom and know-how, they can address real issues and achieve lasting change.",
       "image": {
         "src": "https://picsum.photos/800/600",
         "alt": "image"
       },
       "list": [
-        "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
+        "We focus on the skills and process for achieving a shared vision by moving quickly from plans to action using our \"LADDER\" approach",
         "Etiam porta sem malesuada magna mollis euismod.",
         "Donec ullamcorper nulla non metus auctor fringilla.",
         "Cras mattis consectetur purus sit amet fermentum.",
@@ -747,6 +747,26 @@
             "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
           }
         ]
+      },
+      "text_image_list": {
+        "heading": "Our Approach",
+        "text": "Enduring change is deeply rooted in the will, motivation, and expectations of people and is energized by working across disciplines, sectors, areas of interest, cultures, and ages. By working in teams across natural boundaries, groups begin to see the world in a new way, open up to new risks, and think freely about innovative strategies that can be tested. When people combine their wisdom and know-how, they can address real issues and achieve lasting change.",
+        "image": {
+          "src": "https://picsum.photos/800/600",
+          "alt": "image"
+        },
+        "list": [
+          "We focus on the skills and process for achieving a shared vision by moving quickly from plans to action using our \"LADDER\" approach",
+          "Etiam porta sem malesuada magna mollis euismod.",
+          "Donec ullamcorper nulla non metus auctor fringilla.",
+          "Cras mattis consectetur purus sit amet fermentum.",
+          "Nullam id dolor id nibh ultricies vehicula ut id elit."
+        ],
+        "button": {
+          "name": "Learn More",
+          "url": "#",
+          "target": "_self"
+        }
       }
     }
   },

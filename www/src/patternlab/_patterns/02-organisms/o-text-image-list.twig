@@ -1,0 +1,37 @@
+{% set data = data ? data : organisms.text_image_list %}
+
+<section class="o-text-image-list {{ class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="o-text-image-list__inner">
+          <h2 class="h-h2 h-mb-xxs">{{ data.heading }}</h2>
+          {% include "a-hr.twig" %}
+          <p class="h-p o-text-image-list__text h-mt-xxs h-mb-sm">{{ data.text }}</p>
+          <img class="o-text-image-list__image" src="{{ data.image.src }}" alt="{{ data.image.alt }}">
+          {% if data.list|length > 0 %}
+            <div class="o-text-image-list__list s-post h-mt-sm">
+              <ol>
+                {% for item in data.list %}
+                  <li class="h-p">{{ item }}</li>
+                {% endfor %}
+              </ol>
+            </div>
+          {% endif %}
+          <div class="o-text-image-list__button">
+            {%
+              include "a-button.twig"
+              with {
+                data: {
+                  url: data.button.url,
+                  target: data.button.target,
+                  name: data.button.name
+                }
+              }
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
