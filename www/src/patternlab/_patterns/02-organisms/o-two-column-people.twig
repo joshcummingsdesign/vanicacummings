@@ -1,4 +1,4 @@
-{% set data = organisms.two_column_people %}
+{% set data = data ? data : organisms.two_column_people %}
 
 <section class="o-two-column-people {{ class }}">
   <div class="container">

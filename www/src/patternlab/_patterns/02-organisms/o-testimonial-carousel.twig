@@ -1,31 +1,39 @@
-{% set data = organisms.testimonial_carousel %}
+{% set data = data ? data : organisms.testimonial_carousel %}
 
-<section class="o-testimonial-carousel">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="o-testimonial-carousel__carousel owl-carousel js-testimonial-carousel">
-
-          {% for card in data.cards %}
-
-            <div class="o-testimonial-carousel__item item">
-              {%
-                include "m-testimonial-card.twig"
-                with {
-                  data: {
-                    image: card.image,
-                    text: card.text,
-                    name: card.name,
-                    title: card.title
-                  }
-                }
-              %}
+<section class="o-testimonial-carousel {{ data.opt_border ? 'o-testimonial-carousel--border' : '' }} {{ class }}">
+  <div class="o-testimonial-carousel__inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {% if data.opt_heading %}
+            <h2 class="h-h2 h-mb-xxs">{{ data.opt_heading }}</h2>
+            <div class="h-mb-grid">
+              {% include "a-hr.twig" %}
             </div>
-
-          {% endfor %}
-
+          {% endif %}
         </div>
       </div>
+    </div>
+    <div class="o-testimonial-carousel__carousel owl-carousel js-testimonial-carousel">
+
+      {% for card in data.cards %}
+
+        <div class="o-testimonial-carousel__item item">
+          {%
+            include "m-testimonial-card.twig"
+            with {
+              data: {
+                image: card.image,
+                text: card.text,
+                name: card.name,
+                title: card.title
+              }
+            }
+          %}
+        </div>
+
+      {% endfor %}
+
     </div>
   </div>
 </section>

@@ -2,14 +2,18 @@
 
 {% block content %}
 
-  {% include "o-hero.twig" %}
+  {% set data = templates.home %}
 
-  {% include "o-image-text.twig" with { class: 'h-pt-lg h-pb-lg' } %}
+  {% include "o-hero.twig" with { data: data.hero } %}
 
-  {% include "o-four-column-image-text.twig" with { class: 'h-pt-lg h-pb-lg' } %}
+  {% include "o-image-text.twig" with { data: data.image_text, class: 'h-pt-lg h-pb-lg' } %}
 
-  {% include "o-two-column-people.twig" with { class: 'h-pt-lg h-pb-lg' } %}
+  {% include "o-four-column-image-text.twig" with { data: data.four_column_image_text, class: 'h-pt-lg h-pb-lg' } %}
 
-  {% include "o-three-column-image-grid.twig" with { class: 'h-pt-lg h-pb-lg' } %}
+  {% include "o-two-column-people.twig" with { data: data.two_column_people, class: 'h-pt-lg h-pb-lg' } %}
+
+  {% include "o-three-column-image-grid.twig" with { data: data.three_column_image_grid, class: 'h-pt-lg h-pb-lg' } %}
+
+  {% include "o-testimonial-carousel.twig" with { data: data.testimonial_carousel, class: 'h-pt-lg h-pb-lg' } %}
 
 {% endblock %}

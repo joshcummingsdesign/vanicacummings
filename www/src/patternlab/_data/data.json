@@ -520,6 +520,236 @@
       ]
     }
   },
+  "templates": {
+    "home": {
+      "hero": {
+        "bg_img": "https://picsum.photos/1440/600",
+        "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
+        "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
+        "opt_button": {
+          "name": "View Book",
+          "url": "#",
+          "target": "_self"
+        }
+      },
+      "image_text": {
+        "image": {
+          "src": "/wp-content/themes/vanicacummings/dist/images/brand/vc-logo.svg",
+          "alt": "VanicaCummings"
+        },
+        "heading": "We are think-partners, coaches, and facilitators with a mission of building communities of change.",
+        "text": "With an award-winning track record in building teams that are inclusive, innovative, and can achieve inspired action, VanicaCummings works with you to develop the culture, teamwork, and participitory process for giving voice to the widsom, experience, and creativity of your stakeholders."
+      },
+      "four_column_image_text": {
+        "opt_heading": "What We Do",
+        "opt_text": "Unleashing the power and capacity of people to create change.",
+        "items": [
+          {
+            "image": {
+              "src": "https://picsum.photos/300/300",
+              "alt": "image"
+            },
+            "heading": "Sharing Lessons",
+            "text": "We write, blog, present, and engage the community building field in expending the conversation about innovative structures and strategies for accelerating inspired social change."
+          },
+          {
+            "image": {
+              "src": "https://picsum.photos/300/300",
+              "alt": "image"
+            },
+            "heading": "Stakeholder Strategies",
+            "text": "We co-design wasy to lift the vision and voice of your stakeholders, as well as manage and support large-scale teamwork."
+          },
+          {
+            "image": {
+              "src": "https://picsum.photos/300/300",
+              "alt": "image"
+            },
+            "heading": "Participitory Planning",
+            "text": "We facilitate and train teams in an inclusive process to unleash people's natural creativity and problem-solving and encourage teams to dream big, break through, and own the plan."
+          },
+          {
+            "image": {
+              "src": "https://picsum.photos/300/300",
+              "alt": "image"
+            },
+            "heading": "Capacity Building & Resources",
+            "text": "We coach stakeholder teams in strengthening their organizations and mobilizing the resources needed to put wheels under bold ideas."
+          }
+        ],
+        "opt_button": {
+          "name": "Learn More",
+          "url": "#",
+          "target": "_self"
+        }
+      },
+      "two_column_people": {
+        "opt_heading": "Who We Are",
+        "people": [
+          {
+            "image": {
+              "src": "https://picsum.photos/600/600",
+              "alt": "person"
+            },
+            "name": "Jennifer Vanica",
+            "title": "Senior Fellow at PolicyLink",
+            "description": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
+            "social_items": [
+              {
+                "name": "twitter",
+                "url": "#"
+              },
+              {
+                "name": "linkedin",
+                "url": "#"
+              },
+              {
+                "name": "email",
+                "url": "#"
+              }
+            ]
+          },
+          {
+            "image": {
+              "src": "https://picsum.photos/600/600",
+              "alt": "person"
+            },
+            "name": "Ron Cummings",
+            "title": "Community Change Leader",
+            "description": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
+            "social_items": [
+              {
+                "name": "twitter",
+                "url": "#"
+              },
+              {
+                "name": "linkedin",
+                "url": "#"
+              },
+              {
+                "name": "email",
+                "url": "#"
+              }
+            ]
+          }
+        ],
+        "opt_button": {
+          "name": "Learn More",
+          "url": "#",
+          "target": "_self"
+        }
+      },
+      "three_column_image_grid": {
+        "opt_heading": "Our Work",
+        "items": [
+          {
+            "opt_heading": "Community Development",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Philanthropy",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Collaborations",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Social Enterprises",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Non-Profits",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "opt_heading": "Capital Campaigns",
+            "image": {
+              "src": "https://picsum.photos/480/480",
+              "alt": "photo"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          }
+        ],
+        "opt_button": {
+          "name": "Learn More",
+          "url": "#",
+          "target": "_self"
+        }
+      },
+      "testimonial_carousel": {
+        "opt_heading": "What People Are Saying",
+        "opt_border": true,
+        "cards": [
+          {
+            "image": {
+              "src": "https://picsum.photos/200/200",
+              "alt": "image"
+            },
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+            "name": "Moki Macias",
+            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+          },
+          {
+            "image": {
+              "src": "https://picsum.photos/200/200",
+              "alt": "image"
+            },
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+            "name": "Moki Macias",
+            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+          },
+          {
+            "image": {
+              "src": "https://picsum.photos/200/200",
+              "alt": "image"
+            },
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+            "name": "Moki Macias",
+            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+          }
+        ]
+      }
+    }
+  },
   "footer": {
     "call_to_action": {
       "heading": "Get Involved",

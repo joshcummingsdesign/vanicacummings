@@ -1,4 +1,4 @@
-{% set data = organisms.three_column_image_grid %}
+{% set data = data ? data : organisms.three_column_image_grid %}
 
 <section class="o-three-column-image-grid {{ class }}">
 

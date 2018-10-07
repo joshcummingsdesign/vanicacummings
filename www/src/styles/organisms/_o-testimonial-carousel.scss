@@ -1,0 +1,70 @@
+/*=============================================
+=            Testimonial Carousel             =
+=============================================*/
+
+.o-testimonial-carousel {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .owl-nav {
+    margin-top: $padding-sm;
+
+    button.owl-prev,
+    button.owl-next {
+      position: absolute;
+      top: 45%;
+      font-size: 0;
+      height: 2.4rem;
+      width: 2.4rem;
+      border-top: 3px solid $purple;
+      outline: 0;
+    }
+
+    button.owl-prev {
+      left: 1rem;
+      border-left: 3px solid $purple;
+      transform: rotate(-45deg);
+    }
+
+    button.owl-next {
+      right: 1rem;
+      border-right: 3px solid $purple;
+      transform: rotate(45deg);
+    }
+  }
+
+  button.owl-dot {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    background-color: $grey;
+    border-radius: 100%;
+    margin-right: 1.2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      background-color: $purple;
+    }
+  }
+}
+
+.o-testimonial-carousel--border {
+  border-bottom: 2px solid $light-grey;
+}
+
+.o-testimonial-carousel__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.o-testimonial-carousel__carousel {
+  padding: 0 4.8rem;
+}
+
+.o-testimonial-carousel__item {
+  padding: 1rem;
+}

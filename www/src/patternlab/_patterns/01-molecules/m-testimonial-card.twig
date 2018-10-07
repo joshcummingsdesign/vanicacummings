@@ -1,6 +1,10 @@
 {% set data = data ? data : molecules.testimonial_card %}
 
-<img src="{{ data.image.src }}" alt="{{ data.image.alt }}">
-<p>{{ data.text }}</p>
-<p>{{ data.name }}</p>
-<p>{{ data.title }}</p>
+<div class="m-testimonial-card">
+  <div class="m-testimonial-card__content">
+    <img class="m-testimonrial-card__image" src="{{ data.image.src }}" alt="{{ data.image.alt }}">
+    <p class="m-testimonrial-card__text">&ldquo;{{ data.text }}&rdquo;</p>
+    <p class="m-testimonrial-card__name">{{ data.name }}</p>
+    <p class="m-testimonrial-card__title">{{ data.title }}</p>
+  </div>
+</div>
