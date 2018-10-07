@@ -10,6 +10,7 @@
 
 // Max
 @include breakpoint($sm - 1, max-width) { @import 'l-header-[sm-max]'; }
+@include breakpoint($xs - 1, max-width) { @import 'l-header-[xs-max]'; }
 
 // Min
 @include breakpoint($sm) { @import 'l-header-[sm]'; }
