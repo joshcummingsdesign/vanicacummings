@@ -3,16 +3,14 @@
 <section class="o-one-column-people-small o-two-column-people {{ class }}">
   <div class="container">
 
-    <div class="row">
-
-      <div class="col-12 h-mb-md">
-        {% if data.opt_heading %}
+    {% if data.opt_heading %}
+      <div class="row">
+        <div class="col-12 h-mb-md">
           <h2 class="h-h2 h-mb-xxs">{{ data.opt_heading }}</h2>
           {% include "a-hr.twig" %}
-        {% endif %}
+        </div>
       </div>
-
-    </div>
+    {% endif %}
 
     {% for person in data.people %}
       <div class="row {{ loop.first ? '' : 'h-mt-md h-mt-lg@sm' }}">

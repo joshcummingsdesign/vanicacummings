@@ -1,0 +1,61 @@
+{% set data = data ? data : organisms.one_column_people_small %}
+
+<section class="o-one-column-people o-two-column-people {{ class }}">
+  <div class="o-one-column-people__inner">
+    <div class="container">
+
+      {% if data.opt_heading %}
+        <div class="row">
+          <div class="col-12 h-mb-md">
+            <h2 class="h-h2 h-mb-xxs">{{ data.opt_heading }}</h2>
+            {% include "a-hr.twig" %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% for person in data.people %}
+        <div class="row {{ loop.first ? '' : 'h-mt-md h-mt-lg@sm' }}">
+          <div class="o-one-column-people__image col-sm-4">
+            {% include "m-person-image.twig" with { data: { image: person.image } } %}
+          </div>
+          <div class="col-sm-8">
+            <div class="o-one-column-people__person">
+              {%
+                include "m-person-text.twig"
+                with {
+                  data: {
+                    name: person.name,
+                    title: person.title,
+                    description: person.description,
+                    opt_link: person.opt_link,
+                    social_items: person.social_items
+                  }
+                }
+              %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      <div class="row">
+
+        {% if data.opt_button %}
+          <div class="o-two-column-people__button h-mt-md@sm">
+            {%
+              include "a-button.twig"
+              with {
+                data: {
+                  url: data.opt_button.url,
+                  target: data.opt_button.target,
+                  name: data.opt_button.name
+                }
+              }
+            %}
+          </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+</section>

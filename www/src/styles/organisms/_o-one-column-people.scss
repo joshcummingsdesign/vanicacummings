@@ -1,0 +1,16 @@
+
+/*=============================================
+=              One Column People              =
+=============================================*/
+
+.o-one-column-people__inner {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.o-one-column-people__person {
+
+  @include breakpoint($sm) {
+    text-align: left;
+  }
+}
