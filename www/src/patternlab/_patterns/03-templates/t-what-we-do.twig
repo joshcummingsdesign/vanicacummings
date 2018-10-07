@@ -1,0 +1,15 @@
+{% extends 'l-base.twig' %}
+
+{% block content %}
+
+  {% set data = templates.what_we_do %}
+
+  {% include "o-hero.twig" with { data: data.hero } %}
+
+  {% include "o-content.twig" with { data: data.content, class: 'h-pt-lg h-pb-lg' } %}
+
+  {% include "o-text-featured.twig" with { data: data.text_featured } %}
+
+  {% include "o-call-to-action.twig" with { data: data.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
+
+{% endblock %}

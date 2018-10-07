@@ -1,0 +1,25 @@
+{% set data = data ? data : organisms.text_featured %}
+
+<section class="o-text-featured">
+
+  {% for item in data.items %}
+    <div class="o-text-featured__item h-pt-lg h-pb-lg">
+      <div class="o-text-featured__item-inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7">
+              <h3 class="h-h5">{{ item.heading }}</h3>
+              <div class="s-post">
+                {{ item.text | raw }}
+              </div>
+            </div>
+            <div class="col-sm-5 col-md-4 offset-md-1">
+              {% include "m-featured-card.twig" with { data: item.featured_card, featured_text: data.featured_text } %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+</section>

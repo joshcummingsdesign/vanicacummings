@@ -1,0 +1,28 @@
+/*=============================================
+=                Text Featured                =
+=============================================*/
+
+.o-text-featured {
+
+  .m-featured-card {
+    max-width: 30rem;
+    margin: 0 auto;
+
+    @include breakpoint($sm) {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+.o-text-featured__item {
+  border-top: 2px solid $light-grey;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.o-text-featured__item-inner {
+  max-width: 110rem;
+  margin: 0 auto;
+}

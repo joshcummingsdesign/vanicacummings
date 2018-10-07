@@ -1,0 +1,11 @@
+{% set data = data ? data : molecules.featured_card %}
+
+<div class="m-featured-card">
+  <h5 class="m-featured-card__heading">{{ featured_text }}</h5>
+  <p class="m-featured-card__subheading">{{ data.name }}</p>
+  {% for image in data.images %}
+    <img class="m-featured-card__image" src="{{ image.src }}" alt="{{ image.alt }}">
+  {% endfor %}
+  <p class="m-featured-card__description">{{ data.description }}</p>
+  <a class="m-featured-card__link" href="{{ data.link.url }}" target="{{ data.link.target }}">{{ data.link.name }}</a>
+</div>

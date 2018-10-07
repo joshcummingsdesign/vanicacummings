@@ -1,0 +1,30 @@
+/*=============================================
+=                Featured Card                =
+=============================================*/
+
+.m-featured-card {
+  background-color: $light-grey;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.3);
+  padding: $padding-xs;
+  font-size: 1.5rem;
+}
+
+.m-featured-card__heading {
+  font-weight: $bold;
+  font-size: 1.8rem;
+}
+
+.m-featured-card__image {
+  display: block;
+  max-width: 100%;
+  margin-top: $padding-xxs;
+  margin-bottom: $padding-xxs;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.3);
+}
+
+.m-featured-card__link {
+  display: inline-block;
+  margin-top: $padding-xxs;
+  color: $black;
+}
