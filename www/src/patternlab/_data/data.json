@@ -6,7 +6,7 @@
     "language": "en",
     "title": "VanicaCummings",
     "logo": {
-      "src": "/assets/images/brand/vc-wordmark.svg",
+      "src": "/wp-content/themes/vanicacummings/dist/images/brand/vc-wordmark.svg",
       "alt": "VanicaCummings"
     }
   },
@@ -25,6 +25,70 @@
       "items": [
         {
           "name": "Home",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "About Us",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "What We Do",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "Work",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "Contact",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "Blog",
+          "url": "#",
+          "target": "_self"
+        }
+      ]
+    },
+    "footer": {
+      "items": [
+        {
+          "name": "Home",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "About Us",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "What We Do",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "Work",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "Courageous Philanthropy",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "Contact",
+          "url": "#",
+          "target": "_self"
+        },
+        {
+          "name": "Blog",
           "url": "#",
           "target": "_self"
         }
@@ -533,6 +597,14 @@
           "target": "_self"
         }
       ]
+    },
+    "subscribe": {
+      "heading": "Keep In Touch",
+      "text": "We would love to keep in touch and join the conversation. We know that change happens when leaders, community members, and stakeholders are involved. Join us to share work and stay connected.",
+      "form": {
+        "placeholder": "Email",
+        "button_text": "Subscribe"
+      }
     }
   },
   "templates": {
@@ -731,8 +803,8 @@
         }
       },
       "testimonial_carousel": {
-        "opt_heading": "What People Are Saying",
         "opt_border": true,
+        "opt_heading": "What People Are Saying",
         "cards": [
           {
             "image": {
@@ -802,8 +874,9 @@
       ]
     },
     "subscribe": {
+      "opt_border": true,
       "heading": "Keep In Touch",
-      "text": "Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+      "text": "We would love to keep in touch and join the conversation. We know that change happens when leaders, community members, and stakeholders are involved. Join us to share work and stay connected.",
       "form": {
         "placeholder": "Email",
         "button_text": "Subscribe"
@@ -815,16 +888,19 @@
       "email": "change@vanicacummings.com",
       "phone": "619-840-0640"
     },
-    "social": [
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Twitter",
-        "url": "#"
-      }
-    ],
+    "social": {
+      "heading": "Social",
+      "items": [
+        {
+          "name": "LinkedIn",
+          "url": "#"
+        },
+        {
+          "name": "Twitter",
+          "url": "#"
+        }
+      ]
+    },
     "terms": [
       {
         "name": "Terms & Conditions",

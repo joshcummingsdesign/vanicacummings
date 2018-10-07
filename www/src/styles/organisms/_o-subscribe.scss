@@ -1,0 +1,29 @@
+/*=============================================
+=                  Subscribe                  =
+=============================================*/
+
+.o-subscribe {
+  text-align: center;
+}
+
+.o-subscribe__inner {
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+.o-subscribe__form {
+
+  .a-input {
+    margin-bottom: $padding-xs;
+
+    @include breakpoint($xs) {
+      max-width: 24.7rem;
+      margin-right: $padding-tiny;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.o-subscribe--border {
+  border-bottom: 2px solid $light-grey;
+}
