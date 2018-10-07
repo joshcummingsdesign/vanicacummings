@@ -7,30 +7,56 @@
   position: relative;
   overflow: hidden;
 
+  .owl-stage {
+    display: flex;
+    align-items: center;
+  }
+
   .owl-nav {
     margin-top: $padding-sm;
 
     button.owl-prev,
     button.owl-next {
       position: absolute;
-      top: 45%;
+      top: 41%;
+      height: 4.8rem;
+      width: 4.8rem;
       font-size: 0;
-      height: 2.4rem;
-      width: 2.4rem;
-      border-top: 3px solid $purple;
-      outline: 0;
+      overflow: hidden;
+
+      &:focus {
+        @include outline;
+      }
+
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 1.2rem;
+        height: 2.4rem;
+        width: 2.4rem;
+        border-top: 3px solid $purple;
+      }
     }
 
     button.owl-prev {
-      left: 1rem;
-      border-left: 3px solid $purple;
-      transform: rotate(-45deg);
+      left: 2px;
+
+      &:before {
+        left: 1.8rem;
+        border-left: 3px solid $purple;
+        transform: rotate(-45deg);
+      }
     }
 
     button.owl-next {
-      right: 1rem;
-      border-right: 3px solid $purple;
-      transform: rotate(45deg);
+      right: 2px;
+
+      &:before {
+        right: 1.8rem;
+        border-right: 3px solid $purple;
+        transform: rotate(45deg);
+      }
     }
   }
 
@@ -41,6 +67,10 @@
     background-color: $grey;
     border-radius: 100%;
     margin-right: 1.2rem;
+
+    &:focus {
+      @include outline;
+    }
 
     &:last-child {
       margin-right: 0;
