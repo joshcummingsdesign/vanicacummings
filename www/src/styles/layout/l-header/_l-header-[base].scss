@@ -1,0 +1,36 @@
+/*=============================================
+=                Header [base]                =
+=============================================*/
+
+.l-header {
+  background-color: $white;
+  height: 58px;
+  padding: 10px 4rem;
+}
+
+.l-header__nav-toggle {
+  display: none;
+}
+
+.l-header__logo-link {
+  display: inline-block;
+
+  img {
+    width: auto;
+    height: 38px;
+  }
+}
+
+.l-header__nav {
+  background-color: $white;
+}
+
+.l-header__nav-link {
+  color: $purple;
+  text-decoration: none;
+  font-weight: $bold;
+
+  &:focus, &:hover {
+    text-decoration: underline;
+  }
+}

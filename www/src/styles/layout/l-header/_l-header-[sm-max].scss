@@ -1,0 +1,97 @@
+/*=============================================
+=               Header [sm-max]               =
+=============================================*/
+
+.l-header__nav-toggle {
+  display: block;
+  font-size: 0;
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  top: 10px;
+  right: 4rem;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.l-header__nav-toggle__inner {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.l-header__nav-toggle__line {
+  display: block;
+  content: "";
+  height: 2px;
+  width: calc(100% - 8px);
+  position: absolute;
+  left: 4px;
+  background-color: $purple;
+}
+
+.l-header__nav-toggle__line--1 {
+  top: 8px;
+}
+
+.l-header__nav-toggle__line--2 {
+  top: 18px;
+}
+
+.l-header__nav-toggle__line--3 {
+  bottom: 8px;
+}
+
+.l-header__nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  padding: 2rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+
+.l-header__nav-item {
+  margin-bottom: 1rem;
+}
+
+.l-header__nav-link {
+  font-weight: $bold;
+  font-size: 2rem;
+}
+
+/*----------  Mobile Nav States  ----------*/
+
+html.is-menu-open {
+
+  &, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .l-header__nav {
+    display: block;
+  }
+
+  .l-header__nav-toggle__inner {
+    transform: rotate(45deg);
+  }
+
+  .l-header__nav-toggle__line--1 {
+    top: 18px;
+  }
+
+  .l-header__nav-toggle__line--2 {
+    top: 18px;
+  }
+
+  .l-header__nav-toggle__line--3 {
+    bottom: 18px;
+    transform: rotate(90deg);
+  }
+}

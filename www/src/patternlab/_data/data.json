@@ -4,7 +4,6 @@
   "site": {
     "url": "/",
     "language": "en",
-    "title": "VanicaCummings",
     "logo": {
       "src": "/wp-content/themes/vanicacummings/dist/images/brand/vc-wordmark.svg",
       "alt": "VanicaCummings"
@@ -22,6 +21,7 @@
   },
   "menus": {
     "main": {
+      "text": "Menu",
       "items": [
         {
           "name": "Home",

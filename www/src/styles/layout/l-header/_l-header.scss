@@ -1,0 +1,15 @@
+/*=============================================
+=                   Header                    =
+=============================================*/
+
+/*----------  Base  ----------*/
+
+@import 'l-header-[base]';
+
+/*----------  Breakpoints  ----------*/
+
+// Max
+@include breakpoint($sm - 1, max-width) { @import 'l-header-[sm-max]'; }
+
+// Min
+@include breakpoint($sm) { @import 'l-header-[sm]'; }

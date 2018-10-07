@@ -1,10 +1,21 @@
-{% set items = menus.main_menu.items %}
-
-<header>
-  <nav>
-    <ul>
-      {% for item in items %}
-        <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+<header id="js-main-menu" class="l-header">
+  <a class="l-header__logo-link" href="{{ site.url }}">
+    <img src="{{ site.logo.src }}" alt="{{ site.logo.alt }}">
+  </a>
+  <a id="js-main-menu__toggle" class="l-header__nav-toggle" href="#" aria-expanded="false" aria-controls="js-main-menu__nav" role="button">
+    {{ menus.main.text }}
+    <span class="l-header__nav-toggle__inner">
+      <span class="l-header__nav-toggle__line l-header__nav-toggle__line--1"></span>
+      <span class="l-header__nav-toggle__line l-header__nav-toggle__line--2"></span>
+      <span class="l-header__nav-toggle__line l-header__nav-toggle__line--3"></span>
+    </span>
+  </a>
+  <nav id="js-main-menu__nav" class="l-header__nav">
+    <ul class="l-header__nav-items">
+      {% for item in menus.main.items %}
+        <li class="l-header__nav-item">
+          <a class="l-header__nav-link" href="{{ item.url }}" target="{{ item.target }}">{{ item.name }}</a>
+        </li>
       {% endfor %}
     </ul>
   </nav>
