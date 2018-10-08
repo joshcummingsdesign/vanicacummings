@@ -1,0 +1,40 @@
+/*=============================================
+=                 Award Card                  =
+=============================================*/
+
+.m-award-card {
+  border: 1px solid $grey;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  padding: $padding-sm;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.m-award-card__caption {
+  color: $purple;
+  margin-bottom: $padding-tiny;
+}
+
+.m-award-card__heading {
+  font-weight: $bold;
+  font-size: 1.8rem;
+}
+
+.m-award-card__subheading {
+  color: $purple;
+  margin-top: $padding-tiny;
+
+  &:after {
+    display: block;
+    content: "";
+    height: 1px;
+    background-color: $light-grey;
+    margin: $padding-tiny auto 0;
+    width: 50%;
+  }
+}
+
+.m-award-card__text {
+  margin-top: $padding-tiny;
+}

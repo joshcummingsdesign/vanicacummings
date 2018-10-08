@@ -1,0 +1,17 @@
+{% extends 'l-base.twig' %}
+
+{% block content %}
+
+  {% set data = templates.work_single %}
+
+  {% include "o-hero.twig" with { data: data.hero } %}
+
+  {% include "o-three-column-cards.twig" with { data: data.achievements, class: 'h-pt-lg' } %}
+
+  {% include "o-three-column-cards.twig" with { data: data.awards, class: 'h-pt-lg h-pb-lg' } %}
+
+  {% include "o-pagination.twig" %}
+
+  {% include "o-call-to-action.twig" with { data: data.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
+
+{% endblock %}

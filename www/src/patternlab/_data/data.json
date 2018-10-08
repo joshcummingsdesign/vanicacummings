@@ -153,17 +153,26 @@
       "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
     },
     "featured_card": {
+      "heading": "Featured",
       "name": "Courageous Philanthropy",
-      "image": {
-        "src": "https://picsum.photos/600/300",
-        "alt": "photo"
-      },
+      "images": [
+        {
+          "src": "https://picsum.photos/600/300",
+          "alt": "photo"
+        }
+      ],
       "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "link": {
         "name": "Read More",
         "url": "#",
         "target": "_self"
       }
+    },
+    "award_card": {
+      "caption": "2011",
+      "heading": "Gold-Designated Catalyst Project, California Sustainable Strategies Pilot Program",
+      "opt_subheading": "California Department of Housing and Community Development",
+      "text": "The Village at Market Creek"
     }
   },
   "organisms": {
@@ -563,6 +572,11 @@
           "heading": "Gold-Designated Catalyst Project, California Sustainable Strategies Pilot Program",
           "opt_subheading": "California Department of Housing and Community Development",
           "text": "The Village at Market Creek"
+        },
+        {
+          "caption": "San Diego, CA",
+          "heading": "Smart Growth Pilot Village",
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla."
         }
       ]
     },
@@ -1158,12 +1172,12 @@
         "text": "<p>Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis.</p><p>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
       },
       "text_featured": {
-        "featured_text": "Featured",
         "items": [
           {
             "heading": "Sharing Lessons",
             "text": "<p>Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis.</p><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus.</p>",
             "featured_card": {
+              "heading": "Featured",
               "name": "Courageous Philanthropy",
               "images": [
                 {
@@ -1183,6 +1197,7 @@
             "heading": "Stakeholder Strategies",
             "text": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p><h4>VanicaCummings can help your team:</h4><ul><li>Curabitur blandit tempus porttitor</li><li>Donec id elit non mi porta gravida at eget metus</li><li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus</li><li>Nullam id dolor id nibh ultricies vehicula ut id elit</li></ul>",
             "featured_card": {
+              "heading": "Featured",
               "name": "Courageous Philanthropy",
               "images": [
                 {
@@ -1201,6 +1216,75 @@
                 "target": "_self"
               }
             }
+          }
+        ]
+      },
+      "call_to_action": {
+        "heading": "Get Involved",
+        "buttons": [
+          {
+            "name": "View Book",
+            "url": "#",
+            "target": "_self"
+          },
+          {
+            "name": "Contact",
+            "url": "#",
+            "target": "_self"
+          }
+        ]
+      }
+    },
+    "work_single": {
+      "hero": {
+        "bg_img": "https://picsum.photos/1440/600",
+        "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
+        "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
+        "opt_button": {
+          "name": "View Book",
+          "url": "#",
+          "target": "_self"
+        }
+      },
+      "achievements": {
+        "opt_heading": "Achievements",
+        "items": [
+          {
+            "caption": "San Diego, CA",
+            "heading": "Market Creek Plaza",
+            "text": "Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod."
+          },
+          {
+            "caption": "2011",
+            "heading": "Gold-Designated Catalyst Project, California Sustainable Strategies Pilot Program",
+            "opt_subheading": "California Department of Housing and Community Development",
+            "text": "The Village at Market Creek"
+          },
+          {
+            "caption": "San Diego, CA",
+            "heading": "Smart Growth Pilot Village",
+            "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla."
+          }
+        ]
+      },
+      "awards": {
+        "opt_heading": "Awards",
+        "items": [
+          {
+            "caption": "San Diego, CA",
+            "heading": "Market Creek Plaza",
+            "text": "Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod."
+          },
+          {
+            "caption": "2011",
+            "heading": "Gold-Designated Catalyst Project, California Sustainable Strategies Pilot Program",
+            "opt_subheading": "California Department of Housing and Community Development",
+            "text": "The Village at Market Creek"
+          },
+          {
+            "caption": "San Diego, CA",
+            "heading": "Smart Growth Pilot Village",
+            "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla."
           }
         ]
       },

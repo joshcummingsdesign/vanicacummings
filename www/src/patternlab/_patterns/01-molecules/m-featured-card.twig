@@ -1,7 +1,7 @@
 {% set data = data ? data : molecules.featured_card %}
 
 <div class="m-featured-card">
-  <h5 class="m-featured-card__heading">{{ featured_text }}</h5>
+  <h5 class="m-featured-card__heading">{{ data.heading }}</h5>
   <p class="m-featured-card__subheading">{{ data.name }}</p>
   {% for image in data.images %}
     <img class="m-featured-card__image" src="{{ image.src }}" alt="{{ image.alt }}">

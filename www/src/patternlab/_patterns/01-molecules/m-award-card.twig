@@ -1,0 +1,10 @@
+{% set data = data ? data : molecules.award_card %}
+
+<div class="m-award-card">
+  <p class="m-award-card__caption">{{ data.caption }}</p>
+  <p class="m-award-card__heading">{{ data.heading }}</p>
+  {% if data.opt_subheading %}
+    <p class="m-award-card__subheading">{{ data.opt_subheading }}</p>
+  {% endif %}
+  <p class="m-award-card__text">{{ data.text }}</p>
+</div>

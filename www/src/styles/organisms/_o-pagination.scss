@@ -1,0 +1,65 @@
+/*=============================================
+=                 Pagination                  =
+=============================================*/
+
+.o-pagination {
+  border-top: 2px solid $light-grey;
+  overflow: auto;
+  font-size: 1.3rem;
+
+  @include breakpoint($sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.o-pagination__link {
+  color: $purple;
+  font-weight: $bold;
+  text-decoration: none;
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    height: 1.3rem;
+    width: 1.3rem;
+    position: absolute;
+    top: 50%;
+    border-top: 2px solid $purple;
+
+    @include breakpoint($sm) {
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+  }
+}
+
+.o-pagination__link--prev {
+  float: left;
+  padding-left: 2.3rem;
+
+  @include breakpoint($sm) {
+    padding-right: 2.6rem;
+  }
+
+  &:before {
+    transform: translateY(-50%) rotate(-45deg);
+    border-left: 2px solid $purple;
+    left: 0;
+  }
+}
+
+.o-pagination__link--next {
+  float: right;
+  padding-right: 2.3rem;
+
+  @include breakpoint($sm) {
+    padding-right: 2.6rem;
+  }
+
+  &:before {
+    transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid $purple;
+    right: 0;
+  }
+}

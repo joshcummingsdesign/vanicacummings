@@ -1,0 +1,35 @@
+/*=============================================
+=             Three Column Cards              =
+=============================================*/
+
+.o-three-column-cards__outer {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.o-three-column-cards__heading {
+  text-align: center;
+}
+
+.o-three-column-cards__column {
+  margin-bottom: $grid-gutter-width;
+
+  @include breakpoint($md) {
+    display: flex;
+  }
+
+  &:last-child {
+
+    @include breakpoint($md - 1, max-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  .m-award-card {
+
+    @include breakpoint($md - 1, max-width) {
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+  }
+}
