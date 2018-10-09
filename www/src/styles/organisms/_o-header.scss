@@ -1,0 +1,22 @@
+/*=============================================
+=                   Header                    =
+=============================================*/
+
+.o-header {
+  padding-top: $padding-lg;
+  padding-bottom: 4.2rem;
+}
+
+.o-header__text {
+  margin-top: $padding-tiny;
+  line-height: 1.2;
+  font-size: 1.8rem;
+
+  @include breakpoint($md) {
+    font-size: 1.9rem;
+  }
+
+  @include breakpoint($lg) {
+    font-size: 2rem;
+  }
+}

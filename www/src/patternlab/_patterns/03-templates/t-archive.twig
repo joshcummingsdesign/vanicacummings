@@ -1,0 +1,24 @@
+{% extends 'l-base.twig' %}
+
+{% block content %}
+
+  {% set data = templates.archive %}
+
+  {% include "o-header.twig" with { data: data.header } %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        {% include "o-archive.twig" %}
+      </div>
+      <div class="col-sm-4">
+        {% include "o-sidebar.twig" %}
+      </div>
+    </div>
+  </div>
+
+  {% include "o-pagination.twig" %}
+
+  {% include "o-call-to-action.twig" with { data: data.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
+
+{% endblock %}

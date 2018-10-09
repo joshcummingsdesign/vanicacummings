@@ -1,0 +1,7 @@
+<div class="row">
+  {% for post in posts %}
+    <div class="col-sm-6">
+      {% include "m-post-card.twig" with { post: post } %}
+    </div>
+  {% endfor %}
+</div>
