@@ -3,6 +3,42 @@
 =============================================*/
 
 .o-sidebar {
-  border-left: 2px solid $light-grey;
-  padding-left: $grid-gutter-width;
+  margin-top: $grid-gutter-width;
+
+  @include breakpoint($sm) {
+    margin-top: 0;
+    padding-left: $grid-gutter-width / 2;
+  }
+
+  .m-search__input {
+
+    @include breakpoint($tiny - 1, max-width) {
+      width: 100%;
+      margin-bottom: $padding-tiny;
+      margin-right: 0;
+    }
+
+    @media only screen and (min-width: $sm) and (max-width: $lg - 1) {
+      width: 100%;
+      margin-bottom: $padding-tiny;
+      margin-right: 0;
+    }
+  }
+
+  .m-search__button {
+
+    @include breakpoint($tiny - 1, max-width) {
+      width: 100%;
+    }
+
+    @media only screen and (min-width: $sm) and (max-width: $lg - 1) {
+      width: 100%;
+    }
+  }
+}
+
+.o-sidebar__text {
+  font-style: italic;
+  color: $purple;
+  font-size: 1.8rem;
 }

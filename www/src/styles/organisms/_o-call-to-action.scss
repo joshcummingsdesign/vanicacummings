@@ -9,7 +9,16 @@
 .o-call-to-action__buttons {
 
   .a-button {
-    margin-left: 3.2rem;
+
+    @include breakpoint($xs - 1, max-width) {
+      display: block;
+      max-width: 20rem;
+      margin: 0 auto $padding-xxs !important;
+    }
+
+    @include breakpoint($xs) {
+      margin-left: 3.2rem;
+    }
 
     &:first-child {
       margin-left: 0;

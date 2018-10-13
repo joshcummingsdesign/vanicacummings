@@ -1,0 +1,9 @@
+{% set data = data ? data : molecules.search %}
+
+<div class="m-search">
+  <h6 class="m-search__heading">{{ data.heading }}</h6>
+  <form action="/" method="get">
+    <input class="a-input m-search__input" type="text" placeholder="{{ data.placeholder }}" name="s">
+    <input class="a-button m-search__button" type="submit" value="{{ data.input_text }}">
+  </form>
+</div>

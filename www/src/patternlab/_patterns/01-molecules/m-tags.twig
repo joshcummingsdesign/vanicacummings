@@ -1,0 +1,12 @@
+{% set data = data ? data : molecules.tags %}
+
+<div class="m-tags">
+  <h6 class="m-tags__heading">{{ data.heading }}</h6>
+  <ul class="m-tags__list">
+    {% for item in data.items %}
+      <li class="m-tags__item">
+        <a class="m-tags__link {{ item.is_active ? 'is-active': '' }}" href="{{ item.url }}">{{ item.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

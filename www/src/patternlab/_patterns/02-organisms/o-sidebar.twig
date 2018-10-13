@@ -1,34 +1,15 @@
+{% set data = data ? data : organisms.sidebar %}
+
 <aside class="o-sidebar">
 
-  <p class="o-sidebar__text">"To go fast, go alone. To go far, go together." - African Proverb</p>
+  <p class="o-sidebar__text">{{ data.text }}</p>
 
   <div class="o-sidebar__search">
-    <h6>Search</h6>
-    <form action="/" method="get">
-      <input class="a-input" type="text" placeholder="Search" name="s">
-      <input class="a-button" type="submit" value="Submit">
-    </form>
+    {% include "m-search.twig" with { data: data.search } %}
   </div>
 
   <div class="o-sidebar__topics">
-    <h6>Topics</h6>
-    <ul>
-      <li>
-        <a href="#">Community Change</a>
-      </li>
-      <li>
-        <a href="#">Philanthropy</a>
-      </li>
-      <li>
-        <a href="#">Equity</a>
-      </li>
-      <li>
-        <a href="#">Social Change</a>
-      </li>
-      <li>
-        <a href="#">Inclusion</a>
-      </li>
-    </ul>
+    {% include "m-tags.twig" with { data: data.tags } %}
   </div>
 
 </aside>

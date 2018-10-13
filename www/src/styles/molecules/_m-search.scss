@@ -1,0 +1,23 @@
+/*=============================================
+=                   Search                    =
+=============================================*/
+
+.m-search {
+  margin: $padding-xs 0;
+}
+
+.m-search__heading {
+  font-weight: $bold;
+  margin-bottom: $padding-tiny;
+}
+
+.m-search__input {
+  width: 63%;
+  margin-right: $padding-tiny;
+}
+
+input.m-search__button {
+  font-size: 1.3rem;
+  width: 33%;
+  padding: 1.1rem 2rem;
+}

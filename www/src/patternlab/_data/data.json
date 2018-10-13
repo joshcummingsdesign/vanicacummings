@@ -14,25 +14,57 @@
       "title": "Marking \"America Great - for All, for the First Time\"",
       "excerpt": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "author": "Jennifer Vanica",
-      "date": "Dec 5, 2016"
+      "date": "Dec 5, 2016",
+      "url": "#",
+      "image": {
+        "title": "placeholder",
+        "alt": "placeholder",
+        "sizes": {
+          "medium": "https://picsum.photos/600/350"
+        }
+      }
     },
     {
       "title": "Marking \"America Great - for All, for the First Time\"",
       "excerpt": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "author": "Jennifer Vanica",
-      "date": "Dec 5, 2016"
+      "date": "Dec 5, 2016",
+      "url": "#",
+      "image": {
+        "title": "placeholder",
+        "alt": "placeholder",
+        "sizes": {
+          "medium": "https://picsum.photos/600/350"
+        }
+      }
     },
     {
       "title": "Marking \"America Great - for All, for the First Time\"",
       "excerpt": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "author": "Jennifer Vanica",
-      "date": "Dec 5, 2016"
+      "date": "Dec 5, 2016",
+      "url": "#",
+      "image": {
+        "title": "placeholder",
+        "alt": "placeholder",
+        "sizes": {
+          "medium": "https://picsum.photos/600/350"
+        }
+      }
     },
     {
       "title": "Marking \"America Great - for All, for the First Time\"",
       "excerpt": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "author": "Jennifer Vanica",
-      "date": "Dec 5, 2016"
+      "date": "Dec 5, 2016",
+      "url": "#",
+      "image": {
+        "title": "placeholder",
+        "alt": "placeholder",
+        "sizes": {
+          "medium": "https://picsum.photos/600/350"
+        }
+      }
     }
   ],
   "pagination": {
@@ -199,6 +231,41 @@
       "heading": "Gold-Designated Catalyst Project, California Sustainable Strategies Pilot Program",
       "opt_subheading": "California Department of Housing and Community Development",
       "text": "The Village at Market Creek"
+    },
+    "search": {
+      "heading": "Search",
+      "placeholder": "Search",
+      "input_text": "Submit"
+    },
+    "tags": {
+      "heading": "Topics",
+      "items": [
+        {
+          "name": "Community Change",
+          "url": "#",
+          "is_active": false
+        },
+        {
+          "name": "Philanthropy",
+          "url": "#",
+          "is_active": true
+        },
+        {
+          "name": "Equity",
+          "url": "#",
+          "is_active": false
+        },
+        {
+          "name": "Social Change",
+          "url": "#",
+          "is_active": false
+        },
+        {
+          "name": "Inclusion",
+          "url": "#",
+          "is_active": false
+        }
+      ]
     }
   },
   "organisms": {
@@ -631,6 +698,44 @@
       "form": {
         "placeholder": "Email",
         "button_text": "Subscribe"
+      }
+    },
+    "sidebar": {
+      "text": "\"To go fast, go alone. To go far, go together.\" - African Proverb",
+      "search": {
+        "heading": "Search",
+        "placeholder": "Search",
+        "input_text": "Submit"
+      },
+      "tags": {
+        "heading": "Topics",
+        "items": [
+          {
+            "name": "Community Change",
+            "url": "#",
+            "is_active": false
+          },
+          {
+            "name": "Philanthropy",
+            "url": "#",
+            "is_active": true
+          },
+          {
+            "name": "Equity",
+            "url": "#",
+            "is_active": false
+          },
+          {
+            "name": "Social Change",
+            "url": "#",
+            "is_active": false
+          },
+          {
+            "name": "Inclusion",
+            "url": "#",
+            "is_active": false
+          }
+        ]
       }
     }
   },

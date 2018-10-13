@@ -1,0 +1,39 @@
+/*=============================================
+=                    Tags                     =
+=============================================*/
+
+.m-tags {
+  margin: $padding-xs 0;
+}
+
+.m-tags__heading {
+  font-weight: $bold;
+  margin-bottom: $padding-tiny;
+}
+
+.m-tags__input {
+  width: 63%;
+  margin-right: $padding-tiny;
+}
+
+.m-tags__item {
+  display: inline-block;
+  margin-right: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.m-tags__link {
+  font-size: 1.4rem;
+  display: block;
+  background: $x-light-grey;
+  border-radius: $border-radius;
+  padding: 0.6rem 0.8rem;
+  text-decoration: none;
+  color: $x-dark-grey;
+  transition: color $time $easing, background-color $time $easing;
+
+  &.is-active, &:focus, &:hover {
+    background-color: $light-purple;
+    color: $white;
+  }
+}

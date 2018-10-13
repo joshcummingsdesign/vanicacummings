@@ -1,0 +1,26 @@
+/*=============================================
+=                   Archive                   =
+=============================================*/
+
+.o-archive {
+
+  @include breakpoint($sm) {
+    padding-right: $grid-gutter-width / 2;
+    border-right: 2px solid $light-grey;
+  }
+
+  .o-archive__column {
+    margin-top: $grid-gutter-width;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+
+    &:nth-child(2) {
+
+      @include breakpoint($md) {
+        margin-top: 0;
+      }
+    }
+  }
+}

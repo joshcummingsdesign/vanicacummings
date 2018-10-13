@@ -1,0 +1,45 @@
+/*=============================================
+=                  Post Card                  =
+=============================================*/
+
+.m-post-card {
+  box-shadow: 0 1px 7px rgba(0,0,0,0.3);
+  border-radius: $border-radius;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: $black;
+  transition: $time $easing;
+
+  &:focus, &:hover {
+    box-shadow: 0 2px 10px 3px rgba(0,0,0,0.25);
+  }
+}
+
+.m-post-card__image {
+  width: 100%;
+}
+
+.m-post-card__content {
+  padding: 2.4rem;
+}
+
+.m-post-card__date {
+  color: $purple;
+  font-size: 1.5rem;
+}
+
+.m-post-card__title {
+  font-weight: $bold;
+  font-size: 1.7rem;
+  margin: $padding-tiny 0;
+}
+
+.m-post-card__text {
+  margin: $padding-tiny 0;
+}
+
+.m-post-card__author {
+  color: $x-dark-grey;
+  font-size: 1.5rem;
+}

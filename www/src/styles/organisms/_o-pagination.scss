@@ -5,7 +5,19 @@
 .o-pagination {
   border-top: 2px solid $light-grey;
   overflow: auto;
-  font-size: 1.3rem;
+  font-size: 1rem;
+
+  @include breakpoint($tiny) {
+    font-size: 1.1rem;
+  }
+
+  @include breakpoint($xxs) {
+    font-size: 1.2rem;
+  }
+
+  @include breakpoint($xs) {
+    font-size: 1.3rem;
+  }
 
   @include breakpoint($sm) {
     font-size: 1.6rem;

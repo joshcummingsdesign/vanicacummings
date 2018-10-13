@@ -7,5 +7,5 @@
     <img class="m-featured-card__image" src="{{ image.src }}" alt="{{ image.alt }}">
   {% endfor %}
   <p class="m-featured-card__description">{{ data.description }}</p>
-  <a class="m-featured-card__link" href="{{ data.link.url }}" target="{{ data.link.target }}">{{ data.link.name }}</a>
+  <a class="m-featured-card__link" href="{{ data.link.url }}" target="{{ data.link.target }}" aria-label="{{ data.name }} {{ data.link.name }}">{{ data.link.name }}</a>
 </div>
