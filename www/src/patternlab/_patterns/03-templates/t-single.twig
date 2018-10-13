@@ -2,6 +2,34 @@
 
 {% block content %}
 
-  <h1>Lorem ipsum...</h1>
+  {% set data = templates.single %}
+
+  <div class="t-archive t-single">
+
+    {% set text = [post.author, '|', post.date] | join(' ') %}
+
+    {% include "o-header.twig" with { data: { heading: post.title, text: text } } %}
+
+    <div class="container h-pb-lg">
+      <div class="row">
+        <div class="t-single__content col-sm-8">
+          <div class="s-post">
+            {% if post.image %}
+              <img src="{{ post.image.sizes.medium }}" alt="{{ post.image.alt }}">
+            {% endif %}
+            {{ post.content | raw }}
+          </div>
+        </div>
+        <div class="col-sm-4">
+          {% include "o-sidebar.twig" %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  {% include "o-pagination.twig" %}
+
+  {% include "o-call-to-action.twig" with { data: data.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
 
 {% endblock %}

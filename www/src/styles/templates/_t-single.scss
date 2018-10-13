@@ -1,0 +1,11 @@
+/*=============================================
+=                   Single                    =
+=============================================*/
+
+.t-single__content {
+
+  @include breakpoint($sm) {
+    padding-right: $grid-gutter-width / 2;
+    border-right: 2px solid $light-grey;
+  }
+}

@@ -9,9 +9,25 @@
       "alt": "VanicaCummings"
     }
   },
+  "post": {
+    "title": "Marking \"America Great - for All, for the First Time\"",
+    "content": "<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.</p>",
+    "excerpt": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+    "author": "Jennifer Vanica",
+    "date": "Dec 5, 2016",
+    "url": "#",
+    "image": {
+      "title": "placeholder",
+      "alt": "placeholder",
+      "sizes": {
+        "medium": "https://picsum.photos/600/350"
+      }
+    }
+  },
   "posts": [
     {
       "title": "Marking \"America Great - for All, for the First Time\"",
+      "content": "<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.</p>",
       "excerpt": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "author": "Jennifer Vanica",
       "date": "Dec 5, 2016",
@@ -26,6 +42,7 @@
     },
     {
       "title": "Marking \"America Great - for All, for the First Time\"",
+      "content": "<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.</p>",
       "excerpt": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "author": "Jennifer Vanica",
       "date": "Dec 5, 2016",
@@ -40,6 +57,7 @@
     },
     {
       "title": "Marking \"America Great - for All, for the First Time\"",
+      "content": "<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.</p>",
       "excerpt": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "author": "Jennifer Vanica",
       "date": "Dec 5, 2016",
@@ -54,6 +72,7 @@
     },
     {
       "title": "Marking \"America Great - for All, for the First Time\"",
+      "content": "<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.</p>",
       "excerpt": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
       "author": "Jennifer Vanica",
       "date": "Dec 5, 2016",
@@ -1423,6 +1442,44 @@
           }
         ]
       },
+      "call_to_action": {
+        "heading": "Get Involved",
+        "buttons": [
+          {
+            "name": "View Book",
+            "url": "#",
+            "target": "_self"
+          },
+          {
+            "name": "Contact",
+            "url": "#",
+            "target": "_self"
+          }
+        ]
+      }
+    },
+    "archive": {
+      "header": {
+        "heading": "Speaking of Change",
+        "text": "The VanicaCummings Blog"
+      },
+      "call_to_action": {
+        "heading": "Get Involved",
+        "buttons": [
+          {
+            "name": "View Book",
+            "url": "#",
+            "target": "_self"
+          },
+          {
+            "name": "Contact",
+            "url": "#",
+            "target": "_self"
+          }
+        ]
+      }
+    },
+    "single": {
       "call_to_action": {
         "heading": "Get Involved",
         "buttons": [
