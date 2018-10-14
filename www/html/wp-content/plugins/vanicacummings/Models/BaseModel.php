@@ -82,11 +82,7 @@ class BaseModel {
     if (!empty($buttons)) {
 
       foreach ($buttons as $button) {
-        array_push($cta_buttons, (object)[
-          'name' => $button['link']['title'],
-          'url' => $button['link']['url'],
-          'target' => $button['link']['target'] === '_blank' ? '_blank' : '_self'
-        ]);
+        array_push($cta_buttons, jcdNormalizeLink($button['link']));
       }
     }
 
@@ -181,7 +177,6 @@ class BaseModel {
     $dbPosts = $postsQuery->get_posts();
 
     $posts = [];
-
 
     if (!empty($dbPosts)) {
 

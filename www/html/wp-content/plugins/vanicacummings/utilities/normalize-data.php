@@ -62,3 +62,40 @@ function jcdNormalizeImage($id) {
 
   return $image;
 }
+
+function jcdNormalizeLink($link) {
+  return (object)[
+    'name' => $link['title'],
+    'url' => $link['url'],
+    'target' => $link['target'] === '_blank' ? '_blank' : '_self'
+  ];
+}
+
+function jcdNormalizePeople($post, $description = 'short', $resume = false) {
+  switch ($description) {
+    case 'long':
+      $d = get_field('person_long_description', $post->id);
+      break;
+    default:
+      $d = get_field('person_short_description', $post->id);
+      break;
+  }
+  switch ($resume) {
+    case true:
+      $r = jcdNormalizeLink(get_field('person_opt_link', $post->id));
+      break;
+    default:
+      $r = null;
+      break;
+  }
+  return (object)[
+    'name' => $post->title,
+    'image' => jcdNormalizeImage(get_field('person_image', $post->id)),
+    'title' => get_field('person_title', $post->id),
+    'description' => $d,
+    'opt_link' => $r,
+    'twitter' => get_field('person_twitter', $post->id),
+    'linkedin' => get_field('person_linkedin', $post->id),
+    'email' => get_field('person_email', $post->id)
+  ];
+}

@@ -53,4 +53,20 @@ final class TestNormalizeData extends \WP_UnitTestCase {
     $this->assertObjectHasAttribute('medium', $image);
     $this->assertObjectHasAttribute('full', $image);
   }
+
+  /** @test */
+  public function can_normalize_links() {
+    $link = [
+      'title' => 'Test',
+      'url' => '#',
+      'target' => ''
+    ];
+    $expected = (object)[
+      'name' => 'Test',
+      'url' => '#',
+      'target' => '_self'
+    ];
+    $actual = jcdNormalizeLink($link);
+    $this->assertEquals($expected, $actual);
+  }
 }

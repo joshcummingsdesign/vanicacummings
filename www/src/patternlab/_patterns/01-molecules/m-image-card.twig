@@ -1,9 +1,9 @@
 {% set data = data ? data : molecules.image_card %}
 
 {% if data.opt_link %}
-<a class="m-image-card" href="{{ data.opt_link.url }}" target="{{ data.opt_link.target }}" style="background-image: url('{{ data.image.src }}');">
+<a class="m-image-card" href="{{ data.opt_link.url }}" target="{{ data.opt_link.target }}" style="background-image: url('{{ data.image.full }}');">
 {% else %}
-<span class="m-image-card" style="background-image: url('{{ data.image.src }}');">
+<span class="m-image-card" style="background-image: url('{{ data.image.full }}');">
 {% endif %}
   {% if data.opt_heading %}
     <p class="m-image-card__text">{{ data.opt_heading }}</p>

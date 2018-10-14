@@ -8,7 +8,7 @@
           <h2 class="h-h2 h-mb-xxs">{{ data.heading }}</h2>
           {% include "a-hr.twig" %}
           <p class="h-p o-text-image-list__text h-mt-xxs h-mb-sm">{{ data.text }}</p>
-          <img class="o-text-image-list__image" src="{{ data.image.src }}" alt="{{ data.image.alt }}">
+          <img class="o-text-image-list__image" src="{{ data.image.full }}" alt="{{ data.image.alt }}">
           {% if data.list|length > 0 %}
             <div class="o-text-image-list__list s-post h-mt-sm">
               <ol>

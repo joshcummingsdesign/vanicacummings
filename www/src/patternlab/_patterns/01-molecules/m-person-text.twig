@@ -9,15 +9,29 @@
       <a class="m-person-text__link" href="{{ data.opt_link.url }}" target={{ data.opt_link.target }}>{{ data.opt_link.name }}</a>
     {% endif %}
   </div>
-  {% if data.social_items|length > 0 %}
+  {% if data.twitter or data.linkedin or data.email %}
     <ul class="m-person-text__social-items">
-      {% for item in data.social_items %}
+      {% if data.twitter %}
         <li class="m-person-text__social-item">
-          <a class="m-person-text__social-link" href="{{ item.url }}" target="_blank">
-            {% include "a-icon.twig" with { data: { name: item.name, title: item.name } } %}
+          <a class="m-person-text__social-link" href="{{ data.twitter }}" target="_blank">
+            {% include "a-icon.twig" with { data: { name: 'twitter', title: 'twitter' } } %}
           </a>
         </li>
-      {% endfor %}
+      {% endif %}
+      {% if data.linkedin %}
+        <li class="m-person-text__social-item">
+          <a class="m-person-text__social-link" href="{{ data.linkedin }}" target="_blank">
+            {% include "a-icon.twig" with { data: { name: 'linkedin', title: 'linkedin' } } %}
+          </a>
+        </li>
+      {% endif %}
+      {% if data.email %}
+        <li class="m-person-text__social-item">
+          <a class="m-person-text__social-link" href="mailto:{{ data.email }}" target="_blank">
+            {% include "a-icon.twig" with { data: { name: 'email', title: 'email' } } %}
+          </a>
+        </li>
+      {% endif %}
     </ul>
   {% endif %}
 </div>

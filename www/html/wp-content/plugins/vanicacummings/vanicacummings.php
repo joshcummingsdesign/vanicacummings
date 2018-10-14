@@ -107,13 +107,6 @@ if (!class_exists(__NAMESPACE__ . '\VanicaCummings')) {
     private $adminAssets;
 
     /**
-     * The AdminMenus class instance.
-     *
-     * @var object
-     */
-    private $adminMenus;
-
-    /**
      * The ViewLoader class instance.
      *
      * @var object
@@ -183,7 +176,6 @@ if (!class_exists(__NAMESPACE__ . '\VanicaCummings')) {
      */
     public function initAdmin() {
       $this->adminAssets = new Helpers\Admin\AdminAssets();
-      $this->adminMenus  = new Helpers\Admin\AdminMenus();
       $this->tinymce     = new Helpers\Admin\TinyMCE();
     }
 
