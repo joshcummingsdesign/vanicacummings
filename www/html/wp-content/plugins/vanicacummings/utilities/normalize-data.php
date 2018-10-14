@@ -83,7 +83,7 @@ function jcdNormalizePost($post) {
     'author' => $post->author->first_name . ' ' . $post->author->last_name,
     'date' => $post->date,
     'url' => $post->link,
-    'image' => jcdNormalizeImage($post->thumbnail->id)
+    'image' => $post->thumbnail ? jcdNormalizeImage($post->thumbnail->id) : null
   ];
 }
 

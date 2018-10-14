@@ -1,34 +1,38 @@
 {% set data = data ? data : organisms.three_column_cards %}
 
-<section class="o-three-column-cards {{ class }}">
+{% if data.items|length > 0 %}
 
-  {% if data.opt_heading %}
-    <div class="container">
-      <div class="row">
-        <div class="col-12 h-mb-grid">
-          <div class="o-three-column-cards__heading">
-            <h2 class="h-h2 h-mb-xxs">{{ data.opt_heading }}</h2>
-            {% include "a-hr.twig" %}
+  <section class="o-three-column-cards {{ class }}">
+
+    {% if data.opt_heading %}
+      <div class="container">
+        <div class="row">
+          <div class="col-12 h-mb-grid">
+            <div class="o-three-column-cards__heading">
+              <h2 class="h-h2 h-mb-xxs">{{ data.opt_heading }}</h2>
+              {% include "a-hr.twig" %}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  {% endif %}
+    {% endif %}
 
-  <div class="o-three-column-cards__outer">
-    <div class="container">
-      <div class="row">
+    <div class="o-three-column-cards__outer">
+      <div class="container">
+        <div class="row">
 
-        {% for item in data.items %}
+          {% for item in data.items %}
 
-          <div class="col-md-6 col-lg-4 o-three-column-cards__column">
-            {% include "m-award-card.twig" with { data: item } %}
-          </div>
+            <div class="col-md-6 col-lg-4 o-three-column-cards__column">
+              {% include "m-award-card.twig" with { data: item } %}
+            </div>
 
-        {% endfor %}
+          {% endfor %}
 
+        </div>
       </div>
     </div>
-  </div>
 
-</section>
+  </section>
+
+{% endif %}

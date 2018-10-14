@@ -6,12 +6,12 @@
 
   {% include "o-hero.twig" with { data: data.hero } %}
 
-  {% include "o-three-column-cards.twig" with { data: data.achievements, class: 'h-pt-lg' } %}
+  {% include "o-three-column-cards.twig" with { data: data.achievements, class: 'h-pt-lg h-mb-lg' } %}
 
-  {% include "o-three-column-cards.twig" with { data: data.awards, class: 'h-pt-lg h-pb-lg' } %}
+  {% include "o-three-column-cards.twig" with { data: data.awards, class: 'h-mt-lg h-pb-lg' } %}
 
   {% include "o-pagination.twig" %}
 
-  {% include "o-call-to-action.twig" with { data: data.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
+  {% include "o-call-to-action.twig" with { data: footer.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
 
 {% endblock %}

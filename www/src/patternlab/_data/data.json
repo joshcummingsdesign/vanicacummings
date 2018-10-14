@@ -1356,21 +1356,6 @@
             "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla."
           }
         ]
-      },
-      "call_to_action": {
-        "heading": "Get Involved",
-        "buttons": [
-          {
-            "name": "View Book",
-            "url": "#",
-            "target": "_self"
-          },
-          {
-            "name": "Contact",
-            "url": "#",
-            "target": "_self"
-          }
-        ]
       }
     }
   }

@@ -115,7 +115,10 @@ class BaseModel {
 
   public function getHeader() {
 
-    if (is_search()) {
+    if (is_404()) {
+      $heading = get_field('page_not_found_heading', 'option');
+      $text = get_field('page_not_found_text', 'option');
+    } elseif (is_search()) {
       $heading = get_field('search_heading', 'option');
       $text = get_field('search_results_text', 'option') . ': ' . get_search_query();
     } elseif (is_tag()) {
