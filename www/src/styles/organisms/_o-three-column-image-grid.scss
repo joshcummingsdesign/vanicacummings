@@ -12,6 +12,31 @@
   }
 }
 
+.o-three-column-image-grid__column {
+
+  &:nth-child(1) {
+    .m-image-card {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-child(2) {
+    .m-image-card {
+      @include breakpoint($sm) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .m-image-card {
+      @include breakpoint($md) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 .o-three-column-image-grid--light {
   background-color: $white;
 }

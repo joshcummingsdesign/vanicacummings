@@ -15,7 +15,7 @@
         <div class="t-single__content col-sm-8">
           <div class="s-post">
             {% if post.image %}
-              <img src="{{ post.image.sizes.medium }}" alt="{{ post.image.alt }}">
+              <img src="{{ post.image.full }}" alt="{{ post.image.alt }}">
             {% endif %}
             {{ post.content | raw }}
           </div>

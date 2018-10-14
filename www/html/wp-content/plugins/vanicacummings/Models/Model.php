@@ -178,6 +178,7 @@ class Model {
     }
 
     return (object)[
+      'opt_style' => get_field('three_column_image_grid_opt_style'),
       'opt_heading' => get_field('three_column_image_grid_opt_heading'),
       'items' => $items,
       'opt_button' => jcdNormalizeLink(get_field('three_column_image_grid_opt_button'))

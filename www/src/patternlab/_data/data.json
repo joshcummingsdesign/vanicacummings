@@ -1233,21 +1233,6 @@
             }
           }
         ]
-      },
-      "call_to_action": {
-        "heading": "Get Involved",
-        "buttons": [
-          {
-            "name": "View Book",
-            "url": "#",
-            "target": "_self"
-          },
-          {
-            "name": "Contact",
-            "url": "#",
-            "target": "_self"
-          }
-        ]
       }
     },
     "what_we_do": {
