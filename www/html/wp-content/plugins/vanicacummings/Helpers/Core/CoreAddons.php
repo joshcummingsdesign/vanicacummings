@@ -18,6 +18,7 @@ class CoreAddons {
   private function init() {
     add_action('save_post', [$this, 'setHomePage']);
     add_filter('wp_terms_checklist_args', [$this, 'checkedCategories']);
+    add_filter('pre_get_posts', [$this, 'filterSearch']);
   }
 
   /**
@@ -39,5 +40,17 @@ class CoreAddons {
   public function checkedCategories($args) {
     $args['checked_ontop'] = false;
     return $args;
+  }
+
+  /**
+   * Only allow posts in search query.
+   *
+   * @param array $query The search query passed by WordPress.
+   */
+  public function filterSearch($query) {
+    if ($query->is_search && !is_admin()) {
+      $query->set('post_type', ['post']);
+    }
+    return $query;
   }
 }
