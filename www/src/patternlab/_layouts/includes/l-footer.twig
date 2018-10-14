@@ -8,7 +8,7 @@
 
         <div class="l-footer__column">
           <a class="l-footer__logo-link" href="{{ site.url }}">
-            <img src="{{ site.logo.src }}" alt="{{ site.logo.alt }}">
+            <img src="{{ site.logo.full }}" alt="{{ site.logo.alt }}">
           </a>
           <p>{{ footer.copyright | raw }}</p>
         </div>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="l-footer__column">
-          <p class="l-footer__heading">{{ footer.contact.heading }}</p>
+          <p class="l-footer__heading">{{ footer.contact_text }}</p>
           <ul>
             <li>
               <a class="l-footer__link" href="mailto:{{ footer.contact.email }}">{{ footer.contact.email }}</a>
@@ -37,11 +37,11 @@
         </div>
 
         <div class="l-footer__column">
-          <p class="l-footer__heading">{{ footer.social.heading }}</p>
+          <p class="l-footer__heading">{{ footer.social_text }}</p>
           <ul>
-            {% for item in footer.social.items %}
+            {% for item in menus.social.items %}
               <li>
-                <a class="l-footer__link" href="{{ item.url }}" target="_blank">{{ item.name }}</a>
+                <a class="l-footer__link" href="{{ item.url }}" target="{{ item.target }}">{{ item.name }}</a>
               </li>
             {% endfor %}
           </ul>
@@ -49,9 +49,9 @@
 
         <div class="l-footer__column">
           <ul>
-            {% for item in footer.terms %}
+            {% for item in menus.terms.items %}
               <li>
-                <a class="l-footer__link" href="{{ item.url }}">{{ item.name }}</a>
+                <a class="l-footer__link" href="{{ item.url }}" target="{{ item.target }}">{{ item.name }}</a>
               </li>
             {% endfor %}
           </ul>

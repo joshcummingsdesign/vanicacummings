@@ -14,8 +14,8 @@ final class TestNormalizeData extends \WP_UnitTestCase {
         'PostClass' => (object)[],
         'items' => [
           (object)[
-            'name' => '',
-            'url' => '',
+            'name' => 'Test',
+            'url' => '#',
             'has_child_class' => 1,
             'classes' => [],
             'class' => '',
@@ -25,18 +25,7 @@ final class TestNormalizeData extends \WP_UnitTestCase {
             '_menu_item_object_id:protected' => 41,
             'menu_object:protected' => (object)[],
             'post_author' => '',
-            'children' => [
-              (object)[
-                'name' => '',
-                'url' => '',
-                'children' => [
-                  (object)[
-                    'name' => '',
-                    'url' => ''
-                  ]
-                ]
-              ]
-            ]
+            'target' => ''
           ]
         ]
       ]
@@ -46,20 +35,9 @@ final class TestNormalizeData extends \WP_UnitTestCase {
       'header' => (object)[
         'items' => [
           (object)[
-            'name' => '',
-            'url' => '',
-            'children' => [
-              (object)[
-                'name' => '',
-                'url' => '',
-                'children' => [
-                  (object)[
-                    'name' => '',
-                    'url' => ''
-                  ]
-                ]
-              ]
-            ]
+            'name' => 'Test',
+            'url' => '#',
+            'target' => '_self'
           ]
         ]
       ]
@@ -70,24 +48,9 @@ final class TestNormalizeData extends \WP_UnitTestCase {
 
   /** @test */
   public function can_normalize_images() {
-
-    $image = [
-      'title' => 'foobar',
-      'alt' => 'this is foobar',
-      'sizes' => [
-        'medium' => 800
-      ]
-    ];
-
-    $expected = (object) [
-      'title' => $image['title'],
-      'alt' => $image['alt'],
-      'sizes' => (object)[
-        'medium' => $image['sizes']['medium']
-      ]
-    ];
-
-    $actual = jcdNormalizeImage($image);
-    $this->assertEquals($expected, $actual);
+    $image = jcdNormalizeImage(1);
+    $this->assertObjectHasAttribute('alt', $image);
+    $this->assertObjectHasAttribute('medium', $image);
+    $this->assertObjectHasAttribute('full', $image);
   }
 }

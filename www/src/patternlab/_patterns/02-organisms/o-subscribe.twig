@@ -9,8 +9,8 @@
           {% include "a-hr.twig" %}
           <p class="h-p h-mt-xxs h-mb-xs">{{ data.text }}</p>
           <form class="o-subscribe__form" action="">
-            <input class="a-input" type="text" placeholder="Email" required>
-            <input class="a-button" type="submit" value="Subscribe">
+            <input class="a-input" type="text" placeholder="{{ data.form.placeholder }}" required>
+            <input class="a-button" type="submit" value="{{ data.form.button_text }}">
           </form>
         </div>
       </div>

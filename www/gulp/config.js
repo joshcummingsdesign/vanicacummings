@@ -39,19 +39,19 @@ module.exports = (() => {
       dest: `${project.views}/layouts`
     },
     atoms: {
-      src: `${project.src}/patternlab/_patterns/01-atoms/**/*.twig`,
+      src: `${project.src}/patternlab/_patterns/00-atoms/**/*.twig`,
       dest: `${project.views}/atoms`
     },
     molecules: {
-      src: `${project.src}/patternlab/_patterns/02-molecules/**/*.twig`,
+      src: `${project.src}/patternlab/_patterns/01-molecules/**/*.twig`,
       dest: `${project.views}/molecules`
     },
     organisms: {
-      src: `${project.src}/patternlab/_patterns/03-organisms/**/*.twig`,
+      src: `${project.src}/patternlab/_patterns/02-organisms/**/*.twig`,
       dest: `${project.views}/organisms`
     },
     templates: {
-      src: `${project.src}/patternlab/_patterns/04-templates/**/*.twig`,
+      src: `${project.src}/patternlab/_patterns/03-templates/**/*.twig`,
       dest: `${project.views}/templates`
     }
   };

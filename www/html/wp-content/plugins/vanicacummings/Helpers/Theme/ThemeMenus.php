@@ -19,7 +19,10 @@ class ThemeMenus {
    */
   private function registerMenus() {
     register_nav_menus([
-      'main_menu' => __('Main Menu', 'jcdwp')
+      'main' => __('Main Menu', 'jcdwp'),
+      'footer' => __('Footer Menu', 'jcdwp'),
+      'social' => __('Social Media', 'jcdwp'),
+      'terms' => __('Privacy & Terms', 'jcdwp')
     ]);
   }
 }

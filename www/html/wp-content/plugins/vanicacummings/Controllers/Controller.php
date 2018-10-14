@@ -27,18 +27,21 @@ class Controller {
   public function __construct() {
     $this->baseModel = new BaseModel();
     $this->data['body_class'] = $this->baseModel->getBodyClass();
+    $this->data['is_mobile'] = $this->baseModel->getIsMobile();
+    $this->data['images'] = $this->baseModel->getImages();
     $this->data['site'] = $this->baseModel->getSite();
     $this->data['menus'] = $this->baseModel->getMenus();
     $this->data['footer'] = $this->baseModel->getFooter();
-    $this->data['images'] = $this->baseModel->getImages();
-    $this->data['is_mobile'] = $this->baseModel->getIsMobile();
   }
 
   /**
    * Render the view.
    */
   public function renderView() {
-
-    \Timber::render('t-single.twig', $this->data);
+    $this->data['header'] = $this->baseModel->getHeader();
+    $this->data['sidebar'] = $this->baseModel->getSidebar();
+    $this->data['posts'] = $this->baseModel->getPosts()->posts;
+    $this->data['pagination'] = $this->baseModel->getPosts()->pagination;
+    \Timber::render('t-archive.twig', $this->data);
   }
 }

@@ -23,35 +23,8 @@ function jcdNormalizeMenus($menuData) {
         $menuItem = (object)[
           'name' => $item->name,
           'url' => $item->url,
-          'children' => []
+          'target' => $item->target === '_blank' ? '_blank' : '_self'
         ];
-
-        if ($item->children) {
-
-          foreach ($item->children as $child) {
-
-            $childItem = (object)[
-              'name' => $child->name,
-              'url' => $child->url,
-              'children' => []
-            ];
-
-            if ($child->children) {
-
-              foreach ($child->children as $grandchild) {
-
-                $grandchildItem = (object)[
-                  'name' => $child->name,
-                  'url' => $child->url
-                ];
-
-                  array_push($childItem->children, $grandchildItem);
-              }
-            }
-
-            array_push($menuItem->children, $childItem);
-          }
-        }
 
         array_push($menus->$menuSlug->items, $menuItem);
       }
@@ -61,16 +34,31 @@ function jcdNormalizeMenus($menuData) {
   return $menus;
 }
 
-function jcdNormalizeImage($image) {
+/**
+ * Normalize an image by id.
+ *
+ * @param int $id The image ID
+ */
+function jcdNormalizeImage($id) {
 
-  if (!($image)) {
-    return null;
-  }
-  return (object) [
-    'title' => $image['title'],
-    'alt' => $image['alt'],
-    'sizes' => (object)[
-      'medium' => $image['sizes']['medium']
-    ]
+  // Get alt text
+  $alt = get_post_meta($id, '_wp_attachment_image_alt', true);
+
+  // Create image object
+  $image = (object)[
+    'alt' => $alt
   ];
+
+  // Get image sizes
+  global $_wp_additional_image_sizes;
+  $sizes = $_wp_additional_image_sizes;
+  $sizes['full'] = [];
+
+  // Add image sizes to image object
+  foreach ($sizes as $size => $value) {
+    $url = wp_get_attachment_image_src($id, $size)[0];
+    $image->$size = $url;
+  }
+
+  return $image;
 }

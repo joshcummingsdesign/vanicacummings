@@ -6,7 +6,7 @@
 
   <div class="t-archive">
 
-    {% include "o-header.twig" with { data: data.header } %}
+    {% include "o-header.twig" with { data: header } %}
 
     <div class="container h-pb-lg">
       <div class="row">
@@ -23,6 +23,6 @@
 
   {% include "o-pagination.twig" %}
 
-  {% include "o-call-to-action.twig" with { data: data.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
+  {% include "o-call-to-action.twig" with { data: footer.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
 
 {% endblock %}

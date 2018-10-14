@@ -31,7 +31,7 @@ require('./gulp/tasks/scripts')(gulp, config, browserSync, isProduction, plugins
 require('./gulp/tasks/styles')(gulp, config, browserSync, isProduction, plugins);
 require('./gulp/tasks/fonts')(gulp, config, plugins, runSequence);
 require('./gulp/tasks/images')(gulp, config, plugins, runSequence);
-require('./gulp/tasks/patternlab')(gulp, config, exec, del, plRev, isProduction, plugins, fs, replace, runSequence);
+require('./gulp/tasks/patternlab')(gulp, config, exec, del, plRev, isProduction, fs, replace, runSequence);
 
 // Serve the app and start watching
 gulp.task('watch', () => {
