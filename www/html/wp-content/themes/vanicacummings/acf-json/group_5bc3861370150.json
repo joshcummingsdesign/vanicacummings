@@ -1,35 +1,11 @@
 {
-    "key": "group_5bc2e0747fce0",
-    "title": "Image Text",
+    "key": "group_5bc3861370150",
+    "title": "Content",
     "fields": [
         {
-            "key": "field_5bc2e0783f92d",
-            "label": "Image",
-            "name": "image_text_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5bc2e183d6782",
+            "key": "field_5bc386175563e",
             "label": "Heading",
-            "name": "image_text_heading",
+            "name": "content_heading",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -46,9 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5bc2e1cc5e0ae",
+            "key": "field_5bc3861d5563f",
             "label": "Text",
-            "name": "image_text_text",
+            "name": "content_text",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -62,7 +38,7 @@
             "placeholder": "",
             "maxlength": "",
             "rows": "",
-            "new_lines": ""
+            "new_lines": "wpautop"
         }
     ],
     "location": [
@@ -70,18 +46,25 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/template-home.php"
+                "value": "page-templates\/template-book.php"
             }
         ],
         [
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/template-book.php"
+                "value": "page-templates\/template-about.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-what-we-do.php"
             }
         ]
     ],
-    "menu_order": 1,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -89,5 +72,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539547745
+    "modified": 1539547957
 }

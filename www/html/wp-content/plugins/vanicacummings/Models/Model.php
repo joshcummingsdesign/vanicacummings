@@ -24,8 +24,43 @@ class Model {
 
   public function getContent() {
     return (object)[
-      "heading" => get_field('content_heading'),
-      "text" => get_field('content_text')
+      'heading' => get_field('content_heading'),
+      'text' => get_field('content_text')
+    ];
+  }
+
+  public function getTextFeatured() {
+
+    $row = get_field('text_featured_items');
+
+    $items = [];
+
+    if (!empty($row)) {
+
+      foreach ($row as $item) {
+
+        $images = [];
+
+        foreach ($item['featured_card']['images'] as $image) {
+          array_push($images, jcdNormalizeImage($image['image']));
+        }
+
+        array_push($items, (object)[
+          'heading' => $item['heading'],
+          'text' => $item['text'],
+          'featured_card' => (object)[
+            'heading' => $item['featured_card']['heading'],
+            'name' => $item['featured_card']['name'],
+            'images' => $images,
+            'description' => $item['featured_card']['description'],
+            'link' => jcdNormalizeLink($item['featured_card']['link'])
+          ]
+        ]);
+      }
+    }
+
+    return (object)[
+      'items' => $items
     ];
   }
 
@@ -65,8 +100,8 @@ class Model {
     $person = jcdNormalizePeople($post, $description, $resume);
 
     return (object)[
-      "opt_heading" => get_field('one_column_people_small_opt_heading'),
-      "people" => [$person]
+      'opt_heading' => get_field('one_column_people_small_opt_heading'),
+      'people' => [$person]
     ];
   }
 
@@ -209,8 +244,8 @@ class Model {
     }
 
     return (object)[
-      "heading" => get_field('call_to_action_heading'),
-      "buttons" => $cta_buttons
+      'heading' => get_field('call_to_action_heading'),
+      'buttons' => $cta_buttons
     ];
   }
 
@@ -223,15 +258,15 @@ class Model {
 
       foreach ($row as $logo) {
         array_push($logos, [
-          "image" => jcdNormalizeImage($logo['image']),
-          "opt_link" => jcdNormalizeLink($logo['link'])
+          'image' => jcdNormalizeImage($logo['image']),
+          'opt_link' => jcdNormalizeLink($logo['link'])
         ]);
       }
     }
 
     return (object)[
-      "opt_heading" => get_field('trust_logos_opt_heading'),
-      "logos" => $logos
+      'opt_heading' => get_field('trust_logos_opt_heading'),
+      'logos' => $logos
     ];
   }
 }

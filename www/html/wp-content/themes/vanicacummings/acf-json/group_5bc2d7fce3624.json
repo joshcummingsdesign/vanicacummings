@@ -83,9 +83,30 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "7"
+                "value": "page-templates\/template-home.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-book.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-about.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-what-we-do.php"
             }
         ]
     ],
@@ -111,5 +132,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539496708
+    "modified": 1539547624
 }

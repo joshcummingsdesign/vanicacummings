@@ -22,6 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5bc3844f5926e",
+            "label": "Border",
+            "name": "testimonial_carousel_opt_border",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5bc3074ceb9be",
             "label": "Items",
             "name": "testimonial_carousel_items",
@@ -127,13 +146,20 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "7"
+                "value": "page-templates\/template-home.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-book.php"
             }
         ]
     ],
-    "menu_order": 5,
+    "menu_order": 8,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -141,5 +167,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539508251
+    "modified": 1539548898
 }

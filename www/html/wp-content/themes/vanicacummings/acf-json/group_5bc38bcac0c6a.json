@@ -1,11 +1,11 @@
 {
-    "key": "group_5bc2fc4976509",
-    "title": "Two Column People",
+    "key": "group_5bc38bcac0c6a",
+    "title": "One Column People Small",
     "fields": [
         {
-            "key": "field_5bc2fc531f032",
+            "key": "field_5bc38c3adaab5",
             "label": "Heading",
-            "name": "two_column_people_opt_heading",
+            "name": "one_column_people_small_opt_heading",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,10 +22,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5bc38d628315b",
-            "label": "People",
-            "name": "two_column_people_people",
-            "type": "repeater",
+            "key": "field_5bc38bd2daab2",
+            "label": "Person",
+            "name": "one_column_people_small_person",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,40 +34,19 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_5bc38d838315c",
-                    "label": "Person",
-                    "name": "person",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "person"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "id",
-                    "ui": 1
-                }
-            ]
+            "post_type": [
+                "person"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
         },
         {
-            "key": "field_5bc2fcdbcbbd0",
+            "key": "field_5bc38bf5daab3",
             "label": "Description Length",
-            "name": "two_column_people_description_length",
+            "name": "one_column_people_small_description_length",
             "type": "radio",
             "instructions": "",
             "required": 0,
@@ -89,9 +68,9 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_5bc2fccbcbbcf",
+            "key": "field_5bc38c13daab4",
             "label": "Show Resume",
-            "name": "two_column_people_show_resume",
+            "name": "one_column_people_small_show_resume",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -108,9 +87,9 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_5bc2fc731f033",
+            "key": "field_5bc39b51fca85",
             "label": "Button",
-            "name": "two_column_people_opt_button",
+            "name": "one_column_people_small_opt_button",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -128,11 +107,11 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/template-home.php"
+                "value": "page-templates\/template-book.php"
             }
         ]
     ],
-    "menu_order": 7,
+    "menu_order": 5,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -140,5 +119,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539548891
+    "modified": 1539548879
 }

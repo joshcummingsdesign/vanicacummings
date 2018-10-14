@@ -697,7 +697,7 @@
         },
         {
           "heading": "Stakeholder Strategies",
-          "text": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p><h4>VanicaCummings can help your team:</h4><ul><li>Curabitur blandit tempus porttitor</li><li>Donec id elit non mi porta gravida at eget metus</li><li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus</li><li>Nullam id dolor id nibh ultricies vehicula ut id elit</li></ul>",
+          "text": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p><p><b>VanicaCummings can help your team:</b></p><ul><li>Curabitur blandit tempus porttitor</li><li>Donec id elit non mi porta gravida at eget metus</li><li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus</li><li>Nullam id dolor id nibh ultricies vehicula ut id elit</li></ul>",
           "featured_card": {
             "name": "Courageous Philanthropy",
             "images": [
@@ -1291,7 +1291,7 @@
           },
           {
             "heading": "Stakeholder Strategies",
-            "text": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p><h4>VanicaCummings can help your team:</h4><ul><li>Curabitur blandit tempus porttitor</li><li>Donec id elit non mi porta gravida at eget metus</li><li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus</li><li>Nullam id dolor id nibh ultricies vehicula ut id elit</li></ul>",
+            "text": "<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p><p><b>VanicaCummings can help your team:</b></p><ul><li>Curabitur blandit tempus porttitor</li><li>Donec id elit non mi porta gravida at eget metus</li><li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus</li><li>Nullam id dolor id nibh ultricies vehicula ut id elit</li></ul>",
             "featured_card": {
               "heading": "Featured",
               "name": "Courageous Philanthropy",
@@ -1312,21 +1312,6 @@
                 "target": "_self"
               }
             }
-          }
-        ]
-      },
-      "call_to_action": {
-        "heading": "Get Involved",
-        "buttons": [
-          {
-            "name": "View Book",
-            "url": "#",
-            "target": "_self"
-          },
-          {
-            "name": "Contact",
-            "url": "#",
-            "target": "_self"
           }
         ]
       }
