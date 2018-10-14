@@ -64,30 +64,29 @@ function jcdNormalizeImage($id) {
 }
 
 function jcdNormalizeLink($link) {
-  return (object)[
-    'name' => $link['title'],
-    'url' => $link['url'],
-    'target' => $link['target'] === '_blank' ? '_blank' : '_self'
-  ];
+  if (empty($link)) {
+    return null;
+  } else {
+    return (object)[
+      'name' => $link['title'],
+      'url' => $link['url'],
+      'target' => $link['target'] === '_blank' ? '_blank' : '_self'
+    ];
+  }
 }
 
 function jcdNormalizePeople($post, $description = 'short', $resume = false) {
-  switch ($description) {
-    case 'long':
-      $d = get_field('person_long_description', $post->id);
-      break;
-    default:
-      $d = get_field('person_short_description', $post->id);
-      break;
+
+  $d = get_field('person_short_description', $post->id);
+  if ($description === 'long') {
+    $d = get_field('person_long_description', $post->id);
   }
-  switch ($resume) {
-    case true:
-      $r = jcdNormalizeLink(get_field('person_opt_link', $post->id));
-      break;
-    default:
-      $r = null;
-      break;
+
+  $r = null;
+  if ($resume) {
+    $r = jcdNormalizeLink(get_field('person_opt_link', $post->id));
   }
+
   return (object)[
     'name' => $post->title,
     'image' => jcdNormalizeImage(get_field('person_image', $post->id)),
@@ -97,14 +96,5 @@ function jcdNormalizePeople($post, $description = 'short', $resume = false) {
     'twitter' => get_field('person_twitter', $post->id),
     'linkedin' => get_field('person_linkedin', $post->id),
     'email' => get_field('person_email', $post->id)
-  ];
-}
-
-function jcdNormalizeHero() {
-  return (object)[
-    'bg_img' => jcdNormalizeImage(get_field('hero_bg_img')),
-    'heading' => get_field('hero_heading'),
-    'opt_text' => get_field('hero_opt_text'),
-    'opt_button' => jcdNormalizeLink(get_field('hero_button'))
   ];
 }

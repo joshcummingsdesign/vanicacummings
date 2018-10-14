@@ -8,11 +8,11 @@
     {% for logo in data.logos %}
     <li class="o-trust-logos__item">
       {% if logo.opt_link %}
-        <a class="o-trust-logos__link" href="#">
+        <a class="o-trust-logos__link" href="{{ logo.opt_link.url }}" target="{{ logo.opt_link.target }}">
       {% else %}
         <span class="o-trust-logos__link">
       {% endif %}
-        <img class="o-trust-logos__logo" src="{{ logo.src }}" alt="{{ logo.alt }}">
+        <img class="o-trust-logos__logo" src="{{ logo.image.full }}" alt="{{ logo.image.alt }}">
       {% if logo.opt_link %}
         </a>
       {% else %}

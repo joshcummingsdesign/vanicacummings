@@ -22,7 +22,11 @@ class ControllerBook extends Controller {
     $model = new ModelBook();
     $this->data['templates']['book']['hero'] = $model->getHero();
     $this->data['templates']['book']['image_text'] = $model->getImageText();
+    $this->data['templates']['book']['content'] = $model->getContent();
     $this->data['templates']['book']['testimonial_carousel'] = $model->getTestimonialCarousel();
+    $this->data['templates']['book']['one_column_people_small'] = $model->getOneColumnPeopleSmall();
+    $this->data['templates']['book']['call_to_action'] = $model->getCallToAction();
+    $this->data['templates']['book']['trust_logos'] = $model->getTrustLogos();
   }
 
   /**

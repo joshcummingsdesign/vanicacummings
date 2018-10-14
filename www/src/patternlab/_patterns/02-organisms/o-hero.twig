@@ -10,7 +10,7 @@
           {% if data.opt_text %}
             <p class="h-p o-hero__text">{{ data.opt_text }}</p>
           {% endif %}
-          {% if data.opt_button %}
+          {% if data.opt_button.url %}
             <div class="o-hero__button">
               {%
                 include "a-button.twig"

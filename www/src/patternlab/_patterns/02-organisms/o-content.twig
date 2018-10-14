@@ -1,4 +1,4 @@
-{% set data = organisms.content %}
+{% set data = data ? data : organisms.content %}
 
 <section class="o-content {{ class }}">
   <div class="container">

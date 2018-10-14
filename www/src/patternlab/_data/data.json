@@ -652,16 +652,20 @@
       "opt_heading": "Also Available On",
       "logos": [
         {
-          "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
-          "alt": "amazon",
+          "image": {
+            "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
+            "alt": "amazon"
+          },
           "opt_link": {
             "url": "#",
             "target": "_self"
           }
         },
         {
-          "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/barnes-noble.svg",
-          "alt": "barnes and noble",
+          "image": {
+            "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
+            "alt": "amazon"
+          },
           "opt_link": {
             "url": "#",
             "target": "_self"
@@ -1071,6 +1075,31 @@
             "target": "_self"
           }
         ]
+      },
+      "trust_logos": {
+        "opt_heading": "Also Available On",
+        "logos": [
+          {
+            "image": {
+              "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
+              "alt": "amazon"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          },
+          {
+            "image": {
+              "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
+              "alt": "amazon"
+            },
+            "opt_link": {
+              "url": "#",
+              "target": "_self"
+            }
+          }
+        ]
       }
     },
     "about": {
@@ -1113,21 +1142,6 @@
             "twitter": "https://twitter.com/roncummings82",
             "linkedin": "https://www.linkedin.com/in/roncummings82",
             "email": "ron@vanicacummings.com"
-          }
-        ]
-      },
-      "call_to_action": {
-        "heading": "Get Involved",
-        "buttons": [
-          {
-            "name": "View Book",
-            "url": "#",
-            "target": "_self"
-          },
-          {
-            "name": "Contact",
-            "url": "#",
-            "target": "_self"
           }
         ]
       }
