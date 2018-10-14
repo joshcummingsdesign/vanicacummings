@@ -6,12 +6,7 @@
 class ModelHome {
 
   public function getHero() {
-    return (object)[
-      'bg_img' => jcdNormalizeImage(get_field('hero_bg_img')),
-      'heading' => get_field('hero_heading'),
-      'opt_text' => get_field('hero_opt_text'),
-      'opt_button' => jcdNormalizeLink(get_field('hero_button'))
-    ];
+    return jcdNormalizeHero();
   }
 
   public function getImageText() {
@@ -108,13 +103,16 @@ class ModelHome {
 
     $cards = [];
 
-    foreach ($row as $card) {
-      array_push($cards, (object)[
-        'image' => jcdNormalizeImage($card['image']),
-        'text' => $card['text'],
-        'name' => $card['name'],
-        'title' => $card['title']
-      ]);
+    if (!empty($row)) {
+
+      foreach ($row as $card) {
+        array_push($cards, (object)[
+          'image' => jcdNormalizeImage($card['image']),
+          'text' => $card['text'],
+          'name' => $card['name'],
+          'title' => $card['title']
+        ]);
+      }
     }
 
     return (object)[
@@ -130,8 +128,11 @@ class ModelHome {
 
     $list = [];
 
-    foreach ($row as $item) {
-      array_push($list, $item['list_item']);
+    if (!empty($row)) {
+
+      foreach ($row as $item) {
+        array_push($list, $item['list_item']);
+      }
     }
 
     return (object)[

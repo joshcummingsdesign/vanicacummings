@@ -99,3 +99,12 @@ function jcdNormalizePeople($post, $description = 'short', $resume = false) {
     'email' => get_field('person_email', $post->id)
   ];
 }
+
+function jcdNormalizeHero() {
+  return (object)[
+    'bg_img' => jcdNormalizeImage(get_field('hero_bg_img')),
+    'heading' => get_field('hero_heading'),
+    'opt_text' => get_field('hero_opt_text'),
+    'opt_button' => jcdNormalizeLink(get_field('hero_button'))
+  ];
+}
