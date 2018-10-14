@@ -3,6 +3,30 @@
     "title": "Three Column Image Grid",
     "fields": [
         {
+            "key": "field_5bc3b6050f503",
+            "label": "Style",
+            "name": "three_column_image_grid_opt_style",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "dark": "Dark",
+                "light": "Light"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "dark",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_5bc305ef32499",
             "label": "Heading",
             "name": "three_column_image_grid_opt_heading",
@@ -44,6 +68,13 @@
                 "operator": "==",
                 "value": "page-templates\/template-home.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-work.php"
+            }
         ]
     ],
     "menu_order": 9,
@@ -54,5 +85,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539548904
+    "modified": 1539552843
 }

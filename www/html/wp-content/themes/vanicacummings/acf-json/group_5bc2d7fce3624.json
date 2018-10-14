@@ -108,6 +108,13 @@
                 "operator": "==",
                 "value": "page-templates\/template-what-we-do.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-work.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -132,5 +139,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539547624
+    "modified": 1539552339
 }
