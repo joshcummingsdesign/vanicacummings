@@ -47,6 +47,7 @@ class BaseModel {
       'title' => get_bloginfo('name'),
       'charset' => get_bloginfo('charset'),
       'menu_text' => get_field('menu_text', 'option'),
+      'none_found_text' => get_field('none_found_text', 'option'),
       'logo' => jcdNormalizeImage(get_field('logo', 'option'))
     ];
   }
@@ -137,16 +138,24 @@ class BaseModel {
 
     $terms = get_tags();
 
+    $slugs = [];
+
+    if (is_single()) {
+      foreach (get_the_tags(get_the_id()) as $slug) {
+        array_push($slugs, $slug->slug);
+      }
+    } else {
+      $slugs = [ get_queried_object()->slug ?? null ];
+    }
+
     if (!empty($terms)) {
 
       foreach ($terms as $tag) {
 
-        $slug = get_queried_object()->slug ?? null;
-
         array_push($tags, (object)[
           'name' => $tag->name,
           'url' => get_tag_link($tag->term_id) ?? null,
-          'is_active' => $slug === $tag->slug ?? false
+          'is_active' => in_array($tag->slug, $slugs)
         ]);
       }
     }
@@ -166,6 +175,39 @@ class BaseModel {
   }
 
   /**
+   * Get the post data
+   *
+   * @return object The post data
+   */
+  public function getPost() {
+
+    $post = jcdNormalizePost(new \Timber\Post());
+
+    $prev_post = get_next_post(); // Reversed due to post order
+    $prev_post_title = $prev_post ? $prev_post->post_title : null;
+    $prev_post_url = $prev_post ? get_permalink($prev_post->ID) : null;
+    $next_post = get_previous_post(); // Reversed due to post order
+    $next_post_title = $next_post ? $next_post->post_title : null;
+    $next_post_url = $next_post ? get_permalink($next_post->ID) : null;
+
+    $pagination = (object)[
+      'prev' => (object)[
+        'name' => $prev_post_title,
+        'url' => $prev_post_url
+      ],
+      'next' => (object)[
+        'name' => $next_post_title,
+        'url' => $next_post_url
+      ]
+    ];
+
+    return (object)[
+      'post' => $post,
+      'pagination' => $pagination
+    ];
+  }
+
+  /**
    * Get the posts
    *
    * @return object An object containing the posts and pagination
@@ -181,15 +223,7 @@ class BaseModel {
     if (!empty($dbPosts)) {
 
       foreach ($dbPosts as $post) {
-        $posts[] = (object)[
-          'title' => $post->title,
-          'content' => $post->post_content,
-          'excerpt' => $post->preview()->length(32)->read_more(false),
-          'author' => $post->author->first_name . ' ' . $post->author->last_name,
-          'date' => $post->date,
-          'url' => $post->link,
-          'image' => jcdNormalizeImage($post->thumbnail->id)
-        ];
+        $posts[] = jcdNormalizePost($post);
       }
     }
 

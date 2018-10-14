@@ -75,6 +75,18 @@ function jcdNormalizeLink($link) {
   }
 }
 
+function jcdNormalizePost($post) {
+  return (object)[
+    'title' => $post->title,
+    'content' => $post->content,
+    'excerpt' => $post->preview()->length(32)->read_more(false),
+    'author' => $post->author->first_name . ' ' . $post->author->last_name,
+    'date' => $post->date,
+    'url' => $post->link,
+    'image' => jcdNormalizeImage($post->thumbnail->id)
+  ];
+}
+
 function jcdNormalizePeople($post, $description = 'short', $resume = false) {
 
   $d = get_field('person_short_description', $post->id);

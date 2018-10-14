@@ -1,7 +1,13 @@
 <div class="o-archive row">
-  {% for post in posts %}
+  {% if posts|length > 0 %}
+    {% for post in posts %}
+      <div class="o-archive__column col-md-6">
+        {% include "m-post-card.twig" with { post: post } %}
+      </div>
+    {% endfor %}
+  {% else %}
     <div class="o-archive__column col-md-6">
-      {% include "m-post-card.twig" with { post: post } %}
+      <p class="h-p h-text-dark-grey">{{ site.none_found_text }}</p>
     </div>
-  {% endfor %}
+  {% endif %}
 </div>
