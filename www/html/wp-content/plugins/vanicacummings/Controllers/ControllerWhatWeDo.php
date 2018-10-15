@@ -19,10 +19,10 @@ class ControllerWhatWeDo extends Controller {
    */
   public function __construct() {
     parent::__construct();
-    $model = new ModelWhatWeDo();
-    $this->data['templates']['what_we_do']['hero'] = $model->getHero();
-    $this->data['templates']['what_we_do']['content'] = $model->getContent();
-    $this->data['templates']['what_we_do']['text_featured'] = $model->getTextFeatured();
+    $this->model = new ModelWhatWeDo();
+    $this->data['templates']['what_we_do']['hero'] = $this->model->getHero();
+    $this->data['templates']['what_we_do']['content'] = $this->model->getContent();
+    $this->data['templates']['what_we_do']['text_featured'] = $this->model->getTextFeatured();
   }
 
   /**

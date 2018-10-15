@@ -182,9 +182,9 @@ class BaseModel {
    *
    * @return object The post data
    */
-  public function getPost() {
+  public function getPost($id = null) {
 
-    $post = jcdNormalizePost(new \Timber\Post());
+    $post = jcdNormalizePost(new \Timber\Post($id));
 
     $prev_post = get_next_post(); // Reversed due to post order
     $prev_post_title = $prev_post ? $prev_post->post_title : null;

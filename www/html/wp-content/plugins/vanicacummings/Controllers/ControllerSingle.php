@@ -19,7 +19,7 @@ class ControllerSingle extends Controller {
    */
   public function __construct() {
     parent::__construct();
-    $model = new ModelSingle();
+    $this->model = new ModelSingle();
   }
 
   /**

@@ -32,10 +32,14 @@ final class TestController extends \WP_UnitTestCase {
   public function can_render_a_view() {
     $this->controller->renderView();
     $this->assertArrayHasKey('body_class', $this->controller->data);
+    $this->assertArrayHasKey('is_mobile', $this->controller->data);
+    $this->assertArrayHasKey('images', $this->controller->data);
     $this->assertArrayHasKey('site', $this->controller->data);
     $this->assertArrayHasKey('menus', $this->controller->data);
     $this->assertArrayHasKey('footer', $this->controller->data);
-    $this->assertArrayHasKey('images', $this->controller->data);
-    $this->assertArrayHasKey('is_mobile', $this->controller->data);
+    $this->assertArrayHasKey('header', $this->controller->data);
+    $this->assertArrayHasKey('sidebar', $this->controller->data);
+    $this->assertArrayHasKey('posts', $this->controller->data);
+    $this->assertArrayHasKey('pagination', $this->controller->data);
   }
 }

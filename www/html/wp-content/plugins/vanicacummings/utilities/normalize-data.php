@@ -80,7 +80,7 @@ function jcdNormalizePost($post) {
     'title' => $post->title,
     'content' => $post->content,
     'excerpt' => $post->preview()->length(32)->read_more(false),
-    'author' => $post->author->first_name . ' ' . $post->author->last_name,
+    'author' => $post->author ? $post->author->first_name . ' ' . $post->author->last_name : '',
     'date' => $post->date,
     'url' => $post->link,
     'image' => $post->thumbnail ? jcdNormalizeImage($post->thumbnail->id) : null

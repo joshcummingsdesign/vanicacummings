@@ -19,14 +19,14 @@ class ControllerHome extends Controller {
    */
   public function __construct() {
     parent::__construct();
-    $model = new ModelHome();
-    $this->data['templates']['home']['hero'] = $model->getHero();
-    $this->data['templates']['home']['image_text'] = $model->getImageText();
-    $this->data['templates']['home']['four_column_image_text'] = $model->getFourColumnImageText();
-    $this->data['templates']['home']['two_column_people'] = $model->getTwoColumnPeople();
-    $this->data['templates']['home']['three_column_image_grid'] = $model->getThreeColumnImageGrid();
-    $this->data['templates']['home']['testimonial_carousel'] = $model->getTestimonialCarousel();
-    $this->data['templates']['home']['text_image_list'] = $model->getTextImageList();
+    $this->model= new ModelHome();
+    $this->data['templates']['home']['hero'] = $this->model->getHero();
+    $this->data['templates']['home']['image_text'] = $this->model->getImageText();
+    $this->data['templates']['home']['four_column_image_text'] = $this->model->getFourColumnImageText();
+    $this->data['templates']['home']['two_column_people'] = $this->model->getTwoColumnPeople();
+    $this->data['templates']['home']['three_column_image_grid'] = $this->model->getThreeColumnImageGrid();
+    $this->data['templates']['home']['testimonial_carousel'] = $this->model->getTestimonialCarousel();
+    $this->data['templates']['home']['text_image_list'] = $this->model->getTextImageList();
   }
 
   /**

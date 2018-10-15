@@ -19,10 +19,10 @@ class ControllerWorkSingle extends Controller {
    */
   public function __construct() {
     parent::__construct();
-    $model = new ModelWorkSingle();
-    $this->data['templates']['work_single']['hero'] = $model->getHero();
-    $this->data['templates']['work_single']['achievements'] = $model->getAchievements();
-    $this->data['templates']['work_single']['awards'] = $model->getAwards();
+    $this->model = new ModelWorkSingle();
+    $this->data['templates']['work_single']['hero'] = $this->model->getHero();
+    $this->data['templates']['work_single']['achievements'] = $this->model->getAchievements();
+    $this->data['templates']['work_single']['awards'] = $this->model->getAwards();
   }
 
   /**

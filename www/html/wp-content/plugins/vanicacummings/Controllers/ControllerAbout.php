@@ -19,10 +19,10 @@ class ControllerAbout extends Controller {
    */
   public function __construct() {
     parent::__construct();
-    $model = new ModelAbout();
-    $this->data['templates']['about']['hero'] = $model->getHero();
-    $this->data['templates']['about']['content'] = $model->getContent();
-    $this->data['templates']['about']['one_column_people'] = $model->getOneColumnPeople();
+    $this->model = new ModelAbout();
+    $this->data['templates']['about']['hero'] = $this->model->getHero();
+    $this->data['templates']['about']['content'] = $this->model->getContent();
+    $this->data['templates']['about']['one_column_people'] = $this->model->getOneColumnPeople();
   }
 
   /**

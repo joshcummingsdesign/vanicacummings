@@ -48,6 +48,7 @@ final class TestBaseModel extends \WP_UnitTestCase {
     $this->assertObjectHasAttribute('title', $data);
     $this->assertObjectHasAttribute('charset', $data);
     $this->assertObjectHasAttribute('menu_text', $data);
+    $this->assertObjectHasAttribute('none_found_text', $data);
     $this->assertObjectHasAttribute('logo', $data);
   }
 
@@ -64,11 +65,21 @@ final class TestBaseModel extends \WP_UnitTestCase {
   public function can_get_footer_data() {
     $data = $this->model->getFooter();
     $this->assertObjectHasAttribute('call_to_action', $data);
+    $this->assertObjectHasAttribute('heading', $data->call_to_action);
+    $this->assertObjectHasAttribute('buttons', $data->call_to_action);
     $this->assertObjectHasAttribute('subscribe', $data);
+    $this->assertObjectHasAttribute('opt_border', $data->subscribe);
+    $this->assertObjectHasAttribute('heading', $data->subscribe);
+    $this->assertObjectHasAttribute('text', $data->subscribe);
+    $this->assertObjectHasAttribute('form', $data->subscribe);
+    $this->assertObjectHasAttribute('placeholder', $data->subscribe->form);
+    $this->assertObjectHasAttribute('button_text', $data->subscribe->form);
     $this->assertObjectHasAttribute('sitemap_text', $data);
     $this->assertObjectHasAttribute('contact_text', $data);
     $this->assertObjectHasAttribute('social_text', $data);
     $this->assertObjectHasAttribute('contact', $data);
+    $this->assertObjectHasAttribute('email', $data->contact);
+    $this->assertObjectHasAttribute('phone', $data->contact);
     $this->assertObjectHasAttribute('copyright', $data);
   }
 
@@ -84,12 +95,39 @@ final class TestBaseModel extends \WP_UnitTestCase {
     $data = $this->model->getSidebar();
     $this->assertObjectHasAttribute('text', $data);
     $this->assertObjectHasAttribute('search', $data);
+    $this->assertObjectHasAttribute('heading', $data->search);
+    $this->assertObjectHasAttribute('placeholder', $data->search);
+    $this->assertObjectHasAttribute('button_text', $data->search);
     $this->assertObjectHasAttribute('tags', $data);
+    $this->assertObjectHasAttribute('heading', $data->tags);
+    $this->assertObjectHasAttribute('items', $data->tags);
+  }
+
+  /** @test */
+  public function can_get_post() {
+    $id = $this->factory->post->create();
+    $data = $this->model->getPost($id);
+    $this->assertObjectHasAttribute('post', $data);
+    $this->assertObjectHasAttribute('pagination', $data);
+    $this->assertObjectHasAttribute('prev', $data->pagination);
+    $this->assertObjectHasAttribute('name', $data->pagination->prev);
+    $this->assertObjectHasAttribute('url', $data->pagination->prev);
+    $this->assertObjectHasAttribute('next', $data->pagination);
+    $this->assertObjectHasAttribute('name', $data->pagination->next);
+    $this->assertObjectHasAttribute('url', $data->pagination->next);
   }
 
   /** @test */
   public function can_get_posts() {
+    $id = $this->factory->post->create();
     $data = $this->model->getPosts();
-    $this->assertInternalType('object', $data);
+    $this->assertObjectHasAttribute('posts', $data);
+    $this->assertObjectHasAttribute('pagination', $data);
+    $this->assertObjectHasAttribute('prev', $data->pagination);
+    $this->assertObjectHasAttribute('name', $data->pagination->prev);
+    $this->assertObjectHasAttribute('url', $data->pagination->prev);
+    $this->assertObjectHasAttribute('next', $data->pagination);
+    $this->assertObjectHasAttribute('name', $data->pagination->next);
+    $this->assertObjectHasAttribute('url', $data->pagination->next);
   }
 }

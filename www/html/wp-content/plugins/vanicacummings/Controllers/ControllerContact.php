@@ -19,10 +19,10 @@ class ControllerContact extends Controller {
    */
   public function __construct() {
     parent::__construct();
-    $model = new ModelContact();
-    $this->data['templates']['contact']['hero'] = $model->getHero();
-    $this->data['templates']['contact']['contact'] = $model->getContact();
-    $this->data['templates']['contact']['call_to_action'] = $model->getCallToAction();
+    $this->model = new ModelContact();
+    $this->data['templates']['contact']['hero'] = $this->model->getHero();
+    $this->data['templates']['contact']['contact'] = $this->model->getContact();
+    $this->data['templates']['contact']['call_to_action'] = $this->model->getCallToAction();
   }
 
   /**

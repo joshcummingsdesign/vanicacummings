@@ -19,10 +19,10 @@ class ControllerWork extends Controller {
    */
   public function __construct() {
     parent::__construct();
-    $model = new ModelWork();
-    $this->data['templates']['work']['hero'] = $model->getHero();
-    $this->data['templates']['work']['content'] = $model->getContent();
-    $this->data['templates']['work']['three_column_image_grid'] = $model->getThreeColumnImageGrid();
+    $this->model = new ModelWork();
+    $this->data['templates']['work']['hero'] = $this->model->getHero();
+    $this->data['templates']['work']['content'] = $this->model->getContent();
+    $this->data['templates']['work']['three_column_image_grid'] = $this->model->getThreeColumnImageGrid();
   }
 
   /**
