@@ -27,6 +27,30 @@
             "mime_types": ""
         },
         {
+            "key": "field_5bc44e27b3888",
+            "label": "Alternate Image",
+            "name": "person_alternate_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5bc2e8d326a23",
             "label": "Title",
             "name": "person_title",
@@ -68,6 +92,25 @@
             "key": "field_5bc2e9568fd39",
             "label": "Long Description",
             "name": "person_long_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5bc44e47b3889",
+            "label": "Alternate Description",
+            "name": "person_alternate_description",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -188,5 +231,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539501284
+    "modified": 1539591777
 }

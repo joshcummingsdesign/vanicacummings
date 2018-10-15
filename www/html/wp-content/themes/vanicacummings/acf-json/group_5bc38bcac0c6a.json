@@ -45,8 +45,8 @@
         },
         {
             "key": "field_5bc38bf5daab3",
-            "label": "Description Length",
-            "name": "one_column_people_small_description_length",
+            "label": "Description Type",
+            "name": "one_column_people_small_description_type",
             "type": "radio",
             "instructions": "",
             "required": 0,
@@ -58,7 +58,8 @@
             },
             "choices": {
                 "short": "Short",
-                "long": "Long"
+                "long": "Long",
+                "alternate": "Alternate"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -119,5 +120,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539548879
+    "modified": 1539591868
 }

@@ -90,8 +90,12 @@ function jcdNormalizePost($post) {
 function jcdNormalizePeople($post, $description = 'short', $resume = false) {
 
   $d = get_field('person_short_description', $post->id);
+  $i = get_field('person_image', $post->id);
   if ($description === 'long') {
     $d = get_field('person_long_description', $post->id);
+  } elseif ($description === 'alternate') {
+    $d = get_field('person_alternate_description', $post->id);
+    $i = get_field('person_alternate_image', $post->id);
   }
 
   $r = null;
@@ -101,7 +105,7 @@ function jcdNormalizePeople($post, $description = 'short', $resume = false) {
 
   return (object)[
     'name' => $post->title,
-    'image' => jcdNormalizeImage(get_field('person_image', $post->id)),
+    'image' => jcdNormalizeImage($i),
     'title' => get_field('person_title', $post->id),
     'description' => $d,
     'opt_link' => $r,

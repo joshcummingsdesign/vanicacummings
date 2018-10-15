@@ -93,7 +93,7 @@ class Model {
 
     $post = new \Timber\Post(get_field('one_column_people_small_person'));
 
-    $description = get_field('one_column_people_small_description_length');
+    $description = get_field('one_column_people_small_description_type');
 
     $resume = get_field('one_column_people_small_show_resume');
 
@@ -111,7 +111,7 @@ class Model {
 
     $people = [];
 
-    $description = get_field('one_column_people_description_length');
+    $description = get_field('one_column_people_description_type');
 
     $resume = get_field('one_column_people_show_resume');
 
@@ -136,7 +136,7 @@ class Model {
 
     $people = [];
 
-    $description = get_field('two_column_people_description_length');
+    $description = get_field('two_column_people_description_type');
 
     $resume = get_field('two_column_people_show_resume');
 
