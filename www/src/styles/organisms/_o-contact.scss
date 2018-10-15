@@ -1,0 +1,45 @@
+/*=============================================
+=                   Contact                   =
+=============================================*/
+
+.o-contact {
+  text-align: center;
+}
+
+.o-contact__link {
+  display: block;
+  text-decoration: none;
+  color: $black;
+  font-size: 0.9rem;
+  margin-bottom: $grid-gutter-width;
+
+  @include breakpoint($sm) {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+  }
+
+  @include breakpoint(850px) {
+    font-size: 0.8rem;
+  }
+
+  @include breakpoint(1080px) {
+    font-size: 1rem;
+  }
+
+  .a-icon {
+    font-size: 2.6em;
+    color: $purple;
+  }
+}
+
+.o-contact__heading {
+  display: block;
+  font-weight: $bold;
+  font-size: 2.4em;
+  margin-top: $padding-tiny;
+}
+
+.o-contact__value {
+  display: block;
+  font-size: 1.8em;
+}

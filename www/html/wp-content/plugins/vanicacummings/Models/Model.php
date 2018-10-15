@@ -232,6 +232,30 @@ class Model {
     ];
   }
 
+  public function getContact() {
+
+    $phone = get_field('contact_phone');
+    $email = get_field('contact_email');
+    $linkedin = get_field('contact_linkedin');
+
+    return (object)[
+      'heading' => get_field('contact_heading'),
+      'phone' => (object)[
+        'heading' => $phone['heading'],
+        'value' => $phone['value']
+      ],
+      'email' => (object)[
+        'heading' => $email['heading'],
+        'value' => $email['value']
+      ],
+      'linkedin' => (object)[
+        'heading' => $linkedin['heading'],
+        'name' => $linkedin['name'],
+        'value' => $linkedin['value']
+      ]
+    ];
+  }
+
   public function getCallToAction() {
 
     $buttons = get_field('call_to_action_buttons');

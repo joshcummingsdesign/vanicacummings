@@ -764,6 +764,22 @@
         "placeholder": "Email",
         "button_text": "Subscribe"
       }
+    },
+    "contact": {
+      "heading": "Get in Touch",
+      "phone": {
+        "heading": "Call",
+        "value": "619-840-0640"
+      },
+      "email": {
+        "heading": "Email",
+        "value": "change@vanicacummings.com"
+      },
+      "linkedin": {
+        "heading": "Connect",
+        "name": "LinkedIn",
+        "value": "https://www.linkedin.com/company/vanicacummings-community-change-consulting"
+      }
     }
   },
   "templates": {
@@ -1354,6 +1370,51 @@
             "caption": "San Diego, CA",
             "heading": "Smart Growth Pilot Village",
             "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla."
+          }
+        ]
+      }
+    },
+    "contact": {
+      "hero": {
+        "bg_img": {
+          "full": "https://picsum.photos/1440/600"
+        },
+        "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
+        "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
+        "opt_button": {
+          "name": "View Book",
+          "url": "#",
+          "target": "_self"
+        }
+      },
+      "contact": {
+        "heading": "Get in Touch",
+        "phone": {
+          "heading": "Call",
+          "value": "619-840-0640"
+        },
+        "email": {
+          "heading": "Email",
+          "value": "change@vanicacummings.com"
+        },
+        "linkedin": {
+          "heading": "Connect",
+          "name": "LinkedIn",
+          "value": "https://www.linkedin.com/company/vanicacummings-community-change-consulting"
+        }
+      },
+      "call_to_action": {
+        "heading": "Get Involved",
+        "buttons": [
+          {
+            "name": "View Book",
+            "url": "#",
+            "target": "_self"
+          },
+          {
+            "name": "View Blog",
+            "url": "#",
+            "target": "_self"
           }
         ]
       }

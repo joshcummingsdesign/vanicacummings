@@ -1,0 +1,38 @@
+{% set data = data ? data : organisms.contact %}
+
+<section class="o-contact {{ class }}">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 h-mb-md">
+        <h2 class="h-h2 h-mb-xxs">{{ data.heading }}</h2>
+        {% include "a-hr.twig" %}
+      </div>
+
+      <div class="col-sm-4">
+        <a class="o-contact__link" href="tel:1-{{ data.phone.value }}">
+          {% include "a-icon.twig" with { data: { name: 'phone-lg', title: '' } } %}
+          <span class="o-contact__heading">{{ data.phone.heading }}</span>
+          <span class="o-contact__value">{{ data.phone.value }}</span>
+        </a>
+      </div>
+
+      <div class="col-sm-4">
+        <a class="o-contact__link" href="mailto:{{ data.email.value }}">
+          {% include "a-icon.twig" with { data: { name: 'email-lg', title: '' } } %}
+          <span class="o-contact__heading">{{ data.email.heading }}</span>
+          <span class="o-contact__value">{{ data.email.value }}</span>
+        </a>
+      </div>
+
+      <div class="col-sm-4">
+        <a class="o-contact__link" href="{{ data.linkedin.value }}" target="_blank">
+          {% include "a-icon.twig" with { data: { name: 'linkedin-lg', title: '' } } %}
+          <span class="o-contact__heading">{{ data.linkedin.heading }}</span>
+          <span class="o-contact__value">{{ data.linkedin.name }}</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
