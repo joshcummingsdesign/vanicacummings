@@ -202,8 +202,7 @@
     "url": "#",
     "image": {
       "alt": "placeholder image",
-      "full": "https://picsum.photos/600/350",
-      "medium": "https://picsum.photos/600/350"
+      "post_thumb": "https://picsum.photos/600/350"
     }
   },
   "posts": [
@@ -216,8 +215,7 @@
       "url": "#",
       "image": {
         "alt": "placeholder image",
-        "full": "https://picsum.photos/600/350",
-        "medium": "https://picsum.photos/600/350"
+        "post_thumb": "https://picsum.photos/600/350"
       }
     },
     {
@@ -229,8 +227,7 @@
       "url": "#",
       "image": {
         "alt": "placeholder image",
-        "full": "https://picsum.photos/600/350",
-        "medium": "https://picsum.photos/600/350"
+        "post_thumb": "https://picsum.photos/600/350"
       }
     },
     {
@@ -242,8 +239,7 @@
       "url": "#",
       "image": {
         "alt": "placeholder image",
-        "full": "https://picsum.photos/600/350",
-        "medium": "https://picsum.photos/600/350"
+        "post_thumb": "https://picsum.photos/600/350"
       }
     },
     {
@@ -255,8 +251,7 @@
       "url": "#",
       "image": {
         "alt": "placeholder image",
-        "full": "https://picsum.photos/600/350",
-        "medium": "https://picsum.photos/600/350"
+        "post_thumb": "https://picsum.photos/600/350"
       }
     }
   ],
@@ -284,7 +279,7 @@
   "molecules": {
     "person_image": {
       "image": {
-        "full": "https://picsum.photos/600/600",
+        "large_square": "https://picsum.photos/600/600",
         "alt": "person"
       }
     },
@@ -304,7 +299,7 @@
     "image_card": {
       "opt_heading": "Community Development",
       "image": {
-        "full": "https://picsum.photos/480/480",
+        "medium_square": "https://picsum.photos/480/480",
         "alt": "photo"
       },
       "opt_link": {
@@ -314,7 +309,7 @@
     },
     "testimonial_card": {
       "image": {
-        "full": "https://picsum.photos/200/200",
+        "small_square": "https://picsum.photos/300/300",
         "alt": "image"
       },
       "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
@@ -326,7 +321,7 @@
       "name": "Courageous Philanthropy",
       "images": [
         {
-          "full": "https://picsum.photos/600/300",
+          "post_thumb": "https://picsum.photos/600/300",
           "alt": "photo"
         }
       ],
@@ -346,7 +341,7 @@
     "search": {
       "heading": "Search",
       "placeholder": "Search",
-      "input_text": "Submit"
+      "button_text": "Submit"
     },
     "tags": {
       "heading": "Topics",
@@ -382,7 +377,7 @@
   "organisms": {
     "hero": {
       "bg_img": {
-        "full": "https://picsum.photos/1440/600"
+        "full_width": "https://picsum.photos/1440/600"
       },
       "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
       "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
@@ -394,7 +389,7 @@
     },
     "image_text": {
       "image": {
-        "full": "/wp-content/themes/vanicacummings/dist/images/brand/vc-logo.svg",
+        "small_square": "/wp-content/themes/vanicacummings/dist/images/brand/vc-logo.svg",
         "alt": "VanicaCummings"
       },
       "heading": "We are think-partners, coaches, and facilitators with a mission of building communities of change.",
@@ -410,7 +405,7 @@
       "items": [
         {
           "image": {
-            "full": "https://picsum.photos/300/300",
+            "small_square": "https://picsum.photos/300/300",
             "alt": "image"
           },
           "heading": "Sharing Lessons",
@@ -418,7 +413,7 @@
         },
         {
           "image": {
-            "full": "https://picsum.photos/300/300",
+            "small_square": "https://picsum.photos/300/300",
             "alt": "image"
           },
           "heading": "Stakeholder Strategies",
@@ -426,7 +421,7 @@
         },
         {
           "image": {
-            "full": "https://picsum.photos/300/300",
+            "small_square": "https://picsum.photos/300/300",
             "alt": "image"
           },
           "heading": "Participitory Planning",
@@ -434,7 +429,7 @@
         },
         {
           "image": {
-            "full": "https://picsum.photos/300/300",
+            "small_square": "https://picsum.photos/300/300",
             "alt": "image"
           },
           "heading": "Capacity Building & Resources",
@@ -453,7 +448,7 @@
         {
           "name": "Jennifer Vanica",
           "image": {
-            "full": "https://picsum.photos/600/600"
+            "large_square": "https://picsum.photos/600/600"
           },
           "title": "Senior Fellow at PolicyLink",
           "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
@@ -469,7 +464,7 @@
         {
           "name": "Ron Cummings",
           "image": {
-            "full": "https://picsum.photos/600/600"
+            "large_square": "https://picsum.photos/600/600"
           },
           "title": "Community Change Leader",
           "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
@@ -489,13 +484,12 @@
         "target": "_self"
       }
     },
-    "two_column_people": {
-      "opt_heading": "Who We Are",
+    "one_column_people": {
       "people": [
         {
           "name": "Jennifer Vanica",
           "image": {
-            "full": "https://picsum.photos/600/600"
+            "large_square": "https://picsum.photos/600/600"
           },
           "title": "Senior Fellow at PolicyLink",
           "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
@@ -506,7 +500,34 @@
         {
           "name": "Ron Cummings",
           "image": {
-            "full": "https://picsum.photos/600/600"
+            "large_square": "https://picsum.photos/600/600"
+          },
+          "title": "Community Change Leader",
+          "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
+          "twitter": "https://twitter.com/roncummings82",
+          "linkedin": "https://www.linkedin.com/in/roncummings82",
+          "email": "ron@vanicacummings.com"
+        }
+      ]
+    },
+    "two_column_people": {
+      "opt_heading": "Who We Are",
+      "people": [
+        {
+          "name": "Jennifer Vanica",
+          "image": {
+            "large_square": "https://picsum.photos/600/600"
+          },
+          "title": "Senior Fellow at PolicyLink",
+          "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
+          "twitter": "https://twitter.com/jennifervanica",
+          "linkedin": "https://www.linkedin.com/in/jennifervanica",
+          "email": "jennifer@vanicacummings.com"
+        },
+        {
+          "name": "Ron Cummings",
+          "image": {
+            "large_square": "https://picsum.photos/600/600"
           },
           "title": "Community Change Leader",
           "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
@@ -527,7 +548,7 @@
         {
           "opt_heading": "Community Development",
           "image": {
-            "full": "https://picsum.photos/480/480",
+            "medium_square": "https://picsum.photos/480/480",
             "alt": "photo"
           },
           "opt_link": {
@@ -538,7 +559,7 @@
         {
           "opt_heading": "Philanthropy",
           "image": {
-            "full": "https://picsum.photos/480/480",
+            "medium_square": "https://picsum.photos/480/480",
             "alt": "photo"
           },
           "opt_link": {
@@ -549,7 +570,7 @@
         {
           "opt_heading": "Collaborations",
           "image": {
-            "full": "https://picsum.photos/480/480",
+            "medium_square": "https://picsum.photos/480/480",
             "alt": "photo"
           },
           "opt_link": {
@@ -560,7 +581,7 @@
         {
           "opt_heading": "Social Enterprises",
           "image": {
-            "full": "https://picsum.photos/480/480",
+            "medium_square": "https://picsum.photos/480/480",
             "alt": "photo"
           },
           "opt_link": {
@@ -571,7 +592,7 @@
         {
           "opt_heading": "Non-Profits",
           "image": {
-            "full": "https://picsum.photos/480/480",
+            "medium_square": "https://picsum.photos/480/480",
             "alt": "photo"
           },
           "opt_link": {
@@ -582,7 +603,7 @@
         {
           "opt_heading": "Capital Campaigns",
           "image": {
-            "full": "https://picsum.photos/480/480",
+            "medium_square": "https://picsum.photos/480/480",
             "alt": "photo"
           },
           "opt_link": {
@@ -602,7 +623,7 @@
       "cards": [
         {
           "image": {
-            "full": "https://picsum.photos/200/200",
+            "small_square": "https://picsum.photos/300/300",
             "alt": "image"
           },
           "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
@@ -611,7 +632,7 @@
         },
         {
           "image": {
-            "full": "https://picsum.photos/200/200",
+            "small_square": "https://picsum.photos/300/300",
             "alt": "image"
           },
           "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
@@ -620,7 +641,7 @@
         },
         {
           "image": {
-            "full": "https://picsum.photos/200/200",
+            "small_square": "https://picsum.photos/300/300",
             "alt": "image"
           },
           "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
@@ -633,7 +654,7 @@
       "heading": "Our Approach",
       "text": "Enduring change is deeply rooted in the will, motivation, and expectations of people and is energized by working across disciplines, sectors, areas of interest, cultures, and ages. By working in teams across natural boundaries, groups begin to see the world in a new way, open up to new risks, and think freely about innovative strategies that can be tested. When people combine their wisdom and know-how, they can address real issues and achieve lasting change.",
       "image": {
-        "full": "https://picsum.photos/800/600",
+        "large": "https://picsum.photos/800/600",
         "alt": "image"
       },
       "list": [
@@ -654,7 +675,7 @@
       "logos": [
         {
           "image": {
-            "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
+            "small_square": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
             "alt": "amazon"
           },
           "opt_link": {
@@ -664,8 +685,8 @@
         },
         {
           "image": {
-            "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
-            "alt": "amazon"
+            "small_square": "/wp-content/themes/vanicacummings/dist/images/trust-logos/barnes-noble.svg",
+            "alt": "barnes and noble"
           },
           "opt_link": {
             "url": "#",
@@ -684,7 +705,7 @@
             "name": "Courageous Philanthropy",
             "images": [
               {
-                "full": "https://picsum.photos/600/300",
+                "post_thumb": "https://picsum.photos/600/300",
                 "alt": "photo"
               }
             ],
@@ -703,11 +724,11 @@
             "name": "Courageous Philanthropy",
             "images": [
               {
-                "full": "https://picsum.photos/600/300",
+                "post_thumb": "https://picsum.photos/600/300",
                 "alt": "photo"
               },
               {
-                "full": "https://picsum.photos/600/300",
+                "post_thumb": "https://picsum.photos/600/300",
                 "alt": "photo"
               }
             ],
@@ -786,7 +807,7 @@
     "home": {
       "hero": {
         "bg_img": {
-          "full": "https://picsum.photos/1440/600"
+          "full_width": "https://picsum.photos/1440/600"
         },
         "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
         "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
@@ -798,7 +819,7 @@
       },
       "image_text": {
         "image": {
-          "full": "/wp-content/themes/vanicacummings/dist/images/brand/vc-logo.svg",
+          "small_square": "/wp-content/themes/vanicacummings/dist/images/brand/vc-logo.svg",
           "alt": "VanicaCummings"
         },
         "heading": "We are think-partners, coaches, and facilitators with a mission of building communities of change.",
@@ -810,7 +831,7 @@
         "items": [
           {
             "image": {
-              "full": "https://picsum.photos/300/300",
+              "small_square": "https://picsum.photos/300/300",
               "alt": "image"
             },
             "heading": "Sharing Lessons",
@@ -818,7 +839,7 @@
           },
           {
             "image": {
-              "full": "https://picsum.photos/300/300",
+              "small_square": "https://picsum.photos/300/300",
               "alt": "image"
             },
             "heading": "Stakeholder Strategies",
@@ -826,7 +847,7 @@
           },
           {
             "image": {
-              "full": "https://picsum.photos/300/300",
+              "small_square": "https://picsum.photos/300/300",
               "alt": "image"
             },
             "heading": "Participitory Planning",
@@ -834,7 +855,7 @@
           },
           {
             "image": {
-              "full": "https://picsum.photos/300/300",
+              "small_square": "https://picsum.photos/300/300",
               "alt": "image"
             },
             "heading": "Capacity Building & Resources",
@@ -853,7 +874,7 @@
           {
             "name": "Jennifer Vanica",
             "image": {
-              "full": "https://picsum.photos/600/600"
+              "large_square": "https://picsum.photos/600/600"
             },
             "title": "Senior Fellow at PolicyLink",
             "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
@@ -864,7 +885,7 @@
           {
             "name": "Ron Cummings",
             "image": {
-              "full": "https://picsum.photos/600/600"
+              "large_square": "https://picsum.photos/600/600"
             },
             "title": "Community Change Leader",
             "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
@@ -885,7 +906,7 @@
           {
             "opt_heading": "Community Development",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -896,7 +917,7 @@
           {
             "opt_heading": "Philanthropy",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -907,7 +928,7 @@
           {
             "opt_heading": "Collaborations",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -918,7 +939,7 @@
           {
             "opt_heading": "Social Enterprises",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -929,7 +950,7 @@
           {
             "opt_heading": "Non-Profits",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -961,16 +982,7 @@
         "cards": [
           {
             "image": {
-              "full": "https://picsum.photos/200/200",
-              "alt": "image"
-            },
-            "text": "Hello world.",
-            "name": "Moki Macias",
-            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
-          },
-          {
-            "image": {
-              "full": "https://picsum.photos/200/200",
+              "small_square": "https://picsum.photos/300/300",
               "alt": "image"
             },
             "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
@@ -979,10 +991,19 @@
           },
           {
             "image": {
-              "full": "https://picsum.photos/200/200",
+              "small_square": "https://picsum.photos/300/300",
               "alt": "image"
             },
-            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.",
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+            "name": "Moki Macias",
+            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+          },
+          {
+            "image": {
+              "small_square": "https://picsum.photos/300/300",
+              "alt": "image"
+            },
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
             "name": "Moki Macias",
             "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
           }
@@ -992,7 +1013,7 @@
         "heading": "Our Approach",
         "text": "Enduring change is deeply rooted in the will, motivation, and expectations of people and is energized by working across disciplines, sectors, areas of interest, cultures, and ages. By working in teams across natural boundaries, groups begin to see the world in a new way, open up to new risks, and think freely about innovative strategies that can be tested. When people combine their wisdom and know-how, they can address real issues and achieve lasting change.",
         "image": {
-          "full": "https://picsum.photos/800/600",
+          "large": "https://picsum.photos/800/600",
           "alt": "image"
         },
         "list": [
@@ -1012,7 +1033,7 @@
     "book": {
       "hero": {
         "bg_img": {
-          "full": "https://picsum.photos/1440/600"
+          "full_width": "https://picsum.photos/1440/600"
         },
         "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
         "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
@@ -1024,7 +1045,7 @@
       },
       "image_text": {
         "image": {
-          "full": "/wp-content/themes/vanicacummings/dist/images/brand/vc-logo.svg",
+          "small_square": "/wp-content/themes/vanicacummings/dist/images/brand/vc-logo.svg",
           "alt": "VanicaCummings"
         },
         "heading": "We are think-partners, coaches, and facilitators with a mission of building communities of change.",
@@ -1040,16 +1061,7 @@
         "cards": [
           {
             "image": {
-              "full": "https://picsum.photos/200/200",
-              "alt": "image"
-            },
-            "text": "Hello world.",
-            "name": "Moki Macias",
-            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
-          },
-          {
-            "image": {
-              "full": "https://picsum.photos/200/200",
+              "small_square": "https://picsum.photos/300/300",
               "alt": "image"
             },
             "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
@@ -1058,10 +1070,19 @@
           },
           {
             "image": {
-              "full": "https://picsum.photos/200/200",
+              "small_square": "https://picsum.photos/300/300",
               "alt": "image"
             },
-            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.",
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+            "name": "Moki Macias",
+            "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
+          },
+          {
+            "image": {
+              "small_square": "https://picsum.photos/300/300",
+              "alt": "image"
+            },
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
             "name": "Moki Macias",
             "title": "Former Director of Community Building, The Annie E. Casey Foundation Atlanta Civic Site"
           }
@@ -1073,7 +1094,7 @@
           {
             "name": "Jennifer Vanica",
             "image": {
-              "full": "https://picsum.photos/600/600"
+              "large_square": "https://picsum.photos/600/600"
             },
             "title": "Senior Fellow at PolicyLink",
             "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
@@ -1081,7 +1102,12 @@
             "linkedin": "https://www.linkedin.com/in/jennifervanica",
             "email": "jennifer@vanicacummings.com"
           }
-        ]
+        ],
+        "opt_button": {
+          "name": "Learn More",
+          "url": "#",
+          "target": "_self"
+        }
       },
       "call_to_action": {
         "heading": "Get Your Copy",
@@ -1098,7 +1124,7 @@
         "logos": [
           {
             "image": {
-              "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
+              "small_square": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
               "alt": "amazon"
             },
             "opt_link": {
@@ -1108,8 +1134,8 @@
           },
           {
             "image": {
-              "full": "/wp-content/themes/vanicacummings/dist/images/trust-logos/amazon.svg",
-              "alt": "amazon"
+              "small_square": "/wp-content/themes/vanicacummings/dist/images/trust-logos/barnes-noble.svg",
+              "alt": "barnes and noble"
             },
             "opt_link": {
               "url": "#",
@@ -1122,7 +1148,7 @@
     "about": {
       "hero": {
         "bg_img": {
-          "full": "https://picsum.photos/1440/600"
+          "full_width": "https://picsum.photos/1440/600"
         },
         "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
         "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
@@ -1141,7 +1167,7 @@
           {
             "name": "Jennifer Vanica",
             "image": {
-              "full": "https://picsum.photos/600/600"
+              "large_square": "https://picsum.photos/600/600"
             },
             "title": "Senior Fellow at PolicyLink",
             "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
@@ -1152,7 +1178,7 @@
           {
             "name": "Ron Cummings",
             "image": {
-              "full": "https://picsum.photos/600/600"
+              "large_square": "https://picsum.photos/600/600"
             },
             "title": "Community Change Leader",
             "description": "<p>Maecenas sed diam eget risus varius <a href=\"#\">hello</a> blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>",
@@ -1166,7 +1192,7 @@
     "work": {
       "hero": {
         "bg_img": {
-          "full": "https://picsum.photos/1440/600"
+          "full_width": "https://picsum.photos/1440/600"
         },
         "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
         "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
@@ -1186,7 +1212,7 @@
           {
             "opt_heading": "Community Development",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -1197,7 +1223,7 @@
           {
             "opt_heading": "Philanthropy",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -1208,7 +1234,7 @@
           {
             "opt_heading": "Collaborations",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -1219,7 +1245,7 @@
           {
             "opt_heading": "Social Enterprises",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -1230,7 +1256,7 @@
           {
             "opt_heading": "Non-Profits",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -1241,7 +1267,7 @@
           {
             "opt_heading": "Capital Campaigns",
             "image": {
-              "full": "https://picsum.photos/480/480",
+              "medium_square": "https://picsum.photos/480/480",
               "alt": "photo"
             },
             "opt_link": {
@@ -1255,7 +1281,7 @@
     "what_we_do": {
       "hero": {
         "bg_img": {
-          "full": "https://picsum.photos/1440/600"
+          "full_width": "https://picsum.photos/1440/600"
         },
         "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
         "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
@@ -1279,7 +1305,7 @@
               "name": "Courageous Philanthropy",
               "images": [
                 {
-                  "full": "https://picsum.photos/600/300",
+                  "post_thumb": "https://picsum.photos/600/300",
                   "alt": "photo"
                 }
               ],
@@ -1299,11 +1325,11 @@
               "name": "Courageous Philanthropy",
               "images": [
                 {
-                  "full": "https://picsum.photos/600/300",
+                  "post_thumb": "https://picsum.photos/600/300",
                   "alt": "photo"
                 },
                 {
-                  "full": "https://picsum.photos/600/300",
+                  "post_thumb": "https://picsum.photos/600/300",
                   "alt": "photo"
                 }
               ],
@@ -1321,7 +1347,7 @@
     "work_single": {
       "hero": {
         "bg_img": {
-          "full": "https://picsum.photos/1440/600"
+          "full_width": "https://picsum.photos/1440/600"
         },
         "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
         "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",
@@ -1377,7 +1403,7 @@
     "contact": {
       "hero": {
         "bg_img": {
-          "full": "https://picsum.photos/1440/600"
+          "full_width": "https://picsum.photos/1440/600"
         },
         "heading": "Courageous Philanthropy is by far the freshest distillation of lessons and insights from the community building field.",
         "opt_text": "- Eldwood Hopkins, Emerging Markets, LLC",

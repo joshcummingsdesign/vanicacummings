@@ -4,7 +4,7 @@
   <h5 class="m-featured-card__heading">{{ data.heading }}</h5>
   <p class="m-featured-card__subheading">{{ data.name }}</p>
   {% for image in data.images %}
-    <img class="m-featured-card__image" src="{{ image.full }}" alt="{{ image.alt }}">
+    <img class="m-featured-card__image" src="{{ image.post_thumb }}" alt="{{ image.alt }}">
   {% endfor %}
   <p class="m-featured-card__description">{{ data.description }}</p>
   <a class="m-featured-card__link" href="{{ data.link.url }}" target="{{ data.link.target }}" aria-label="{{ data.name }} {{ data.link.name }}">{{ data.link.name }}</a>
