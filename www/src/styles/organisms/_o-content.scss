@@ -6,6 +6,10 @@
   text-align: center;
   background-color: $purple;
   color: $white;
+
+  i {
+    font-style: italic;
+  }
 }
 
 .o-content__heading {
@@ -18,7 +22,7 @@
 }
 
 .o-content__text {
-  max-width: 51rem;
+  max-width: 53rem;
   margin: 0 auto;
 
   p {

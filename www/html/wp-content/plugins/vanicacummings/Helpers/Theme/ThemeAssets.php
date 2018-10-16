@@ -29,7 +29,7 @@ class ThemeAssets {
     // fonts
     wp_enqueue_style(
       'jcd/fonts',
-      'https://fonts.googleapis.com/css?family=Lato:300,300i,700',
+      'https://fonts.googleapis.com/css?family=Lato:300,300i,700,700i',
       null
     );
 

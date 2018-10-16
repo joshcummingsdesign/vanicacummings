@@ -11,6 +11,10 @@
   color: $white;
   padding: 8rem 0;
 
+  i {
+    font-style: italic;
+  }
+
   @include breakpoint($sm) {
     padding: 12rem 0;
   }
