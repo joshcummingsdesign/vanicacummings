@@ -1,4 +1,4 @@
 <?php namespace VanicaCummings\Controllers;
 
-$controller = new ControllerSingle();
+$controller = new ControllerPage();
 $controller->renderView();

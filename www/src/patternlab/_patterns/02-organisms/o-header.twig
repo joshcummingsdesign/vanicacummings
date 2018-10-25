@@ -1,11 +1,19 @@
 {% set data = data ? data : header %}
 
-<section class="o-header">
+{% if data.style == 'page' %}
+  {% set column_class = 'col-sm-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2' %}
+{% else %}
+  {% set column_class = 'col-sm-8' %}
+{% endif %}
+
+<section class="o-header {{ data.class }}">
   <div class="container">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="{{ column_class }}">
         <h1 class="h-h2">{{ data.heading }}</h1>
-        <p class="o-header__text">{{ data.text }}</p>
+        {% if data.text %}
+          <p class="o-header__text">{{ data.text }}</p>
+        {% endif %}
       </div>
     </div>
   </div>

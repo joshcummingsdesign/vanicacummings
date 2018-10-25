@@ -1,0 +1,30 @@
+{% extends 'l-base.twig' %}
+
+{% block content %}
+
+  {% set data = templates.single %}
+
+  <div class="t-archive t-page">
+
+    {% set text = [post.author, '|', post.date] | join(' ') %}
+
+    {% include "o-header.twig" with { data: { style: 'page', heading: post.title, class: 'h-pb-none' } } %}
+
+    <div class="container h-pb-lg">
+      <div class="row">
+        <div class="t-page__content col-sm-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+          <div class="s-post">
+            {% if post.image %}
+              <img src="{{ post.image.post_thumb }}" alt="{{ post.image.alt }}">
+            {% endif %}
+            {{ post.content | raw }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  {% include "o-call-to-action.twig" with { data: footer.call_to_action, class: 'h-pt-lg h-pb-lg' } %}
+
+{% endblock %}

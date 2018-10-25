@@ -11,6 +11,7 @@
   }
 
   .o-archive__column {
+    display: flex;
     margin-top: $grid-gutter-width;
 
     &:nth-child(1) {

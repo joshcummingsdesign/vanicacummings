@@ -24,11 +24,18 @@
   }
 }
 
+.o-pagination__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .o-pagination__link {
   color: $purple;
   font-weight: $bold;
   text-decoration: none;
   position: relative;
+  width: 45%;
 
   &:before {
     display: block;
@@ -63,6 +70,7 @@
 
 .o-pagination__link--next {
   float: right;
+  text-align: right;
   padding-right: 2.3rem;
 
   @include breakpoint($sm) {
