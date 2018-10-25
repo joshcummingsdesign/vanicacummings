@@ -44,6 +44,7 @@ class ModelWorkSingle extends Model {
         array_push($items, (object)[
           'caption' => $item['caption'],
           'heading' => $item['heading'],
+          'opt_subheading' => $item['opt_subheading'],
           'text' => $item['text']
         ]);
       }

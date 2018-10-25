@@ -26,6 +26,7 @@
   }
 
   .m-award-card {
+    width: 100%;
 
     @include breakpoint($md - 1, max-width) {
       max-width: 50rem;

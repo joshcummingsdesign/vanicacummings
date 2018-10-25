@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-12">
         <div class="o-hero__content">
-          <h1 class="h-h1 o-hero__heading">{{ data.heading }}</h1>
+          <div class="h-h1 o-hero__heading">{{ data.heading | raw }}</div>
           {% if data.opt_text %}
             <p class="h-p o-hero__text">{{ data.opt_text }}</p>
           {% endif %}
