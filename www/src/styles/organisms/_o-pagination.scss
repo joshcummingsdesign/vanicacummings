@@ -36,20 +36,20 @@
   text-decoration: none;
   position: relative;
   width: 45%;
+}
 
-  &:before {
-    display: block;
-    content: "";
-    height: 1.3rem;
-    width: 1.3rem;
-    position: absolute;
-    top: 50%;
-    border-top: 2px solid $purple;
+.o-pagination__arrow {
+  display: block;
+  content: "";
+  height: 1.3rem;
+  width: 1.3rem;
+  position: absolute;
+  top: 50%;
+  border-top: 2px solid $purple;
 
-    @include breakpoint($sm) {
-      height: 1.6rem;
-      width: 1.6rem;
-    }
+  @include breakpoint($sm) {
+    height: 1.6rem;
+    width: 1.6rem;
   }
 }
 
@@ -61,7 +61,7 @@
     padding-right: 2.6rem;
   }
 
-  &:before {
+  .o-pagination__arrow {
     transform: translateY(-50%) rotate(-45deg);
     border-left: 2px solid $purple;
     left: 0;
@@ -77,7 +77,7 @@
     padding-right: 2.6rem;
   }
 
-  &:before {
+  .o-pagination__arrow {
     transform: translateY(-50%) rotate(45deg);
     border-right: 2px solid $purple;
     right: 0;

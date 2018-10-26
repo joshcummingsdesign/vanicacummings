@@ -2,13 +2,13 @@
 =               Helpers - Video               =
 =============================================*/
 
-.h-video-wrapper {
+.entry-content-asset {
   position: relative;
   padding-bottom: 56.25%; // 16:9
   height: 0;
 }
 
-.h-video-wrapper iframe {
+.entry-content-asset iframe {
   position: absolute;
   top: 0;
   left: 0;

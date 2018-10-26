@@ -14,7 +14,7 @@
       <div class="row">
         <div class="t-single__content col-sm-8">
           <div class="s-post">
-            {% if post.image %}
+            {% if post.image and post.hide_thumb != true %}
               <img src="{{ post.image.post_thumb }}" alt="{{ post.image.alt }}">
             {% endif %}
             {{ post.content | raw }}

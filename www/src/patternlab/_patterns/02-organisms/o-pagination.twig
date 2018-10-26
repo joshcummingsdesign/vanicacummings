@@ -5,10 +5,20 @@
         <div class="col-12">
           <div class="o-pagination__inner">
             {% if pagination.prev.url %}
-              <a class="o-pagination__link o-pagination__link--prev" href="{{ pagination.prev.url }}">{{ pagination.prev.name }}</a>
+              <a class="o-pagination__link o-pagination__link--prev" href="{{ pagination.prev.url }}">
+                <span class="o-pagination__arrow"></span>
+                {{ pagination.prev.name }}
+              </a>
+            {% else %}
+              <span class="o-pagination__link o-pagination__link--prev"></span>
             {% endif %}
             {% if pagination.next.url %}
-              <a class="o-pagination__link o-pagination__link--next" href="{{ pagination.next.url }}">{{ pagination.next.name }}</a>
+              <a class="o-pagination__link o-pagination__link--next" href="{{ pagination.next.url }}">
+                <span class="o-pagination__arrow"></span>
+                {{ pagination.next.name }}
+              </a>
+            {% else %}
+              <span class="o-pagination__link o-pagination__link--next"></span>
             {% endif %}
           </div>
         </div>

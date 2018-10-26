@@ -185,6 +185,7 @@ class BaseModel {
   public function getPost($id = null) {
 
     $post = jcdNormalizePost(new \Timber\Post($id));
+    $post->hide_thumb = get_field('hide_thumb', $id);
 
     $prev_post = get_next_post(); // Reversed due to post order
     $prev_post_title = $prev_post ? $prev_post->post_title : null;
