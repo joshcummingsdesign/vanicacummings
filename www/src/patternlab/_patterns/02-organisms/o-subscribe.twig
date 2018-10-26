@@ -8,10 +8,17 @@
           <h2 class="h-h2 h-mb-xxs">{{ data.heading }}</h2>
           {% include "a-hr.twig" %}
           <p class="h-p h-mt-xxs h-mb-xs">{{ data.text }}</p>
-          <form class="o-subscribe__form" action="">
-            <input class="a-input" type="text" placeholder="{{ data.form.placeholder }}" required>
-            <input class="a-button" type="submit" value="{{ data.form.button_text }}">
-          </form>
+          <div id="mc_embed_signup">
+            <form class="validate o-subscribe__form" action="https://vanicacummings.us11.list-manage.com/subscribe/post?u=396e1983700c1efa5e4cc3f66&amp;id=c0a7e74b6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+              <input id="mce-EMAIL" class="a-input" type="email" value="" name="EMAIL" placeholder="{{ data.form.placeholder }}" required>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_396e1983700c1efa5e4cc3f66_c0a7e74b6d" tabindex="-1" value=""></div>
+              <input id="mc-embedded-subscribe" class="a-button" type="submit" value="{{ data.form.button_text }}" name="subscribe"></div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
