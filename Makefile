@@ -57,17 +57,14 @@ sbw:
 	@$(MAKE) -f $(THIS_FILE) build
 	@$(MAKE) -f $(THIS_FILE) watch
 
-dev:
-	@bin/tasks/dev.sh
-
 ssh:
 	@bin/tasks/ssh.sh
 
-ssh-dev:
-	@bin/tasks/ssh-dev.sh
+ssh-prod:
+	@bin/tasks/ssh-prod.sh
 
-clone-dev:
-	@bin/tasks/clone-dev.sh
+clone-prod:
+	@bin/tasks/clone-prod.sh
 
 rebuild:
 	@bin/tasks/rebuild.sh
@@ -91,8 +88,6 @@ help:
 	@echo "		- Install WordPress inside the container"
 	@echo "	make deps"
 	@echo "		- Install project dependencies"
-	@echo "	make dev"
-	@echo "		- Connect dev branch to dev server"
 	@echo "	make update-deps"
 	@echo "		- Update newly-added dependencies and generate lock files"
 	@echo "	make build"
@@ -109,10 +104,8 @@ help:
 	@echo "		- Sync, Build, Watch"
 	@echo "	make ssh"
 	@echo "		- SSH into the container"
-	@echo "	make ssh-dev"
-	@echo "		- SSH into the dev server"
-	@echo "	make clone-dev"
-	@echo "		- Clone the dev server to local"
+	@echo "	make ssh-prod"
+	@echo "		- SSH into the prod server"
 	@echo "	make rebuild"
 	@echo "		- Rebuild and restart the container"
 	@echo "	make stop"
@@ -122,4 +115,4 @@ help:
 	@echo "	make clean"
 	@echo "		- Docker garbage collection"
 
-.PHONY: coffee start install run-deps build-project check-deps remove-lock-files sync-lock-files build build-prod watch test sync dev ssh ssh-dev clone-dev rebuild stop restart clean
+.PHONY: coffee start install run-deps build-project check-deps remove-lock-files sync-lock-files build build-prod watch test sync ssh ssh-prod rebuild stop restart clean

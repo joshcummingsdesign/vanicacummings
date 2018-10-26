@@ -94,10 +94,6 @@ jobs:
           path: ~/test-results
       - deploy:
           command: |
-            if [ "${CIRCLE_BRANCH}" == "dev" ]; then
-              ./bin/deploy/dev/deploy-code.sh
-            elif [ "${CIRCLE_BRANCH}" == "staging" ]; then
-              ./bin/deploy/staging/deploy-code.sh
-            elif [ "${CIRCLE_BRANCH}" == "master" ]; then
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
               ./bin/deploy/prod/deploy-code.sh
             fi
