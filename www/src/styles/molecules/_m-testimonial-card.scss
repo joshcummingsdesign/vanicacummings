@@ -24,6 +24,10 @@
 
 .m-testimonrial-card__text {
   margin-bottom: $padding-xxs;
+
+  i {
+    font-style: italic;
+  }
 }
 
 .m-testimonrial-card__name {
