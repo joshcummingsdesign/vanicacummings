@@ -12,10 +12,10 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - composer-v006-{{ checksum "www/html/wp-content/plugins/vanicacummings/composer.lock" }}
+            - composer-v007-{{ checksum "www/html/wp-content/plugins/vanicacummings/composer.lock" }}
       - restore_cache:
           keys:
-            - node-modules-v006-{{ checksum "www/package-lock.json" }}
+            - node-modules-v007-{{ checksum "www/package-lock.json" }}
       - run:
           name: Database Check
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s

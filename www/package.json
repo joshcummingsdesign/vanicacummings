@@ -59,6 +59,7 @@
     "lazypipe": "~1.0.1",
     "mocha": "~3.2.0",
     "mocha-junit-reporter": "~1.13.0",
+    "natives": "1.1.6",
     "replace": "~0.3.0",
     "retire": "~1.5.1",
     "require-dir": "~0.3.1",

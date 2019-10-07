@@ -16,7 +16,7 @@ COPY docker/ssl.conf /etc/apache2/
 COPY docker/wp-su.sh /bin/wp
 
 # Install server dependencies
-RUN apt-get update && apt-get install -qqy sudo less nano git subversion wget mysql-client \
+RUN apt-get update && apt-get install -qqy sudo less nano git subversion wget mariadb-client-10.3 \
   openssl openssh-server libpng-dev libjpeg-dev \
   && chmod +x /usr/local/bin/docker-entrypoint.sh \
   && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
