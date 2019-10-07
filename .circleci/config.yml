@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Install Server Dependencies
           command: |
-            sudo apt install mysql-client subversion
+            sudo apt update && apt install mysql-client subversion
             sudo docker-php-ext-install mysqli
             mkdir -p ~/test-results/mocha ~/test-results/phpunit
       - run:
