@@ -29,6 +29,6 @@ class ControllerWhatWeDo extends Controller {
    * Render the view.
    */
   public function renderView() {
-    \Timber::render('t-what-we-do.twig', $this->data);
+    \Timber\Timber::render('t-what-we-do.twig', $this->data);
   }
 }

@@ -17,7 +17,7 @@ final class TestModelWorkSingle extends \WP_UnitTestCase {
   /**
    * The PHPUnit setUp method.
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     $this->model = new ModelWorkSingle();
   }
@@ -25,14 +25,14 @@ final class TestModelWorkSingle extends \WP_UnitTestCase {
   /** @test */
   public function can_get_achievements_data() {
     $data = $this->model->getAchievements();
-    $this->assertObjectHasAttribute('opt_heading', $data);
-    $this->assertObjectHasAttribute('items', $data);
+    $this->assertObjectHasProperty('opt_heading', $data);
+    $this->assertObjectHasProperty('items', $data);
   }
 
   /** @test */
   public function can_get_awards_data() {
     $data = $this->model->getAwards();
-    $this->assertObjectHasAttribute('opt_heading', $data);
-    $this->assertObjectHasAttribute('items', $data);
+    $this->assertObjectHasProperty('opt_heading', $data);
+    $this->assertObjectHasProperty('items', $data);
   }
 }

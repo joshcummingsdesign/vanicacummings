@@ -3,7 +3,7 @@ module.exports = (gulp, config, browserSync, isProduction, plugins) => {
     .src(config.styles.src + config.styles.pattern)
     .pipe(plugins.plumber())
     .pipe(plugins.if(!isProduction, plugins.sourcemaps.init()))
-    .pipe(plugins.sass()).on('error', plugins.sass.logError)
+    .pipe(plugins.dartSass()).on('error', plugins.dartSass.logError)
     .pipe(plugins.autoprefixer({browsers: ['> 1%', 'last 3 versions', 'Firefox >= 20', 'iOS >=7']}))
     .pipe(plugins.if(isProduction, plugins.cssnano()))
     .pipe(plugins.if(!isProduction, plugins.sourcemaps.write()))

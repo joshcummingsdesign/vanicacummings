@@ -42,6 +42,6 @@ class Controller {
     $this->data['sidebar'] = $this->baseModel->getSidebar();
     $this->data['posts'] = $this->baseModel->getPosts()->posts;
     $this->data['pagination'] = $this->baseModel->getPosts()->pagination;
-    \Timber::render('t-archive.twig', $this->data);
+    \Timber\Timber::render('t-archive.twig', $this->data);
   }
 }

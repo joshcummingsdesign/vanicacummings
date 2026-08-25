@@ -6,16 +6,25 @@
   "authors": [
     {
       "name": "Josh Cummings",
-      "email": "hello@joshcummingsdesign.com",
+      "email": "joshcummingsdesgin@gmail.com",
       "homepage": "https://joshcummingsdesign.com"
     }
   ],
   "require": {
-    "timber/timber": "~1.4.1"
+    "php": "^8.3",
+    "timber/timber": "^2.5.1"
   },
   "autoload": {
     "psr-4": {
       "VanicaCummings\\": "./"
+    }
+  },
+  "require-dev": {
+    "yoast/phpunit-polyfills": "^1.1"
+  },
+  "config": {
+    "platform": {
+      "php": "8.3.0"
     }
   }
 }

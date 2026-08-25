@@ -5,8 +5,12 @@
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true">
+  <php>
+    <!-- ACF Pro bundled here still emits PHP 8 deprecations during bootstrap. -->
+    <ini name="error_reporting" value="8191"/>
+  </php>
   <testsuites>
-    <testsuite>
+    <testsuite name="VanicaCummings">
       <directory suffix=".php">./html/wp-content/plugins/vanicacummings/tests/unit-tests</directory>
     </testsuite>
   </testsuites>

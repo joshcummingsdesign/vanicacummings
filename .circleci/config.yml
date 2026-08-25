@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/php:7.2-apache-node
+      - image: cimg/php:8.3
       - image: circleci/mariadb:10.3-ram
         environment:
           MYSQL_USER: root
@@ -22,15 +22,18 @@ jobs:
       - run:
           name: Install Server Dependencies
           command: |
-            sudo apt-get update && sudo apt-get install -y mariadb-client-10.3 subversion
+            sudo apt-get update && sudo apt-get install -y default-mysql-client subversion
+            sudo cp docker/mysql-client.cnf /etc/mysql/conf.d/disable-ssl.cnf
             sudo docker-php-ext-install mysqli
             mkdir -p ~/test-results/mocha ~/test-results/phpunit
       - run:
-          name: Install PHPUnit
+          name: Install Node.js
           command: |
-            sudo wget https://phar.phpunit.de/phpunit-6.1.phar
-            sudo chmod +x phpunit-6.1.phar
-            sudo mv phpunit-6.1.phar /usr/bin/phpunit
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+            echo 'export NVM_DIR="$HOME/.nvm"' >> "$BASH_ENV"
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"' >> "$BASH_ENV"
+            . "$BASH_ENV"
+            nvm install 10.24.1
       - run:
           name: Install PHP_CodeSniffer
           command: sudo pear install PHP_CodeSniffer
@@ -70,9 +73,11 @@ jobs:
               npx gulp
             fi
       - run:
-          name: Check for Vulnerabilities
+          name: Check Production Dependencies for Vulnerabilities
           working_directory: www
-          command: npx retire -n -p
+          command: |
+            npm audit --production
+            cd html/wp-content/plugins/vanicacummings && composer audit --no-dev
       - run:
           name: PHP Coding Standards
           working_directory: www
@@ -86,7 +91,7 @@ jobs:
       - run:
           name: PHP Unit Tests
           working_directory: www
-          command: phpunit --log-junit ~/test-results/phpunit/results.xml
+          command: html/wp-content/plugins/vanicacummings/vendor/bin/phpunit --log-junit ~/test-results/phpunit/results.xml
           when: always
       - store_test_results:
           path: ~/test-results

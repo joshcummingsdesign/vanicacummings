@@ -1,4 +1,5 @@
 v: 2.5.0
+phpBin: /usr/local/bin/php
 overrideConfig: q
 ie:
     - DS_Store

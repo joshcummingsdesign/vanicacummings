@@ -8,6 +8,8 @@ if (!$_tests_dir) {
   $_tests_dir = '/tmp/wordpress-tests-lib';
 }
 
+define('WP_TESTS_PHPUNIT_POLYFILLS_PATH', dirname(__FILE__) . '/../vendor/yoast/phpunit-polyfills');
+
 // Give access to tests_add_filter() function.
 require_once $_tests_dir . '/includes/functions.php';
 
@@ -15,6 +17,7 @@ require_once $_tests_dir . '/includes/functions.php';
  * Manually load plugins.
  */
 function _manually_load_plugin() {
+  error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
   require dirname(dirname(__FILE__)) . '/../advanced-custom-fields-pro/acf.php';
   require dirname(dirname(__FILE__)) . '/vanicacummings.php';
 }

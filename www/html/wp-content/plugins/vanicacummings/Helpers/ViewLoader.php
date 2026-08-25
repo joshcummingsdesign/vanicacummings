@@ -33,8 +33,22 @@ class ViewLoader {
    * Initialize Timber.
    */
   public function initTimber() {
-    $this->timber = new \Timber\Timber();
-    $this->initTwigFiles();
+    add_filter('timber/locations', [$this, 'addLocationPaths']);
+    \Timber\Timber::init();
+  }
+
+  /**
+   * Add the theme's Twig directories to Timber.
+   *
+   * @param array $locations Existing Timber locations.
+   * @return array Updated Timber locations.
+   */
+  public function addLocationPaths($locations) {
+    $locations[\Timber\Loader::MAIN_NAMESPACE] = array_merge(
+      $this->getLocationPaths(),
+      $locations[\Timber\Loader::MAIN_NAMESPACE] ?? []
+    );
+    return $locations;
   }
 
   /**
@@ -82,7 +96,4 @@ class ViewLoader {
   /**
    * Let Timber know where the twig files are.
    */
-  private function initTwigFiles() {
-    \Timber::$locations = $this->getLocationPaths();
-  }
 }

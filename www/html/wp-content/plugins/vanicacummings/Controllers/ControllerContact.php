@@ -29,6 +29,6 @@ class ControllerContact extends Controller {
    * Render the view.
    */
   public function renderView() {
-    \Timber::render('t-contact.twig', $this->data);
+    \Timber\Timber::render('t-contact.twig', $this->data);
   }
 }

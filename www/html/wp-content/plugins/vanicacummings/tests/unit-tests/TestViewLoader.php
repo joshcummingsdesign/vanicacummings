@@ -13,7 +13,7 @@ final class TestViewLoader extends \WP_UnitTestCase {
 
   public $locations;
 
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     $this->data = dirname(__FILE__) . '/../data';
     $this->viewLoader = new ViewLoader('views');
@@ -39,5 +39,13 @@ final class TestViewLoader extends \WP_UnitTestCase {
     }
 
     $this->assertSame($expected, $actual);
+  }
+
+  /** @test */
+  public function can_add_location_paths() {
+    $locations = [\Timber\Loader::MAIN_NAMESPACE => ['existing']];
+    $actual = $this->viewLoader->addLocationPaths($locations);
+    $expected = array_merge($this->viewLoader->getLocationPaths(), ['existing']);
+    $this->assertSame($expected, $actual[\Timber\Loader::MAIN_NAMESPACE]);
   }
 }

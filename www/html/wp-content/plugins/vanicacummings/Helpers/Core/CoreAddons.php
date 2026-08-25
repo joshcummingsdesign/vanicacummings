@@ -25,9 +25,13 @@ class CoreAddons {
    * Set "Home" page as front page.
    */
   public function setHomePage() {
-    $homepage = get_page_by_title('Home');
-    if ($homepage) {
-      update_option('page_on_front', $homepage->ID);
+    $homepage = new \WP_Query([
+      'post_type' => 'page',
+      'title' => 'Home',
+      'posts_per_page' => 1
+    ]);
+    if ($homepage->have_posts()) {
+      update_option('page_on_front', $homepage->posts[0]->ID);
       update_option('show_on_front', 'page');
     }
   }

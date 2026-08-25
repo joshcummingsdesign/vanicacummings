@@ -7,9 +7,9 @@ class ModelWorkSingle extends Model {
 
   public function getAchievements() {
 
-    $achievements = get_field('work_achievements');
+    $achievements = (array)get_field('work_achievements');
 
-    $row = $achievements['items'];
+    $row = $achievements['items'] ?? [];
 
     $items = [];
 
@@ -25,16 +25,16 @@ class ModelWorkSingle extends Model {
     }
 
     return (object)[
-      'opt_heading' => $achievements['opt_heading'],
+      'opt_heading' => $achievements['opt_heading'] ?? null,
       'items' => $items
     ];
   }
 
   public function getAwards() {
 
-    $awards = get_field('work_awards');
+    $awards = (array)get_field('work_awards');
 
-    $row = $awards['items'];
+    $row = $awards['items'] ?? [];
 
     $items = [];
 
@@ -51,7 +51,7 @@ class ModelWorkSingle extends Model {
     }
 
     return (object)[
-      'opt_heading' => $awards['opt_heading'],
+      'opt_heading' => $awards['opt_heading'] ?? null,
       'items' => $items
     ];
   }

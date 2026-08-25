@@ -13,20 +13,19 @@ final class TestNormalizeData extends \WP_UnitTestCase {
         'MenuItemClass' => (object)[],
         'PostClass' => (object)[],
         'items' => [
-          (object)[
-            'name' => 'Test',
-            'url' => '#',
-            'has_child_class' => 1,
-            'classes' => [],
-            'class' => '',
-            'level' => 1,
-            'post_name' => '',
-            'PostClass' => (object)[],
-            '_menu_item_object_id:protected' => 41,
-            'menu_object:protected' => (object)[],
-            'post_author' => '',
-            'target' => ''
-          ]
+          new class {
+            public function title() {
+              return 'Test';
+            }
+
+            public function link() {
+              return '#';
+            }
+
+            public function target() {
+              return '';
+            }
+          }
         ]
       ]
     ];
@@ -49,13 +48,13 @@ final class TestNormalizeData extends \WP_UnitTestCase {
   /** @test */
   public function can_normalize_images() {
     $image = jcdNormalizeImage(1);
-    $this->assertObjectHasAttribute('alt', $image);
-    $this->assertObjectHasAttribute('small_square', $image);
-    $this->assertObjectHasAttribute('medium_square', $image);
-    $this->assertObjectHasAttribute('large_square', $image);
-    $this->assertObjectHasAttribute('post_thumb', $image);
-    $this->assertObjectHasAttribute('large', $image);
-    $this->assertObjectHasAttribute('full_width', $image);
+    $this->assertObjectHasProperty('alt', $image);
+    $this->assertObjectHasProperty('small_square', $image);
+    $this->assertObjectHasProperty('medium_square', $image);
+    $this->assertObjectHasProperty('large_square', $image);
+    $this->assertObjectHasProperty('post_thumb', $image);
+    $this->assertObjectHasProperty('large', $image);
+    $this->assertObjectHasProperty('full_width', $image);
   }
 
   /** @test */
@@ -77,27 +76,27 @@ final class TestNormalizeData extends \WP_UnitTestCase {
   /** @test */
   public function can_normalize_post() {
     $id = $this->factory->post->create();
-    $post = jcdNormalizePost(new \Timber\Post($id));
-    $this->assertObjectHasAttribute('title', $post);
-    $this->assertObjectHasAttribute('content', $post);
-    $this->assertObjectHasAttribute('excerpt', $post);
-    $this->assertObjectHasAttribute('author', $post);
-    $this->assertObjectHasAttribute('date', $post);
-    $this->assertObjectHasAttribute('url', $post);
-    $this->assertObjectHasAttribute('image', $post);
+    $post = jcdNormalizePost(\Timber\Timber::get_post($id));
+    $this->assertObjectHasProperty('title', $post);
+    $this->assertObjectHasProperty('content', $post);
+    $this->assertObjectHasProperty('excerpt', $post);
+    $this->assertObjectHasProperty('author', $post);
+    $this->assertObjectHasProperty('date', $post);
+    $this->assertObjectHasProperty('url', $post);
+    $this->assertObjectHasProperty('image', $post);
   }
 
   /** @test */
   public function can_normalize_people() {
     $id = $this->factory->post->create();
-    $post = jcdNormalizePeople(new \Timber\Post($id));
-    $this->assertObjectHasAttribute('name', $post);
-    $this->assertObjectHasAttribute('image', $post);
-    $this->assertObjectHasAttribute('title', $post);
-    $this->assertObjectHasAttribute('description', $post);
-    $this->assertObjectHasAttribute('opt_link', $post);
-    $this->assertObjectHasAttribute('twitter', $post);
-    $this->assertObjectHasAttribute('linkedin', $post);
-    $this->assertObjectHasAttribute('email', $post);
+    $post = jcdNormalizePeople(\Timber\Timber::get_post($id));
+    $this->assertObjectHasProperty('name', $post);
+    $this->assertObjectHasProperty('image', $post);
+    $this->assertObjectHasProperty('title', $post);
+    $this->assertObjectHasProperty('description', $post);
+    $this->assertObjectHasProperty('opt_link', $post);
+    $this->assertObjectHasProperty('twitter', $post);
+    $this->assertObjectHasProperty('linkedin', $post);
+    $this->assertObjectHasProperty('email', $post);
   }
 }

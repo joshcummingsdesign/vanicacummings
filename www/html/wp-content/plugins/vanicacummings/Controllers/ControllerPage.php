@@ -28,6 +28,6 @@ class ControllerPage extends Controller {
   public function renderView() {
     $this->data['header'] = $this->baseModel->getHeader();
     $this->data['post'] = $this->baseModel->getPost()->post;
-    \Timber::render('t-page.twig', $this->data);
+    \Timber\Timber::render('t-page.twig', $this->data);
   }
 }

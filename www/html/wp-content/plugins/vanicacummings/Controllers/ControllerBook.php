@@ -33,6 +33,6 @@ class ControllerBook extends Controller {
    * Render the view.
    */
   public function renderView() {
-    \Timber::render('t-book.twig', $this->data);
+    \Timber\Timber::render('t-book.twig', $this->data);
   }
 }

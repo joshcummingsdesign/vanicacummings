@@ -18,7 +18,7 @@ final class TestController extends \WP_UnitTestCase {
   /**
    * The PHPUnit setUp method.
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     $this->controller = new Controller();
   }

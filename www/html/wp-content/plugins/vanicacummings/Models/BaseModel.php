@@ -64,7 +64,7 @@ class BaseModel {
     $menuData = (object)[];
 
     foreach ($registeredMenus as $menuDataSlug => $menuDataTitle) {
-      $menuData->$menuDataSlug = new \Timber\Menu($menuDataSlug);
+      $menuData->$menuDataSlug = \Timber\Timber::get_menu($menuDataSlug);
     }
 
     return jcdNormalizeMenus($menuData);
@@ -184,7 +184,7 @@ class BaseModel {
    */
   public function getPost($id = null) {
 
-    $post = jcdNormalizePost(new \Timber\Post($id));
+    $post = jcdNormalizePost(\Timber\Timber::get_post($id));
     $post->hide_thumb = get_field('hide_thumb', $id);
 
     $prev_post = get_next_post(); // Reversed due to post order
@@ -218,15 +218,13 @@ class BaseModel {
    */
   public function getPosts() {
 
-    $postsQuery = new \Timber\PostQuery();
-
-    $dbPosts = $postsQuery->get_posts();
+    $postsQuery = \Timber\Timber::get_posts();
 
     $posts = [];
 
-    if (!empty($dbPosts)) {
+    if (!empty($postsQuery)) {
 
-      foreach ($dbPosts as $post) {
+      foreach ($postsQuery as $post) {
         $posts[] = jcdNormalizePost($post);
       }
     }

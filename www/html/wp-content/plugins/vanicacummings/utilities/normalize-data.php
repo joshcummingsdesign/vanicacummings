@@ -16,14 +16,14 @@ function jcdNormalizeMenus($menuData) {
       'items' => []
     ];
 
-    if ($menuTitle->items) {
+    if ($menuTitle && $menuTitle->items) {
 
       foreach ($menuTitle->items as $item) {
 
         $menuItem = (object)[
-          'name' => $item->name,
-          'url' => $item->url,
-          'target' => $item->target === '_blank' ? '_blank' : '_self'
+          'name' => $item->title(),
+          'url' => $item->link(),
+          'target' => $item->target() === '_blank' ? '_blank' : '_self'
         ];
 
         array_push($menus->$menuSlug->items, $menuItem);
@@ -56,8 +56,8 @@ function jcdNormalizeImage($id) {
 
   // Add image sizes to image object
   foreach ($sizes as $size => $value) {
-    $url = wp_get_attachment_image_src($id, $size)[0];
-    $image->$size = $url;
+    $source = wp_get_attachment_image_src($id, $size);
+    $image->$size = $source ? $source[0] : null;
   }
 
   return $image;
@@ -76,41 +76,54 @@ function jcdNormalizeLink($link) {
 }
 
 function jcdNormalizePost($post) {
+  if (!$post) {
+    return (object)[
+      'title' => null,
+      'content' => null,
+      'excerpt' => null,
+      'author' => null,
+      'date' => null,
+      'url' => null,
+      'image' => null
+    ];
+  }
+
   return (object)[
-    'title' => $post->title,
-    'content' => $post->content,
-    'excerpt' => $post->preview()->length(32)->read_more(false),
-    'author' => $post->author ? $post->author->first_name . ' ' . $post->author->last_name : '',
-    'date' => $post->date,
-    'url' => $post->link,
-    'image' => $post->thumbnail ? jcdNormalizeImage($post->thumbnail->id) : null
+    'title' => $post->title(),
+    'content' => $post->content(),
+    'excerpt' => $post->excerpt(['words' => 32, 'read_more' => false]),
+    'author' => $post->author() ? $post->author()->first_name . ' ' . $post->author()->last_name : '',
+    'date' => $post->date(),
+    'url' => $post->link(),
+    'image' => $post->thumbnail() ? jcdNormalizeImage($post->thumbnail()->id) : null
   ];
 }
 
 function jcdNormalizePeople($post, $description = 'short', $resume = false) {
 
-  $d = get_field('person_short_description', $post->id);
-  $i = get_field('person_image', $post->id);
+  $postId = $post ? $post->id : 0;
+  $d = get_field('person_short_description', $postId);
+  $i = get_field('person_image', $postId);
   if ($description === 'long') {
-    $d = get_field('person_long_description', $post->id);
+    $d = get_field('person_long_description', $postId);
   } elseif ($description === 'alternate') {
-    $d = get_field('person_alternate_description', $post->id);
-    $i = get_field('person_alternate_image', $post->id);
+    $d = get_field('person_alternate_description', $postId);
+    $i = get_field('person_alternate_image', $postId);
   }
 
   $r = null;
   if ($resume) {
-    $r = jcdNormalizeLink(get_field('person_opt_link', $post->id));
+    $r = jcdNormalizeLink(get_field('person_opt_link', $postId));
   }
 
   return (object)[
-    'name' => $post->title,
+    'name' => $post ? $post->title() : null,
     'image' => jcdNormalizeImage($i),
-    'title' => get_field('person_title', $post->id),
+    'title' => get_field('person_title', $postId),
     'description' => $d,
     'opt_link' => $r,
-    'twitter' => get_field('person_twitter', $post->id),
-    'linkedin' => get_field('person_linkedin', $post->id),
-    'email' => get_field('person_email', $post->id)
+    'twitter' => get_field('person_twitter', $postId),
+    'linkedin' => get_field('person_linkedin', $postId),
+    'email' => get_field('person_email', $postId)
   ];
 }

@@ -19,7 +19,8 @@ module.exports = (gulp, config, exec, del, plRev, isProduction, fs, replace, run
   gulp.task('pl-copy', () => gulp.src(config.patternlab.public).pipe(gulp.dest(config.patternlab.dest)));
 
   gulp.task('pl-gen', cb => {
-    exec('cd patternlab-core && php core/console --generate', (err, stdout, stderr) => {
+    // ponytail: Pattern Lab 2 emits PHP 8 deprecations; remove this override when Pattern Lab is upgraded.
+    exec('cd patternlab-core && php -d error_reporting=8191 core/console --generate', (err, stdout, stderr) => {
       console.log(stdout);
       console.log(stderr);
       cb(err);

@@ -29,6 +29,6 @@ class ControllerAbout extends Controller {
    * Render the view.
    */
   public function renderView() {
-    \Timber::render('t-about.twig', $this->data);
+    \Timber\Timber::render('t-about.twig', $this->data);
   }
 }

@@ -6,14 +6,14 @@
     "test": "mocha --require babel-core/register src/scripts/tests/unit-tests"
   },
   "repository": "github:joshcummingsdesign/vanicacummings",
-  "author": "Josh Cummings <hello@joshcummingsdesign.com> (https://joshcummingsdesign.com)",
+  "author": "Josh Cummings <joshcummingsdesgin@gmail.com> (https://joshcummingsdesign.com)",
   "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/joshcummingsdesign/vanicacummings/issues"
   },
   "homepage": "https://github.com/joshcummingsdesign/vanicacummings",
   "engines": {
-    "node": "~8.9.4"
+    "node": "10.24.1"
   },
   "babel": {
     "presets": [
@@ -21,7 +21,7 @@
     ]
   },
   "dependencies": {
-    "jquery": "1.12.4",
+    "jquery": "3.7.1",
     "owl.carousel": "~2.3.4"
   },
   "devDependencies": {
@@ -47,12 +47,11 @@
     "gulp-eslint": "~4.0.0",
     "gulp-flatten": "~0.3.1",
     "gulp-if": "~2.0.2",
-    "gulp-imagemin": "~3.2.0",
     "gulp-load-plugins": "~1.5.0",
     "gulp-newer": "~1.3.0",
     "gulp-plumber": "~1.1.0",
     "gulp-rev": "~3.0.0",
-    "gulp-sass": "~3.1.0",
+    "gulp-dart-sass": "1.0.2",
     "gulp-sourcemaps": "~2.4.1",
     "gulp-watch": "~4.3.11",
     "imports-loader": "~0.7.1",
@@ -64,6 +63,7 @@
     "retire": "~1.5.1",
     "require-dir": "~0.3.1",
     "run-sequence": "~1.2.2",
+    "sass": "1.32.13",
     "uglifyjs-webpack-plugin": "~0.4.3",
     "webpack": "~3.8.1",
     "webpack-stream": "~4.0.0"

@@ -15,14 +15,14 @@ final class TestVanicaCummings extends \WP_UnitTestCase {
   /**
    * The PHPUnit setUp method.
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     $this->testDir = 'tests/unit-tests/';
   }
 
   /** @test */
   public function has_class_instance() {
-    $this->assertClassHasStaticAttribute('instance', 'VanicaCummings\VanicaCummings');
+    $this->assertTrue(property_exists('VanicaCummings\VanicaCummings', 'instance'));
   }
 
   /** @test */

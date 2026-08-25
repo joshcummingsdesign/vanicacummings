@@ -26,7 +26,7 @@ if (!class_exists(__NAMESPACE__ . '\VanicaCummings')) {
     /**
      * The minimum PHP version needed to run VanicaCummings.
      */
-    const PHP_MIN_VERISON = '7.0';
+    const PHP_MIN_VERISON = '8.3';
 
     /**
      * The base directory where the views live.

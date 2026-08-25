@@ -30,6 +30,6 @@ class ControllerSingle extends Controller {
     $this->data['sidebar'] = $this->baseModel->getSidebar();
     $this->data['post'] = $this->baseModel->getPost()->post;
     $this->data['pagination'] = $this->baseModel->getPost()->pagination;
-    \Timber::render('t-single.twig', $this->data);
+    \Timber\Timber::render('t-single.twig', $this->data);
   }
 }

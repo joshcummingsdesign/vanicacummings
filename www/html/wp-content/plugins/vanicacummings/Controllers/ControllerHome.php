@@ -33,6 +33,6 @@ class ControllerHome extends Controller {
    * Render the view.
    */
   public function renderView() {
-    \Timber::render('t-home.twig', $this->data);
+    \Timber\Timber::render('t-home.twig', $this->data);
   }
 }

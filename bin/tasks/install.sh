@@ -2,7 +2,7 @@
 
 source bin/vars/variables.sh
 
-docker exec -it $WP_CONTAINER bash -c "\
+docker exec -i $WP_CONTAINER bash -c "\
   echo \
   && cd html \
   && echo 'Downloading WordPress...' \
@@ -18,25 +18,32 @@ docker exec -it $WP_CONTAINER bash -c "\
     --dbuser=root \
     --dbhost=mysql \
     --skip-check \
-    --extra-php='define(\"WP_DEBUG\", true);' \
+    --extra-php='define(\"WP_DEBUG\", true); define(\"WP_DEBUG_DISPLAY\", false);' \
   && echo \
   && echo '===========================' \
   && echo \
   && echo 'Creating database...' \
   && echo \
-  && wp db create || true \
+  && (wp db check --defaults > /dev/null 2>&1 || wp db create --defaults) \
   && echo \
   && echo '===========================' \
   && echo \
   && echo 'Installing WordPress...' \
   && echo \
-  && wp core install \
+  && (wp core is-installed || wp core install \
     --url=https://localhost \
     --title=Josh \
     --admin_user=josh \
     --admin_password=changeme \
-    --admin_email=hello@joshcummingsdesign.com \
-    --skip-email \
+    --admin_email=joshcummingsdesign@gmail.com \
+    --skip-email) \
+  && echo \
+  && echo '===========================' \
+  && echo \
+  && echo 'Activating theme and plugins...' \
+  && echo \
+  && wp plugin activate advanced-custom-fields-pro vanicacummings \
+  && wp theme activate vanicacummings \
   && echo \
   && echo '===========================' \
   && echo \

@@ -17,7 +17,7 @@ final class TestModel extends \WP_UnitTestCase {
   /**
    * The PHPUnit setUp method.
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     $this->model = new Model();
   }
@@ -25,119 +25,119 @@ final class TestModel extends \WP_UnitTestCase {
   /** @test */
   public function can_get_hero_data() {
     $data = $this->model->getHero();
-    $this->assertObjectHasAttribute('bg_img', $data);
-    $this->assertObjectHasAttribute('heading', $data);
-    $this->assertObjectHasAttribute('opt_text', $data);
-    $this->assertObjectHasAttribute('opt_button', $data);
+    $this->assertObjectHasProperty('bg_img', $data);
+    $this->assertObjectHasProperty('heading', $data);
+    $this->assertObjectHasProperty('opt_text', $data);
+    $this->assertObjectHasProperty('opt_button', $data);
   }
 
   /** @test */
   public function can_get_image_text_data() {
     $data = $this->model->getImageText();
-    $this->assertObjectHasAttribute('image', $data);
-    $this->assertObjectHasAttribute('heading', $data);
-    $this->assertObjectHasAttribute('text', $data);
+    $this->assertObjectHasProperty('image', $data);
+    $this->assertObjectHasProperty('heading', $data);
+    $this->assertObjectHasProperty('text', $data);
   }
 
   /** @test */
   public function can_get_content_data() {
     $data = $this->model->getContent();
-    $this->assertObjectHasAttribute('heading', $data);
-    $this->assertObjectHasAttribute('text', $data);
+    $this->assertObjectHasProperty('heading', $data);
+    $this->assertObjectHasProperty('text', $data);
   }
 
   /** @test */
   public function can_get_text_featured_data() {
     $data = $this->model->getTextFeatured();
-    $this->assertObjectHasAttribute('items', $data);
+    $this->assertObjectHasProperty('items', $data);
   }
 
   /** @test */
   public function can_get_four_column_image_text_data() {
     $data = $this->model->getFourColumnImageText();
-    $this->assertObjectHasAttribute('opt_heading', $data);
-    $this->assertObjectHasAttribute('opt_text', $data);
-    $this->assertObjectHasAttribute('items', $data);
-    $this->assertObjectHasAttribute('opt_button', $data);
+    $this->assertObjectHasProperty('opt_heading', $data);
+    $this->assertObjectHasProperty('opt_text', $data);
+    $this->assertObjectHasProperty('items', $data);
+    $this->assertObjectHasProperty('opt_button', $data);
   }
 
   /** @test */
   public function can_get_one_column_people_small_data() {
     $data = $this->model->getOneColumnPeopleSmall();
-    $this->assertObjectHasAttribute('opt_heading', $data);
-    $this->assertObjectHasAttribute('people', $data);
+    $this->assertObjectHasProperty('opt_heading', $data);
+    $this->assertObjectHasProperty('people', $data);
   }
 
   /** @test */
   public function can_get_one_column_people_data() {
     $data = $this->model->getOneColumnPeople();
-    $this->assertObjectHasAttribute('opt_heading', $data);
-    $this->assertObjectHasAttribute('people', $data);
-    $this->assertObjectHasAttribute('opt_button', $data);
+    $this->assertObjectHasProperty('opt_heading', $data);
+    $this->assertObjectHasProperty('people', $data);
+    $this->assertObjectHasProperty('opt_button', $data);
   }
 
   /** @test */
   public function can_get_two_column_people_data() {
     $data = $this->model->getTwoColumnPeople();
-    $this->assertObjectHasAttribute('opt_heading', $data);
-    $this->assertObjectHasAttribute('people', $data);
-    $this->assertObjectHasAttribute('opt_button', $data);
+    $this->assertObjectHasProperty('opt_heading', $data);
+    $this->assertObjectHasProperty('people', $data);
+    $this->assertObjectHasProperty('opt_button', $data);
   }
 
   /** @test */
   public function can_get_three_column_image_grid_data() {
     $data = $this->model->getThreeColumnImageGrid();
-    $this->assertObjectHasAttribute('opt_style', $data);
-    $this->assertObjectHasAttribute('opt_heading', $data);
-    $this->assertObjectHasAttribute('items', $data);
-    $this->assertObjectHasAttribute('opt_button', $data);
+    $this->assertObjectHasProperty('opt_style', $data);
+    $this->assertObjectHasProperty('opt_heading', $data);
+    $this->assertObjectHasProperty('items', $data);
+    $this->assertObjectHasProperty('opt_button', $data);
   }
 
   /** @test */
   public function can_get_testimonial_carousel_data() {
     $data = $this->model->getTestimonialCarousel();
-    $this->assertObjectHasAttribute('opt_border', $data);
-    $this->assertObjectHasAttribute('opt_heading', $data);
-    $this->assertObjectHasAttribute('cards', $data);
+    $this->assertObjectHasProperty('opt_border', $data);
+    $this->assertObjectHasProperty('opt_heading', $data);
+    $this->assertObjectHasProperty('cards', $data);
   }
 
   /** @test */
   public function can_get_text_image_list_data() {
     $data = $this->model->getTextImageList();
-    $this->assertObjectHasAttribute('heading', $data);
-    $this->assertObjectHasAttribute('text', $data);
-    $this->assertObjectHasAttribute('image', $data);
-    $this->assertObjectHasAttribute('list', $data);
-    $this->assertObjectHasAttribute('button', $data);
+    $this->assertObjectHasProperty('heading', $data);
+    $this->assertObjectHasProperty('text', $data);
+    $this->assertObjectHasProperty('image', $data);
+    $this->assertObjectHasProperty('list', $data);
+    $this->assertObjectHasProperty('button', $data);
   }
 
   /** @test */
   public function can_get_contact_data() {
     $data = $this->model->getContact();
-    $this->assertObjectHasAttribute('heading', $data);
-    $this->assertObjectHasAttribute('phone', $data);
-    $this->assertObjectHasAttribute('heading', $data->phone);
-    $this->assertObjectHasAttribute('value', $data->phone);
-    $this->assertObjectHasAttribute('email', $data);
-    $this->assertObjectHasAttribute('heading', $data->email);
-    $this->assertObjectHasAttribute('value', $data->email);
-    $this->assertObjectHasAttribute('linkedin', $data);
-    $this->assertObjectHasAttribute('heading', $data->linkedin);
-    $this->assertObjectHasAttribute('name', $data->linkedin);
-    $this->assertObjectHasAttribute('value', $data->linkedin);
+    $this->assertObjectHasProperty('heading', $data);
+    $this->assertObjectHasProperty('phone', $data);
+    $this->assertObjectHasProperty('heading', $data->phone);
+    $this->assertObjectHasProperty('value', $data->phone);
+    $this->assertObjectHasProperty('email', $data);
+    $this->assertObjectHasProperty('heading', $data->email);
+    $this->assertObjectHasProperty('value', $data->email);
+    $this->assertObjectHasProperty('linkedin', $data);
+    $this->assertObjectHasProperty('heading', $data->linkedin);
+    $this->assertObjectHasProperty('name', $data->linkedin);
+    $this->assertObjectHasProperty('value', $data->linkedin);
   }
 
   /** @test */
   public function can_get_call_to_action_data() {
     $data = $this->model->getCallToAction();
-    $this->assertObjectHasAttribute('heading', $data);
-    $this->assertObjectHasAttribute('buttons', $data);
+    $this->assertObjectHasProperty('heading', $data);
+    $this->assertObjectHasProperty('buttons', $data);
   }
 
   /** @test */
   public function can_get_trust_logos_data() {
     $data = $this->model->getTrustLogos();
-    $this->assertObjectHasAttribute('opt_heading', $data);
-    $this->assertObjectHasAttribute('logos', $data);
+    $this->assertObjectHasProperty('opt_heading', $data);
+    $this->assertObjectHasProperty('logos', $data);
   }
 }

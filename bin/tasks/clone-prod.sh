@@ -49,11 +49,18 @@ if [[ $PROCEED == "y" ]]; then
       && echo 'Cleaning up staging...' \
       && ssh $PROD_USER@$PROD_IP 'PROD_DB="${PROD_DB}" \
         && rm vanicacummings.com/staging.sql;' \
-      && echo 'Resetting the database...' \
       && cd html \
-      && wp db reset --yes \
+      && wp core download --force --skip-content \
+      && wp config create --force \
+        --dbname=wp \
+        --dbuser=root \
+        --dbhost=mysql \
+        --skip-check \
+        --extra-php='define(\"WP_DEBUG\", true); define(\"WP_DEBUG_DISPLAY\", false);' \
+      && echo 'Resetting the database...' \
+      && wp db reset --yes --defaults \
       && echo 'Importing the database...' \
-      && wp db import ../tmp/staging.sql \
+      && wp db import ../tmp/staging.sql --defaults \
       && echo 'Performing search and replace...' \
       && echo 'This may take a moment...' \
       && wp search-replace '"$PROD_DOMAIN"' 'localhost' --all-tables \
@@ -61,7 +68,7 @@ if [[ $PROCEED == "y" ]]; then
       && rm -rf ../tmp \
       && echo 'Gathering files...' \
       && rsync -azP --delete $PROD_USER@$PROD_IP:vanicacummings.com/wp-content/uploads/ wp-content/uploads/ \
-      && rsync -azP --delete $PROD_USER@$PROD_IP:vanicacummings.com/wp-content/plugins/ wp-content/plugins/ \
+      && rsync -azP --delete --exclude vanicacummings/ $PROD_USER@$PROD_IP:vanicacummings.com/wp-content/plugins/ wp-content/plugins/ \
       && chown -R www-data:www-data wp-content \
       && wp plugin deactivate \
         w3-total-cache"

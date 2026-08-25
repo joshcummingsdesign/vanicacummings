@@ -3,11 +3,11 @@
 source bin/vars/variables.sh
 
 deps() {
-  docker exec -it $WP_CONTAINER bash -c "source ~/.bashrc \
+  docker exec -i $WP_CONTAINER bash -c "source ~/.bashrc \
     && echo \
     && echo 'Running npm install...' \
     && echo \
-    && npm install \
+    && npm ci --production=false \
     && echo \
     && echo '===========================' \
     && echo \

@@ -17,7 +17,7 @@ final class TestBaseModel extends \WP_UnitTestCase {
   /**
    * The PHPUnit setUp method.
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     $this->model = new BaseModel();
   }
@@ -25,109 +25,109 @@ final class TestBaseModel extends \WP_UnitTestCase {
   /** @test */
   public function can_get_body_class() {
     $data = $this->model->getBodyClass();
-    $this->assertInternalType('string', $data);
+    $this->assertIsString($data);
   }
 
   /** @test */
   public function can_get_is_mobile() {
     $data = $this->model->getIsMobile();
-    $this->assertInternalType('int', $data);
+    $this->assertIsInt($data);
   }
 
   /** @test */
   public function can_get_image_path() {
     $data = $this->model->getImages();
-    $this->assertInternalType('string', $data);
+    $this->assertIsString($data);
   }
 
   /** @test */
   public function can_get_site_data() {
     $data = $this->model->getSite();
-    $this->assertObjectHasAttribute('url', $data);
-    $this->assertObjectHasAttribute('language', $data);
-    $this->assertObjectHasAttribute('title', $data);
-    $this->assertObjectHasAttribute('charset', $data);
-    $this->assertObjectHasAttribute('menu_text', $data);
-    $this->assertObjectHasAttribute('none_found_text', $data);
-    $this->assertObjectHasAttribute('logo', $data);
+    $this->assertObjectHasProperty('url', $data);
+    $this->assertObjectHasProperty('language', $data);
+    $this->assertObjectHasProperty('title', $data);
+    $this->assertObjectHasProperty('charset', $data);
+    $this->assertObjectHasProperty('menu_text', $data);
+    $this->assertObjectHasProperty('none_found_text', $data);
+    $this->assertObjectHasProperty('logo', $data);
   }
 
   /** @test */
   public function can_get_menu_data() {
     $data = $this->model->getMenus();
-    $this->assertObjectHasAttribute('main', $data);
-    $this->assertObjectHasAttribute('footer', $data);
-    $this->assertObjectHasAttribute('social', $data);
-    $this->assertObjectHasAttribute('terms', $data);
+    $this->assertObjectHasProperty('main', $data);
+    $this->assertObjectHasProperty('footer', $data);
+    $this->assertObjectHasProperty('social', $data);
+    $this->assertObjectHasProperty('terms', $data);
   }
 
   /** @test */
   public function can_get_footer_data() {
     $data = $this->model->getFooter();
-    $this->assertObjectHasAttribute('call_to_action', $data);
-    $this->assertObjectHasAttribute('heading', $data->call_to_action);
-    $this->assertObjectHasAttribute('buttons', $data->call_to_action);
-    $this->assertObjectHasAttribute('subscribe', $data);
-    $this->assertObjectHasAttribute('opt_border', $data->subscribe);
-    $this->assertObjectHasAttribute('heading', $data->subscribe);
-    $this->assertObjectHasAttribute('text', $data->subscribe);
-    $this->assertObjectHasAttribute('form', $data->subscribe);
-    $this->assertObjectHasAttribute('placeholder', $data->subscribe->form);
-    $this->assertObjectHasAttribute('button_text', $data->subscribe->form);
-    $this->assertObjectHasAttribute('sitemap_text', $data);
-    $this->assertObjectHasAttribute('contact_text', $data);
-    $this->assertObjectHasAttribute('social_text', $data);
-    $this->assertObjectHasAttribute('contact', $data);
-    $this->assertObjectHasAttribute('email', $data->contact);
-    $this->assertObjectHasAttribute('phone', $data->contact);
-    $this->assertObjectHasAttribute('copyright', $data);
+    $this->assertObjectHasProperty('call_to_action', $data);
+    $this->assertObjectHasProperty('heading', $data->call_to_action);
+    $this->assertObjectHasProperty('buttons', $data->call_to_action);
+    $this->assertObjectHasProperty('subscribe', $data);
+    $this->assertObjectHasProperty('opt_border', $data->subscribe);
+    $this->assertObjectHasProperty('heading', $data->subscribe);
+    $this->assertObjectHasProperty('text', $data->subscribe);
+    $this->assertObjectHasProperty('form', $data->subscribe);
+    $this->assertObjectHasProperty('placeholder', $data->subscribe->form);
+    $this->assertObjectHasProperty('button_text', $data->subscribe->form);
+    $this->assertObjectHasProperty('sitemap_text', $data);
+    $this->assertObjectHasProperty('contact_text', $data);
+    $this->assertObjectHasProperty('social_text', $data);
+    $this->assertObjectHasProperty('contact', $data);
+    $this->assertObjectHasProperty('email', $data->contact);
+    $this->assertObjectHasProperty('phone', $data->contact);
+    $this->assertObjectHasProperty('copyright', $data);
   }
 
   /** @test */
   public function can_get_header_data() {
     $data = $this->model->getHeader();
-    $this->assertObjectHasAttribute('heading', $data);
-    $this->assertObjectHasAttribute('text', $data);
+    $this->assertObjectHasProperty('heading', $data);
+    $this->assertObjectHasProperty('text', $data);
   }
 
   /** @test */
   public function can_get_sidebar_data() {
     $data = $this->model->getSidebar();
-    $this->assertObjectHasAttribute('text', $data);
-    $this->assertObjectHasAttribute('search', $data);
-    $this->assertObjectHasAttribute('heading', $data->search);
-    $this->assertObjectHasAttribute('placeholder', $data->search);
-    $this->assertObjectHasAttribute('button_text', $data->search);
-    $this->assertObjectHasAttribute('tags', $data);
-    $this->assertObjectHasAttribute('heading', $data->tags);
-    $this->assertObjectHasAttribute('items', $data->tags);
+    $this->assertObjectHasProperty('text', $data);
+    $this->assertObjectHasProperty('search', $data);
+    $this->assertObjectHasProperty('heading', $data->search);
+    $this->assertObjectHasProperty('placeholder', $data->search);
+    $this->assertObjectHasProperty('button_text', $data->search);
+    $this->assertObjectHasProperty('tags', $data);
+    $this->assertObjectHasProperty('heading', $data->tags);
+    $this->assertObjectHasProperty('items', $data->tags);
   }
 
   /** @test */
   public function can_get_post() {
     $id = $this->factory->post->create();
     $data = $this->model->getPost($id);
-    $this->assertObjectHasAttribute('post', $data);
-    $this->assertObjectHasAttribute('pagination', $data);
-    $this->assertObjectHasAttribute('prev', $data->pagination);
-    $this->assertObjectHasAttribute('name', $data->pagination->prev);
-    $this->assertObjectHasAttribute('url', $data->pagination->prev);
-    $this->assertObjectHasAttribute('next', $data->pagination);
-    $this->assertObjectHasAttribute('name', $data->pagination->next);
-    $this->assertObjectHasAttribute('url', $data->pagination->next);
+    $this->assertObjectHasProperty('post', $data);
+    $this->assertObjectHasProperty('pagination', $data);
+    $this->assertObjectHasProperty('prev', $data->pagination);
+    $this->assertObjectHasProperty('name', $data->pagination->prev);
+    $this->assertObjectHasProperty('url', $data->pagination->prev);
+    $this->assertObjectHasProperty('next', $data->pagination);
+    $this->assertObjectHasProperty('name', $data->pagination->next);
+    $this->assertObjectHasProperty('url', $data->pagination->next);
   }
 
   /** @test */
   public function can_get_posts() {
     $id = $this->factory->post->create();
     $data = $this->model->getPosts();
-    $this->assertObjectHasAttribute('posts', $data);
-    $this->assertObjectHasAttribute('pagination', $data);
-    $this->assertObjectHasAttribute('prev', $data->pagination);
-    $this->assertObjectHasAttribute('name', $data->pagination->prev);
-    $this->assertObjectHasAttribute('url', $data->pagination->prev);
-    $this->assertObjectHasAttribute('next', $data->pagination);
-    $this->assertObjectHasAttribute('name', $data->pagination->next);
-    $this->assertObjectHasAttribute('url', $data->pagination->next);
+    $this->assertObjectHasProperty('posts', $data);
+    $this->assertObjectHasProperty('pagination', $data);
+    $this->assertObjectHasProperty('prev', $data->pagination);
+    $this->assertObjectHasProperty('name', $data->pagination->prev);
+    $this->assertObjectHasProperty('url', $data->pagination->prev);
+    $this->assertObjectHasProperty('next', $data->pagination);
+    $this->assertObjectHasProperty('name', $data->pagination->next);
+    $this->assertObjectHasProperty('url', $data->pagination->next);
   }
 }

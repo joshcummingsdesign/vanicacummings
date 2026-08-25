@@ -15,11 +15,6 @@ echo
 echo
 echo "==========================="
 echo
-echo "Configuring Pattern Lab Twig..."
-echo
-echo "phpBin: /opt/circleci/.phpenv/shims/php" >> ./www/patternlab-core/config/config.yml
-echo "==========================="
-echo
 echo "Running npm-cache install..."
 echo
 cd www

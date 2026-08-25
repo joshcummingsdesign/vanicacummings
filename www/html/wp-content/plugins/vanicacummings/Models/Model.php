@@ -91,7 +91,7 @@ class Model {
 
   public function getOneColumnPeopleSmall() {
 
-    $post = new \Timber\Post(get_field('one_column_people_small_person'));
+    $post = \Timber\Timber::get_post(get_field('one_column_people_small_person'));
 
     $description = get_field('one_column_people_small_description_type');
 
@@ -118,7 +118,7 @@ class Model {
     if (!empty($row)) {
 
       foreach ($row as $person) {
-        $post = new \Timber\Post($person['person']);
+        $post = \Timber\Timber::get_post($person['person']);
         $people[] = jcdNormalizePeople($post, $description, $resume);
       }
     }
@@ -143,7 +143,7 @@ class Model {
     if (!empty($row)) {
 
       foreach ($row as $person) {
-        $post = new \Timber\Post($person['person']);
+        $post = \Timber\Timber::get_post($person['person']);
         $people[] = jcdNormalizePeople($post, $description, $resume);
       }
     }
@@ -157,9 +157,7 @@ class Model {
 
   public function getThreeColumnImageGrid() {
 
-    $postsQuery = new \Timber\PostQuery(['post_type' => 'work']);
-
-    $dbPosts = $postsQuery->get_posts();
+    $dbPosts = \Timber\Timber::get_posts(['post_type' => 'work']);
 
     $items = [];
 
@@ -167,10 +165,10 @@ class Model {
 
       foreach ($dbPosts as $post) {
         $items[] = (object)[
-          'opt_heading' => $post->title,
+          'opt_heading' => $post->title(),
           'image' => jcdNormalizeImage(get_field('work_image_thumbnail', $post->id)),
           'opt_link' => (object)[
-            'url' => $post->link,
+            'url' => $post->link(),
             'target' => '_self'
           ]
         ];
@@ -234,24 +232,24 @@ class Model {
 
   public function getContact() {
 
-    $phone = get_field('contact_phone');
-    $email = get_field('contact_email');
-    $linkedin = get_field('contact_linkedin');
+    $phone = (array)get_field('contact_phone');
+    $email = (array)get_field('contact_email');
+    $linkedin = (array)get_field('contact_linkedin');
 
     return (object)[
       'heading' => get_field('contact_heading'),
       'phone' => (object)[
-        'heading' => $phone['heading'],
-        'value' => $phone['value']
+        'heading' => $phone['heading'] ?? null,
+        'value' => $phone['value'] ?? null
       ],
       'email' => (object)[
-        'heading' => $email['heading'],
-        'value' => $email['value']
+        'heading' => $email['heading'] ?? null,
+        'value' => $email['value'] ?? null
       ],
       'linkedin' => (object)[
-        'heading' => $linkedin['heading'],
-        'name' => $linkedin['name'],
-        'value' => $linkedin['value']
+        'heading' => $linkedin['heading'] ?? null,
+        'name' => $linkedin['name'] ?? null,
+        'value' => $linkedin['value'] ?? null
       ]
     ];
   }

@@ -30,6 +30,6 @@ class ControllerWorkSingle extends Controller {
    */
   public function renderView() {
     $this->data['pagination'] = $this->baseModel->getPost()->pagination;
-    \Timber::render('t-work-single.twig', $this->data);
+    \Timber\Timber::render('t-work-single.twig', $this->data);
   }
 }
