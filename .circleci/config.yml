@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     docker:
@@ -102,3 +102,8 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               ./bin/deploy/prod/deploy-code.sh
             fi
+
+workflows:
+  build_and_deploy:
+    jobs:
+      - build
