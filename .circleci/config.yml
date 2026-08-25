@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: cimg/php:8.3
-      - image: circleci/mariadb:10.3-ram
+      - image: cimg/mariadb:10.11
         environment:
           MYSQL_USER: root
           MYSQL_ROOT_PASSWORD: ''
@@ -96,7 +96,8 @@ jobs:
           path: ~/test-results
       - store_artifacts:
           path: ~/test-results
-      - deploy:
+      - run:
+          name: Deploy
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               ./bin/deploy/prod/deploy-code.sh
