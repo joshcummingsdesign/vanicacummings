@@ -1,2 +1,2 @@
 [client]
-ssl=0
+skip-ssl
