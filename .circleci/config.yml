@@ -23,7 +23,6 @@ jobs:
           name: Install Server Dependencies
           command: |
             sudo apt-get update && sudo apt-get install -y default-mysql-client subversion
-            sudo docker-php-ext-install mysqli
             mkdir -p ~/test-results/mocha ~/test-results/phpunit
       - run:
           name: Install Node.js

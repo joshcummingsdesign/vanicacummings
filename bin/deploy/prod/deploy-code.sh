@@ -11,7 +11,7 @@ ssh $SSH_OPTIONS $PROD_USER@$PROD_IP true
 
 echo "Deploying theme..."
 echo
-rsync -e "ssh $SSH_OPTIONS" -azq --partial --delete www/html/wp-content/themes/vanicacummings/ \
+rsync -e "ssh $SSH_OPTIONS" -az --info=progress2 --timeout=60 --partial --delete www/html/wp-content/themes/vanicacummings/ \
   $PROD_USER@$PROD_IP:vanicacummings.com/wp-content/themes/vanicacummings/
 
 echo
@@ -20,5 +20,5 @@ echo
 
 echo "Deploying plugins..."
 echo
-rsync -e "ssh $SSH_OPTIONS" -azq --partial --delete www/html/wp-content/plugins/vanicacummings/ \
+rsync -e "ssh $SSH_OPTIONS" -az --info=progress2 --timeout=60 --partial --delete www/html/wp-content/plugins/vanicacummings/ \
   $PROD_USER@$PROD_IP:vanicacummings.com/wp-content/plugins/vanicacummings/
