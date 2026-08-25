@@ -106,6 +106,11 @@ install_db() {
 	local DB_HOSTNAME=${PARTS[0]};
 	local DB_SOCK_OR_PORT=${PARTS[1]};
 	local EXTRA=""
+	local SSL_OPTION="--ssl-mode=DISABLED"
+
+	if mysql --version | grep -q MariaDB; then
+		SSL_OPTION="--disable-ssl"
+	fi
 
 	if ! [ -z $DB_HOSTNAME ] ; then
 		if [ $(echo $DB_SOCK_OR_PORT | grep -e '^[0-9]\{1,\}$') ]; then
@@ -118,7 +123,7 @@ install_db() {
 	fi
 
 	# create database
-	mysql --user="$DB_USER" --password="$DB_PASS"$EXTRA --execute="CREATE DATABASE IF NOT EXISTS \`$DB_NAME\`;"
+	mysql $SSL_OPTION --user="$DB_USER" --password="$DB_PASS"$EXTRA --execute="CREATE DATABASE IF NOT EXISTS \`$DB_NAME\`;"
 }
 
 install_wp
